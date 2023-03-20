@@ -1,0 +1,8 @@
+
+.nav-item .active {
+  filter: brightness(70%);
+}
+
+.nav-item .nav-link:hover {
+  filter: brightness(70%);
+}

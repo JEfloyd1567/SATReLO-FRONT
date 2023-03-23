@@ -1,5 +1,6 @@
 import { FC } from "react";
-import SatreloImg from '../assets/images/satrelo_logo.png'
+import Satrelo from '../../assets/images/satrelo_logo.png';
+import './Navbar.css';
 
 const Navigation = [ 
   {name: 'Inicio', href: '#'},
@@ -15,7 +16,7 @@ export const Navbar: FC<Props> = ({currentPage = ''}) => {
     <nav className="navbar navbar-expand-lg navbar-light bg-white pt-5 border">
       <div className="container fluid align-items-end me-auto">
         <a href="#" className="navbar-brand">
-          <img src={SatreloImg}
+          <img src={Satrelo}
           height='50'
           alt="Satrelo Logo"
           />

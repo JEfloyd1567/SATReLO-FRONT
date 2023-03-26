@@ -10,16 +10,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons/faChevronLeft';
 import IsNotLastButton from './IsNotLastButton';
 import './Patients.css';
-import imagenes from "../img/imagenes";
+import sol from '../../assets/images/sol.png';
+import arbol from '../../assets/images/arbol.png';
+import gato from '../../assets/images/gato.png';
+import perro from '../../assets/images/perro.png';
+import luna from '../../assets/images/luna.png';
 
 const Patients = ({ show, handleClose }: {show:any; handleClose:any}) => {
 
     const [objButtons, setObjButtons] = useState([
-        { className: "lunita", cssC: "css-lunita", image: imagenes.luna, identifier: '1', value: 0 },
-        { className: "arbolito", cssC: "css-arbolito", image: imagenes.arbol, identifier: '2', value: 0 },
-        { className: "solicito", cssC: "css-solicito", image: imagenes.sol, identifier: '3', value: 0 },
-        { className: "gatito", cssC: "css-gatito", image: imagenes.gato, identifier: '4', value: 0 },
-        { className: "perrito", cssC: "css-perrito", image: imagenes.perro, identifier: '5', value: 0 },
+        { className: "lunita", cssC: "css-lunita", image: luna, identifier: '1', value: 0 },
+        { className: "arbolito", cssC: "css-arbolito", image: arbol, identifier: '2', value: 0 },
+        { className: "solicito", cssC: "css-solicito", image: sol, identifier: '3', value: 0 },
+        { className: "gatito", cssC: "css-gatito", image: gato, identifier: '4', value: 0 },
+        { className: "perrito", cssC: "css-perrito", image: perro, identifier: '5', value: 0 },
     ]);
 
     const [pressedButtons, setPressedButtons] = useState(""); //combinación botones
@@ -63,11 +67,11 @@ const Patients = ({ show, handleClose }: {show:any; handleClose:any}) => {
 
     const handleReset = () => {
         setObjButtons([
-          { className: "lunita", cssC: "css-lunita", image: imagenes.luna, identifier: '1', value: 0 },
-          { className: "arbolito", cssC: "css-arbolito", image: imagenes.arbol, identifier: '2', value: 0 },
-          { className: "solicito", cssC: "css-solicito", image: imagenes.sol, identifier: '3', value: 0 },
-          { className: "gatito", cssC: "css-gatito", image: imagenes.gato, identifier: '4', value: 0 },
-          { className: "perrito", cssC: "css-perrito", image: imagenes.perro, identifier: '5', value: 0 },
+            { className: "lunita", cssC: "css-lunita", image: luna, identifier: '1', value: 0 },
+            { className: "arbolito", cssC: "css-arbolito", image: arbol, identifier: '2', value: 0 },
+            { className: "solicito", cssC: "css-solicito", image: sol, identifier: '3', value: 0 },
+            { className: "gatito", cssC: "css-gatito", image: gato, identifier: '4', value: 0 },
+            { className: "perrito", cssC: "css-perrito", image: perro, identifier: '5', value: 0 },
         ]);
         setPressedButtons("");
         setIconPress(1);

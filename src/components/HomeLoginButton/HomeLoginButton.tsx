@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import Patients from "../Patients/Patients";
 import './HomeLoginButton.css';
+import Therapist from "../TherapistModal/Therapist";
+import Button from 'react-bootstrap/Button';
 
 export const HomeLoginButton =()=>{
 
@@ -16,6 +18,10 @@ export const HomeLoginButton =()=>{
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const [showPatients, setShowPatients] = useState(false);
+
+    const handleClosePatients = () => setShowPatients(false);
+    const handleShowPatients = () => setShowPatients(true);
 
     return(
         <>
@@ -31,11 +37,13 @@ export const HomeLoginButton =()=>{
                         <input className="rounded-pill inputClicked" type="text" placeholder="IDENTIFICACION" maxLength={10} ></input>
                     </div>
                     <div className="clickedBackgroundIcon rounded-circle d-inline col">
-                        <button className="buttonHome" type="submit" onClick={handleShow}>
+                        <button className="buttonHome" type="submit" onClick={handleShowPatients}>
                         <FontAwesomeIcon icon={faArrowRight} style={{color: "white", width: "30px", height: "30px"}} />
                         </button>
                     </div>
-                    <Patients show={show} handleClose={handleClose} />
+                    <Patients show={showPatients} handleClose={handleClosePatients} />
+                    <Button variant="primary" onClick={handleShow}>testo</Button>
+                    <Therapist show={show} handleClose={handleClose}/>
                 </div>
             </div>
             </>

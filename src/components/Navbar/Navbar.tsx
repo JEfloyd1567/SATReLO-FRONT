@@ -1,10 +1,13 @@
 import { FC } from "react";
+
 import Satrelo from '../../assets/images/satrelo_logo.png';
+import { UserAvatar } from "../UserAvatar/UserAvatar";
 import './Navbar.css';
 
 const Navigation = [ 
   {name: 'Inicio', href: '#'},
-  {name: 'Contacto', href: '#'}
+  {name: 'Contacto', href: '#'},
+  {name: 'Terapeuta', href: '#'},
 ]
 
 interface Props {
@@ -21,16 +24,19 @@ export const Navbar: FC<Props> = ({currentPage = ''}) => {
           alt="Satrelo Logo"
           />
         </a>
-        <div className="collapse navbar-collapse justify-content-end">
+        <div className="collapse navbar-collapse justify-content-end align-self-end">
           <ul className="navbar-nav">
             {
               Navigation.map(({name, href}) => ( 
-                <li className="nav-item">
+                <li className="nav-item" key={name}>
                   <a href={href} className={`nav-link text-primary fw-bold ${currentPage === name && 'active'}`}>{name}</a>
                 </li>   
               ))
             }
           </ul>
+
+          <UserAvatar />
+
         </div>
       </div>
     </nav>

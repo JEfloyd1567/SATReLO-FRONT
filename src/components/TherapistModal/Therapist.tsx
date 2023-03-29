@@ -9,13 +9,14 @@ const Therapist = ({ show, handleClose }: {show:any; handleClose:any}) => {
   }
 
   return (
-    <Modal show={show} onHide={handleClose} className="new-modal align-items-center justify-content-center" backdrop="static" keyboard={false} centered >
+    <Modal show={show} onHide={handleClose} className="new-modalT align-items-center justify-content-center" backdrop="static" keyboard={false} centered >
 
             <Modal.Header
                     style={{
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
+                    border: "none",
                     
                     }}
                 >
@@ -32,9 +33,8 @@ const Therapist = ({ show, handleClose }: {show:any; handleClose:any}) => {
                     {/* inicio de sesión */}
                     <div className="init-Sesion">
                         <div className="text-center">
-                            <h6 className="imagen-init"> Introduzca su contraseña. </h6>
-                            <input type="password" name="password"/>
-                            <Button variant="primary" className="custom-btn">
+                            <input className='rounded-pill inputClickedTera' type="password" name="password"/>
+                            <Button variant="primary" className="custom-btnT">
                                 INICIAR SESIÓN
                             </Button>
                         </div>
@@ -46,6 +46,7 @@ const Therapist = ({ show, handleClose }: {show:any; handleClose:any}) => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
+                    border: "none",
                     }}>
 
             {/* Cerrar*/}

@@ -33,7 +33,10 @@ const Therapist = ({ show, handleClose }: {show:any; handleClose:any}) => {
                     {/* inicio de sesión */}
                     <div className="init-Sesion">
                         <div className="text-center">
-                            <input className='rounded-pill inputClickedTera' type="password" name="password"/>
+                            <input className='rounded-pill inputClickedTera' type="password" name="password" placeholder="CONTRASEÑA" maxLength={10}/>
+                            </div>
+                            <br></br>
+                            <div className="text-center">
                             <Button variant="primary" className="custom-btnT">
                                 INICIAR SESIÓN
                             </Button>

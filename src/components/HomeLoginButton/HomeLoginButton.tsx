@@ -28,8 +28,9 @@ export const HomeLoginButton =()=>{
                         <input className="rounded-pill inputClicked" type="text" placeholder="IDENTIFICACION" maxLength={10} ></input>
                     </div>
                     <div className="clickedBackgroundIcon rounded-circle d-inline col" onClick={handleShow}>
-                        <FontAwesomeIcon icon={faArrowRight} style={{color: "white", width: "30px", height: "30px"}} />
+                        <FontAwesomeIcon  icon={faArrowRight} style={{color: "white", width: "30px", height: "30px"}} />
                     </div>
+                    {/* <Button variant="primary" onClick={handleShow}>testo</Button> */}
                     <Therapist show={show} handleClose={handleClose}/>
                 </div>
             </div>

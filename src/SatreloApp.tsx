@@ -5,6 +5,9 @@ import { HomeLoginButton } from "./components/HomeLoginButton/HomeLoginButton";
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TherapistLayout, TherapistPatientsContent, TherapistPatientsHeader } from "./components";
+import { AllPatientsFooter } from "./components/AllPatientsPage/AllPatientsFooter";
+import { AllPatientsHeader } from "./components/AllPatientsPage/AllPatientsHeader";
+import { AllPatientsPage } from "./components/AllPatientsPage/AllPatientsPage";
 
 function SatreloApp() {
 
@@ -31,12 +34,20 @@ function SatreloApp() {
         </div> */}
      
 
-        <TherapistLayout 
+        {/*<TherapistLayout 
           title="Mis pacientes" 
           header={<TherapistPatientsHeader/>}
         >
           <TherapistPatientsContent/>
-        </TherapistLayout>        
+      </TherapistLayout>*/}
+      <TherapistLayout 
+          title="Todos los pacientes" 
+          header={<AllPatientsHeader/>}
+        >
+          <AllPatientsPage/>
+          <AllPatientsFooter/>
+        </TherapistLayout>
+                
       </div>
     </>
   );

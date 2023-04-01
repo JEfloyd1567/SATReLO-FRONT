@@ -23,7 +23,9 @@ export const TherapistLayout: FC<Props> = ({title, children, header, footer}) =>
       </div>
 
       {/* Box Footer */}
-      {footer}
+      <div className="d-flex flex-row justify-content-end align-items-center">
+        {footer}
+      </div>
 
     </div>
   )

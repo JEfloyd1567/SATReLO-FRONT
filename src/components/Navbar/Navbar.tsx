@@ -5,9 +5,9 @@ import { UserAvatar } from "../UserAvatar/UserAvatar";
 import './Navbar.css';
 
 const Navigation = [ 
-  {name: 'Inicio', href: '#'},
-  {name: 'Contacto', href: '#'},
-  {name: 'Terapeuta', href: '#'},
+  {name: 'Inicio', href: '/'},
+  {name: 'Contacto', href: '/'},
+  {name: 'Terapeuta', href: '/MisPacientes'},
 ]
 
 interface Props {

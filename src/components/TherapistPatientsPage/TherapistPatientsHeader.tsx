@@ -3,7 +3,7 @@
 export const TherapistPatientsHeader = () => {
   return (
     <>
-      <a href="#">Volver</a>
+      <a href="/TodosLosPacientes">Todos Los Pacientes</a>
     </>
   )
 }

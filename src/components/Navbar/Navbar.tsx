@@ -5,9 +5,9 @@ import { UserAvatar } from "../UserAvatar/UserAvatar";
 import './Navbar.css';
 
 const Navigation = [ 
-  {name: 'Inicio', href: '#'},
-  {name: 'Contacto', href: '#'},
-  {name: 'Terapeuta', href: '#'},
+  {name: 'Inicio', href: '/'},
+  {name: 'Contacto', href: '/'},
+  {name: 'Terapeuta', href: '/MisPacientes'},
 ]
 
 interface Props {
@@ -18,7 +18,7 @@ export const Navbar: FC<Props> = ({currentPage = ''}) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white pt-5 border">
       <div className="container fluid align-items-end me-auto">
-        <a href="#" className="navbar-brand">
+        <a href="/" className="navbar-brand">
           <img src={Satrelo}
           height='50'
           alt="Satrelo Logo"

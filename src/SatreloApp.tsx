@@ -4,6 +4,7 @@ import { Home } from "./pages/Home";
 import { TherapistPage } from "./pages/TherapistPage";
 import "./SatreloApp.css"
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { TherapistProfilePage } from "./pages/TherapistProfilePage";
 
 function SatreloApp() {
 
@@ -16,6 +17,7 @@ function SatreloApp() {
         <Route path='/' element={<Home/>}/>
         <Route path='/TodosLosPacientes' element={<AllPatientsInstitutePage/>}/>
         <Route path='/MisPacientes' element={<TherapistPage/>}/>
+        <Route path='/MiPerfil' element={<TherapistProfilePage/>}></Route>
       </Routes>
       </Router>
     </div>

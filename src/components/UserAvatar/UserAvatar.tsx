@@ -8,6 +8,8 @@ interface Props {
 
 export const UserAvatar: FC<Props> = ({size = '2x'}) => {
   return (
-    <FontAwesomeIcon icon={faCircleUser} className="text-primary" size='2x' />
+    <a href='/MiPerfil'>
+      <FontAwesomeIcon icon={faCircleUser} className="text-primary" size='2x' />
+    </a>
   )
 }

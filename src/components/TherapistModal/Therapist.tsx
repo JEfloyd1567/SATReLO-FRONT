@@ -2,6 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons/faChevronLeft';
+import { MyAvatar } from '../MyAvatarTherapist/MyAvatar';
 
 const Therapist = ({ show, handleClose }: {show:any; handleClose:any}) => {
   function handleReset() {
@@ -37,9 +38,11 @@ const Therapist = ({ show, handleClose }: {show:any; handleClose:any}) => {
                             </div>
                             <br></br>
                             <div className="text-center">
-                            <Button variant="primary" className="custom-btnT">
-                                INICIAR SESIÓN
-                            </Button>
+                                <a href='/Avatar'>
+                                    <Button variant="primary" className="custom-btnT">
+                                        INICIAR SESIÓN
+                                    </Button>
+                                </a>
                         </div>
                     </div>    
             </Modal.Body>

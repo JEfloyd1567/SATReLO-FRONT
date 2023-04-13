@@ -1,0 +1,76 @@
+.TodosLosPacientes{
+    font-family: 'Actor';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 24px;
+    text-align: left;
+    color: #000000;
+    
+}
+
+.input-group {
+    display: flex;
+    align-items: center; 
+}
+
+.SearchButton{
+    border-radius: 50px !important;
+}
+  
+.inputBusqueda{
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px
+}
+
+.BuscarPaciente{
+    font-family: 'var(--bs-body-font-family)'!important;
+    font-weight: bold!important;
+    font-size: 20px!important;
+    line-height: 24px!important;
+    color: #000000!important;
+    margin-top: 5px; 
+}
+
+.search-button-text {
+    margin-left: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+.SearchButton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    border-radius: 50px;
+    background-color: #FF673B;
+}
+
+.SearchButton:hover {
+    cursor: pointer!important;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.inputBusqueda {
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin-right: 10px;
+    flex-grow: 1;
+}
+
+.verPacientes{
+
+}

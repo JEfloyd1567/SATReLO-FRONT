@@ -3,6 +3,7 @@ import { AllPatientsInstitutePage } from "./pages/AllPatientsInstitutePage";
 import { Home } from "./pages/Home";
 import { TherapistPage } from "./pages/TherapistPage";
 import "./SatreloApp.css"
+import { MyAvatarTherapist } from "./pages/MyAvararTherapist";
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { TherapistProfilePage } from "./pages/TherapistProfilePage";
 
@@ -17,6 +18,7 @@ function SatreloApp() {
         <Route path='/' element={<Home/>}/>
         <Route path='/TodosLosPacientes' element={<AllPatientsInstitutePage/>}/>
         <Route path='/MisPacientes' element={<TherapistPage/>}/>
+        <Route path='/Avatar' element={<MyAvatarTherapist/>}/>
         <Route path='/MiPerfil' element={<TherapistProfilePage/>}></Route>
       </Routes>
       </Router>

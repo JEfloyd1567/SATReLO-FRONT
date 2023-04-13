@@ -1,13 +1,14 @@
-import { TherapistLayout, TherapistPatientsContent, TherapistPatientsHeader } from "../components";
+import { SearchBox, TherapistLayout, TherapistPatientsContent, TherapistPatientsHeader } from "../components";
 
 
 export const TherapistPage = () => {
     return(
-        <TherapistLayout 
-          title="Mis pacientes" 
-          header={<TherapistPatientsHeader/>}
-        >
-          <TherapistPatientsContent/>
-      </TherapistLayout>
+      <TherapistLayout
+        title=""
+        header={<TherapistPatientsHeader />}
+      >
+      <SearchBox />
+      <TherapistPatientsContent />
+    </TherapistLayout>
     );
 };

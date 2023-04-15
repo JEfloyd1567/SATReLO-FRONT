@@ -1,4 +1,4 @@
-import { TherapistLayout, TherapistPatientsContent, TherapistPatientsHeader } from "../components";
+import { TherapistLayout } from "../components";
 import { AllPatientsFooter } from "../components/AllPatientsPage/AllPatientsFooter";
 import { AllPatientsHeader } from "../components/AllPatientsPage/AllPatientsHeader";
 import { AllPatientsPage } from "../components/AllPatientsPage/AllPatientsPage";
@@ -11,7 +11,7 @@ export const AllPatientsInstitutePage = () => {
       >
       <SearchBox />
       <AllPatientsPage />
-      <div className="d-flex flex-row justify-content-end align-items-center">
+      <div className="d-flex flex-row justify-content-end align-items-center" style={{height: '80px'}}>
         <AllPatientsFooter/>
       </div>
     </TherapistLayout>

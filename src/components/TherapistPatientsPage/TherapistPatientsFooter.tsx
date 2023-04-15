@@ -1,25 +1,21 @@
-import Pagination from 'react-bootstrap/Pagination';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import React, { useState } from 'react';
+import { PaginationControl } from 'react-bootstrap-pagination-control';
 
 export const TherapistPatientsFooter = () => {
-  return (
-    <>
-      <Pagination size="sm">
-      <Pagination.First />
-      <Pagination.Prev />
-      <Pagination.Item>{1}</Pagination.Item>
-      <Pagination.Ellipsis />
+  const [page, setPage] = useState(1)
 
-      <Pagination.Item>{10}</Pagination.Item>
-      <Pagination.Item>{11}</Pagination.Item>
-      <Pagination.Item active>{12}</Pagination.Item>
-      <Pagination.Item>{13}</Pagination.Item>
-      <Pagination.Item disabled>{14}</Pagination.Item>
-
-      <Pagination.Ellipsis />
-      <Pagination.Item>{20}</Pagination.Item>
-      <Pagination.Next />
-      <Pagination.Last />
-      </Pagination>
-    </>
-  )
+  return <PaginationControl
+    page={page}
+    between={4}
+    total={250}
+    limit={10}
+    changePage={(page) => {
+      setPage(page); 
+      console.log(page)
+    }}
+    ellipsis={1}
+    last = {true}
+  />
 }

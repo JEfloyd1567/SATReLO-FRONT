@@ -93,7 +93,7 @@ const Patients = ({ show, handleClose }: {show:any; handleClose:any}) => {
                 >
                 <Modal.Title style={{ fontFamily: 'Abel', fontStyle: 'normal', fontWeight: 400, fontSize: '32px', 
                 lineHeight: '41px', textAlign: 'center', textTransform: 'uppercase' }}>
-                    BIENVENIDO, NOMBRE 
+                    HOLA, NOMBRE 
                 </Modal.Title>
 
                 

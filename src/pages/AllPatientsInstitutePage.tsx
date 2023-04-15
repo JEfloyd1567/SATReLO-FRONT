@@ -6,11 +6,14 @@ import { SearchBox } from "../components/SearchBox/SearchBox";
 export const AllPatientsInstitutePage = () => {
     return(
       <TherapistLayout
-        title=""
-        header={<TherapistPatientsHeader />}
+        title="Todos los Pacientes"
+        header={<AllPatientsHeader />}
       >
       <SearchBox />
-      <TherapistPatientsContent />
+      <AllPatientsPage />
+      <div className="d-flex flex-row justify-content-end align-items-center">
+        <AllPatientsFooter/>
+      </div>
     </TherapistLayout>
     );
 };

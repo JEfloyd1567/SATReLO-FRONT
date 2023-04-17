@@ -88,6 +88,7 @@ const Patients = ({ show, handleClose }: {show:any; handleClose:any}) => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
+                    border: "none",
                     
                     }}
                 >
@@ -138,6 +139,7 @@ const Patients = ({ show, handleClose }: {show:any; handleClose:any}) => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
+                    border: "none",
                     }}>
 
             {/* Cerrar*/}

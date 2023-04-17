@@ -19,10 +19,11 @@ const Therapist = ({ show, handleClose }: {show:any; handleClose:any}) => {
                     alignItems: "center",
                     border: "none",
                     
+                    
                     }}
                 >
                 <Modal.Title style={{ fontFamily: 'Abel', fontStyle: 'normal', fontWeight: 400, fontSize: '32px', 
-                lineHeight: '41px', textAlign: 'center', textTransform: 'uppercase' }}>
+                lineHeight: '41px', textAlign: 'center', textTransform: 'uppercase'}}>
                     HOLA, TERAPEUTA 
                 </Modal.Title>
 

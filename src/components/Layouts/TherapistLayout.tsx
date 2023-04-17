@@ -9,7 +9,7 @@ interface Props {
 
 export const TherapistLayout: FC<Props> = ({title, children, header, footer}) => {
   return (
-    <div className="bg-white w-50 h-auto rounded-3 shadow px-4 py-5 my-5 mx-auto">
+    <div className="bg-white w-50 h-auto rounded-3 shadow my-5 mx-auto px-4 py-5">
 
       {/* Box Header */}
       <div className="d-flex flex-row justify-content-between w-100 mb-4 align-items-center">
@@ -18,7 +18,7 @@ export const TherapistLayout: FC<Props> = ({title, children, header, footer}) =>
       </div>
 
       {/* Box Content */}
-      <div className="container">-+
+      <div className="container justify-content-center">
         {children}
       </div>
 

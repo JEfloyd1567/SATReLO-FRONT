@@ -10,7 +10,7 @@ export const TherapistPage = () => {
       >
       <SearchBox />
       <TherapistPatientsContent />
-      <div className="d-flex flex-row justify-content-end align-items-center">
+      <div className="d-flex flex-row justify-content-end align-items-center" style={{height: '80px'}}>
         <TherapistPatientsFooter/>
       </div>
     </TherapistLayout>

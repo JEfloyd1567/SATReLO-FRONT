@@ -9,7 +9,10 @@ export const AllPatientsInstitutePage = () => {
         title="Todos los Pacientes"
         header={<AllPatientsHeader />}
       >
-      <SearchBox />
+      <div className="d-flex flex-row justify-content-end align-items-center" style={{height: '80px'}}>
+        <SearchBox />
+      </div>
+      
       <AllPatientsPage />
       <div className="d-flex flex-row justify-content-end align-items-center" style={{height: '80px'}}>
         <AllPatientsFooter/>

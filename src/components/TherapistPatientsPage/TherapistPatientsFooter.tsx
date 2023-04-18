@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
 import { PaginationControl } from 'react-bootstrap-pagination-control';
 
-export const AllPatientsFooter = () => {
+export const TherapistPatientsFooter = () => {
   const [page, setPage] = useState(1)
 
   return <PaginationControl

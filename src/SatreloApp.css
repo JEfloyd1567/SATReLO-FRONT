@@ -120,10 +120,11 @@
 .new-modalT .modal-content {
     border: none;
     border-radius: 40px;
-    height: 427px !important;
-    width: 607px !important;
+    height: 400px !important;
+    width: 500px !important;
     text-align: center !important;
-    
+    left: 47px;
+    right: 46px;
 }
 
 .inputClickedTera{
@@ -366,4 +367,20 @@
     border-radius: 20px;
     display: inline-block;
     align-items: center !important;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
 }

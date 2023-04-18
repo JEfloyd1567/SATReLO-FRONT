@@ -11,7 +11,7 @@ function SatreloApp() {
 
   return (
     <>
-    <div className="vh-100 " style={{backgroundColor: '#f5f5f5'}}>
+    <div className="" style={{backgroundColor: '#f5f5f5'}}>
       <Router>
       <Navbar/>
       <Routes>

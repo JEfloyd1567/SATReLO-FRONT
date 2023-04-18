@@ -88,12 +88,13 @@ const Patients = ({ show, handleClose }: {show:any; handleClose:any}) => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
+                    border: "none",
                     
                     }}
                 >
                 <Modal.Title style={{ fontFamily: 'Abel', fontStyle: 'normal', fontWeight: 400, fontSize: '32px', 
                 lineHeight: '41px', textAlign: 'center', textTransform: 'uppercase' }}>
-                    BIENVENIDO, NOMBRE 
+                    HOLA, NOMBRE 
                 </Modal.Title>
 
                 
@@ -138,6 +139,7 @@ const Patients = ({ show, handleClose }: {show:any; handleClose:any}) => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
+                    border: "none",
                     }}>
 
             {/* Cerrar*/}

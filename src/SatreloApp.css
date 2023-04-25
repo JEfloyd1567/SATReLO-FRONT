@@ -6,6 +6,7 @@ html body {
     background-image: url('./assets/images/banner.png');
     display: flex;
     height: 50vh;
+    background: "no-repeat";
 }
 .botonNoClicked{
     display: flex;
@@ -15,7 +16,6 @@ html body {
     top: 375px;
     background-color:#FF673B!important;
     color:white!important;
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -35,7 +35,6 @@ html body {
     top: 375px;
     text-align: center;
     align-items: center;
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -78,7 +77,6 @@ html body {
     justify-content: center;
     text-align: center;
     align-items: center;
-    font-family: 'Abel';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -94,7 +92,6 @@ html body {
     top: 20%;
     padding: 10px 30px;
     border: none !important;
-    font-family: 'Inter' !important;
     font-style: normal !important;
     font-weight: 500 !important;
     font-size: 20px !important;
@@ -130,7 +127,6 @@ html body {
     left: 525px;
     text-align: center;
     align-items: center!important;
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -231,7 +227,6 @@ html body {
     justify-content: center;
     text-align: center;
     align-items: center;
-    font-family: 'Abel';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -295,7 +290,6 @@ html body {
 }
 
 .info-therapist-titleh6{
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;

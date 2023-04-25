@@ -1,21 +1,35 @@
-import { SearchBox, TherapistLayout, TherapistPatientsContent, TherapistPatientsHeader} from "../components";
-import { TherapistPatientsFooter } from "../components/TherapistPatientsPage/TherapistPatientsFooter";
+import { FC } from "react";
+import { TherapistLayout, TherapistPatientsContent, TherapistPatientsHeader} from "../components";
+import { Patient } from "../interfaces";
 
+const patientsData: Patient[] = Array();
 
-export const TherapistPage = () => {
-    return(
-      <TherapistLayout
-        title="Mis Pacientes"
-        header={<TherapistPatientsHeader />}
-      >
-      <div className="d-flex flex-row justify-content-end align-items-center" style={{height: '80px'}}>
-        <SearchBox />
-      </div>
-      
-      <TherapistPatientsContent />
-      <div className="d-flex flex-row justify-content-end align-items-center" style={{height: '80px'}}>
-        <TherapistPatientsFooter/>
-      </div>
-    </TherapistLayout>
-    );
+/***  ONLY FOR TEST PURPOSE ***/
+const numDataTest = 3;
+
+/***  ONLY FOR TEST PURPOSE ***/
+for (let i = 0; i < numDataTest; i++) {
+  const obj: Patient = {
+    picture: '',
+    name: `Sebastian Mena Ferreira ${i+1}`,
+    fromDate: 'DD/MM/YYYY',
+    profileUrl: '#'
+  };
+  patientsData.push(obj);
+}
+
+interface Props {
+  target?: 'all' | 'own';
+}
+
+export const TherapistPage: FC<Props> = ({target = 'all'}) => {
+  return(
+    <TherapistLayout
+      header={<TherapistPatientsHeader target={target} />}
+    >
+    
+    <TherapistPatientsContent patients={patientsData} />
+
+  </TherapistLayout>
+  );
 };

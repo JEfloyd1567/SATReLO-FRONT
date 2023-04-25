@@ -1,28 +1,33 @@
+import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
+
 import { Navbar } from "./components/Navbar/Navbar";
-import { AllPatientsInstitutePage } from "./pages/AllPatientsInstitutePage";
 import { Home } from "./pages/Home";
 import { TherapistPage } from "./pages/TherapistPage";
-import "./SatreloApp.css"
 import { MyAvatarTherapist } from "./pages/MyAvararTherapist";
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { TherapistProfilePage } from "./pages/TherapistProfilePage";
 
+import "./SatreloApp.css"
+import { useAuthStore } from './hooks';
+
 function SatreloApp() {
+  const {status} = useAuthStore()
 
   return (
     <>
-    <div className="" style={{backgroundColor: '#f5f5f5'}}>
-      <Router>
-      <Navbar/>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/TodosLosPacientes' element={<AllPatientsInstitutePage/>}/>
-        <Route path='/MisPacientes' element={<TherapistPage/>}/>
-        <Route path='/Avatar' element={<MyAvatarTherapist/>}/>
-        <Route path='/MiPerfil' element={<TherapistProfilePage/>}></Route>
-      </Routes>
-      </Router>
-    </div>
+        <div>
+          <Router>
+            <Navbar/>
+            <Routes>
+                <Route path='/' element={<Home/>}/>
+                <Route path='/*' element={<Navigate to='/'/>} />
+                <Route path='/TodosLosPacientes' element={<TherapistPage/>}/>
+                <Route path='/MisPacientes' element={<TherapistPage target="own" />}/>
+                <Route path='/Avatar' element={<MyAvatarTherapist/>}/>
+                <Route path='/MiPerfil' element={<TherapistProfilePage/>}></Route>
+                <Route path='/*' element={<TherapistPage />} />
+            </Routes>
+          </Router>
+        </div>
     </>
   );
 }

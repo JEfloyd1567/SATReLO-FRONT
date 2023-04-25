@@ -1,47 +1,61 @@
+import { FC, useState } from "react";
+
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { PaginationControl } from "react-bootstrap-pagination-control";
+import { Patient } from "../../interfaces";
 
+interface Props {
+  patients: Patient[];
+}
 
-export const TherapistPatientsContent = () => {
+export const TherapistPatientsContent: FC<Props> = ({patients}) => {
 
+  const patientsPerPage = 6;
+  const [activePage, setActivePage] = useState(1);
+
+  const indexOfLastCard = activePage * patientsPerPage;
+  const indexOfFirstCard = indexOfLastCard - patientsPerPage;
+  const currentPatients = patients.slice(indexOfFirstCard, indexOfLastCard);
+      
   return (
-    <div className="row row-cols-3 d-flex justify-content-between gy-5">
-      <div className="col border shadow rounded-3 p-3 d-flex flex-column align-items-center" style={{maxWidth: '200px'}}>
-        <FontAwesomeIcon icon={faCircleUser} className='text-primary mb-3' size="7x" />
-        <p className="fw-bold align-bottom">Nombre Paciente</p>
-        <p>Desde: DD/MM/YYYY</p>
-        <a href='#' >Ver Perfil</a>
+    <>
+      <div className="row row-cols-3 gy-4 d-flex align-items-center h-auto">
+        { 
+          currentPatients.map( ({name, fromDate, profileUrl}, index) => (
+          <div className="col d-flex justify-content-center" key={index}>
+            <div className="border shadow rounded-3 px-5 py-3 d-inline-flex flex-column align-items-center" >
+              <FontAwesomeIcon icon={faCircleUser} className='text-primary mb-3' size="7x" />
+              <p className="fw-bold align-bottom">{name}</p>
+              <p>{fromDate}</p>
+              <a href={`${profileUrl}`} >Ver Perfil</a>
+            </div>
+          </div>
+          ))
+        }
+
+        {
+          patients.length < 1 &&
+          <div className="col-12 h-auto my-auto align-items-center d-flex justify-content-center">
+            <h2 className="fw-lighter fst-italic">Aun no se han registrado pacientes</h2>
+          </div>
+        }
+
       </div>
-      <div className="col border shadow rounded-3 p-3 d-flex flex-column align-items-center" style={{maxWidth: '200px'}}>
-        <FontAwesomeIcon icon={faCircleUser} className='text-primary mb-3' size="7x" />
-        <p className="fw-bold">Nombre Paciente</p>
-        <p>Desde: DD/MM/YYYY</p>
-        <a href='#' >Ver Perfil</a>
-      </div>
-      <div className="col border shadow rounded-3 p-3 d-flex flex-column align-items-center" style={{maxWidth: '200px'}}>
-        <FontAwesomeIcon icon={faCircleUser} className='text-primary mb-3' size="7x" />
-        <p className="fw-bold">Nombre Paciente</p>
-        <p>Desde: DD/MM/YYYY</p>
-        <a href='#' >Ver Perfil</a>
-      </div>
-      <div className="col border shadow rounded-3 p-3 d-flex flex-column align-items-center" style={{maxWidth: '200px'}}>
-        <FontAwesomeIcon icon={faCircleUser} className='text-primary mb-3' size="7x" />
-        <p className="fw-bold align-bottom">Nombre Paciente</p>
-        <p>Desde: DD/MM/YYYY</p>
-        <a href='#' >Ver Perfil</a>
-      </div>
-      <div className="col border shadow rounded-3 p-3 d-flex flex-column align-items-center" style={{maxWidth: '200px'}}>
-        <FontAwesomeIcon icon={faCircleUser} className='text-primary mb-3' size="7x" />
-        <p className="fw-bold">Nombre Paciente</p>
-        <p>Desde: DD/MM/YYYY</p>
-        <a href='#' >Ver Perfil</a>
-      </div>
-      <div className="col border shadow rounded-3 p-3 d-flex flex-column align-items-center" style={{maxWidth: '200px'}}>
-        <FontAwesomeIcon icon={faCircleUser} className='text-primary mb-3' size="7x" />
-        <p className="fw-bold">Nombre Paciente</p>
-        <p>Desde: DD/MM/YYYY</p>
-        <a href='#' >Ver Perfil</a>
-      </div>
-    </div>
+
+      {/* PAGINATION */}
+      {(patients.length > 0) &&
+        <div className="d-flex justify-content-end mt-4 me-4">
+          <PaginationControl
+            page={activePage}
+            total={patients.length}
+            limit={6}
+            changePage={(page) => setActivePage(page)}
+            ellipsis={1}
+            last = {true}
+          />
+        </div>
+      }
+    </>
   )
 }

@@ -27,7 +27,7 @@
 }
 
 .BuscarPaciente{
-    font-family: 'var(--bs-body-font-family)'!important;
+    /* font-family: 'var(--bs-body-font-family)'!important; */
     font-weight: bold!important;
     font-size: 20px!important;
     line-height: 24px!important;
@@ -67,8 +67,9 @@
     border: 1px solid #CCCCCC;
     box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-    margin-right: 10px;
+    margin: 0px 20px;
     flex-grow: 1;
+    padding: 3px 10px;
 }
 
 .verPacientes{

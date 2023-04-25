@@ -28,7 +28,6 @@ export const HomeLoginButton =()=>{
         setShow(true)
     };
 
-
     const handleClosePatients = () => setShowPatients(false);
     const handleShowPatients = () => {
         if (inputValue === '') {
@@ -69,7 +68,7 @@ export const HomeLoginButton =()=>{
                             <div className="clickedBackgroundIcon rounded-circle d-inline-flex justify-content-center align-items-center h-auto" onClick={handleShow}>
                                 <FontAwesomeIcon  icon={faArrowRight} style={{color: "white", width: "30px", height: "30px"}} />
                             </div>
-                            <Therapist show={show} handleClose={handleClose}/>
+                            <Therapist show={show} handleClose={handleClose} identification={inputValue} />
 
                             <div className="clickedBackgroundIcon rounded-circle d-inline-flex justify-content-center align-items-center" onClick={handleShowPatients}>
                                 <FontAwesomeIcon  icon={faArrowRight} style={{color: "white", width: "30px", height: "30px"}} />

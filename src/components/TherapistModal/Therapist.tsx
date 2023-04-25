@@ -2,13 +2,18 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons/faChevronLeft';
-import { MyAvatar } from '../MyAvatarTherapist/MyAvatar';
 import { ErrorToast } from '../Toasts/ErrorToast';
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, FC, useState } from 'react';
 import { useAuthStore } from '../../hooks/useAuthSlice';
 import { IUserLogin } from '../../interfaces/users';
 
-const Therapist = ({ show, handleClose }: {show:any; handleClose:any}) => {
+interface Props {
+    show: boolean;
+    handleClose: () => void;
+    identification: string;
+}
+
+const Therapist: FC<Props> = ({ show, handleClose, identification }) => {
     const [showErrorToast, setShowErrorToast] = useState(false);
     const [inputPassword, setInputPassword] = useState('');
 
@@ -32,12 +37,7 @@ const Therapist = ({ show, handleClose }: {show:any; handleClose:any}) => {
             return;
         }
 
-        const credentials: IUserLogin = {
-            username: 'sebastian',
-            password: '111111'
-        }
-
-        startLogin(credentials);
+        startLogin({username: identification,password: inputPassword});
     }
 
     return (

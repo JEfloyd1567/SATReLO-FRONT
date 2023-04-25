@@ -16,16 +16,27 @@ export const useAuthStore = () => {
       const {data} = await satreloLoginAPI.post('/login', {username, password})
       console.log(data);
     
+      // dispatch(onLogin({name: 'Therapist Name', role:'therapist'}))
     } catch (error) {
       console.log({error});
     }
 
+    localStorage.setItem('user', username);
     dispatch(onLogin({name: 'Therapist Name', role:'therapist'}))
-      
   }
 
   const startLogout = () => {
-    dispatch(onLogout())
+    localStorage.clear();
+    dispatch(onLogout());
+  }
+
+  const checkAuth = () => {
+    const user = localStorage.getItem('user');
+
+    if (!user) return;
+
+    dispatch(onLogin({name: 'Therapist Name', role:'therapist'}))
+
   }
 
   return {
@@ -35,6 +46,7 @@ export const useAuthStore = () => {
 
     // *Methods
     startLogin,
-    startLogout
+    startLogout,
+    checkAuth
   }
 }

@@ -37,7 +37,7 @@ export const TherapistPatientsContent: FC<Props> = ({patients}) => {
         {
           patients.length < 1 &&
           <div className="col-12 h-auto my-auto align-items-center d-flex justify-content-center">
-            <h2 className="fw-lighter fst-italic">Aun no se han registrado pacientes</h2>
+            <h2 className="fw-lighter fst-italic">Aun no hay pacientes registrados</h2>
           </div>
         }
 

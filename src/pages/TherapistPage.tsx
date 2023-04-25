@@ -5,13 +5,13 @@ import { Patient } from "../interfaces";
 const patientsData: Patient[] = Array();
 
 /***  ONLY FOR TEST PURPOSE ***/
-const numDataTest = 3;
+const numDataTest = 0;
 
 /***  ONLY FOR TEST PURPOSE ***/
 for (let i = 0; i < numDataTest; i++) {
   const obj: Patient = {
     picture: '',
-    name: `Sebastian Mena Ferreira ${i+1}`,
+    name: `Paciente ${i+1}`,
     fromDate: 'DD/MM/YYYY',
     profileUrl: '#'
   };

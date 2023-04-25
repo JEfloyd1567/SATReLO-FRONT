@@ -1,8 +1,9 @@
+import { ChangeEvent, useState } from "react";
+
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ChangeEvent, useState } from "react";
+
 import Therapist from "../TherapistModal/Therapist";
-import Button from 'react-bootstrap/Button';
 import Patients from "../Patients/Patients";
 import { ErrorToast } from "../Toasts/ErrorToast";
 
@@ -57,7 +58,6 @@ export const HomeLoginButton =()=>{
             <div className="container" style={{maxWidth: '460px'}}>
                 
                 <div className="row d-inline-flex justify-content-center">
-                    {/* Error message toast  */}
                     {
                         showErrorToast &&
                         <ErrorToast msg="Debe ingresar una identificacion valida" handleCloseBtnClick={handleCloseErrorToast} />

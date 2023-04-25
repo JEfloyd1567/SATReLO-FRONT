@@ -77,9 +77,6 @@ const Patients = ({ show, handleClose }: {show:any; handleClose:any}) => {
         setIconPress(1);
       };
     
-    // console.log(pressedButtons);
-    // console.log("icon: ",iconCount);
-    
     return(
         <Modal show={show} onHide={handleClose} className="new-modal align-items-center justify-content-center" backdrop="static" keyboard={false} centered >
 

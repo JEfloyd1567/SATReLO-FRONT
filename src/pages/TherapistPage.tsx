@@ -5,7 +5,7 @@ import { Patient } from "../interfaces";
 const patientsData: Patient[] = Array();
 
 /***  ONLY FOR TEST PURPOSE ***/
-const numDataTest = 0;
+const numDataTest = 1;
 
 /***  ONLY FOR TEST PURPOSE ***/
 for (let i = 0; i < numDataTest; i++) {

@@ -52,7 +52,7 @@ export const HomeLoginButton =()=>{
         <div className="position-absolute bottom-0 start-50 homeLoginButton translate-middle-x">
         {
             (!clicked)?
-            <button className="btn rounded-pill botonNoClicked " onClick={handleButtonClick}>INICIAR SESION</button>
+            <button className="btn rounded-pill botonNoClicked " onClick={handleButtonClick}>INICIAR SESIÓN</button>
             :
 
             <div className="container" style={{maxWidth: '460px'}}>
@@ -63,7 +63,7 @@ export const HomeLoginButton =()=>{
                         <ErrorToast msg="Debe ingresar una identificacion valida" handleCloseBtnClick={handleCloseErrorToast} />
                     }
                     <div className="col d-flex">
-                        <input className="rounded-pill inputClicked" type="text" value={inputValue} onChange={handleInputChange} placeholder="IDENTIFICACION" maxLength={10} ></input>
+                        <input className="rounded-pill inputClicked" type="text" value={inputValue} onChange={handleInputChange} placeholder="IDENTIFICACIÓN" maxLength={10} ></input>
                         <div className="d-inline-flex">
                             <div className="clickedBackgroundIcon rounded-circle d-inline-flex justify-content-center align-items-center h-auto" onClick={handleShow}>
                                 <FontAwesomeIcon  icon={faArrowRight} style={{color: "white", width: "30px", height: "30px"}} />

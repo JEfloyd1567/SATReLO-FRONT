@@ -14,6 +14,7 @@ export const useAuthStore = () => {
 
     dispatch(clearErrorMessage());
 
+
     try {
       const {data} = await satreloLoginAPI.post('/login', {username, password})
 

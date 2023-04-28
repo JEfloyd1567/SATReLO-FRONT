@@ -3,15 +3,14 @@ import { IUser } from "../../interfaces";
 
 interface authState {
   status: string;
-  user: IUser;
+  user: IUser | undefined;
+  errorMessage: string | undefined;
 }
 
 const initialState: authState = {
   status: 'not-authenticated',
-  user: {
-    name: '',
-    role: undefined
-  }
+  user: undefined,
+  errorMessage: undefined
 }
 
 export const authSlice = createSlice({
@@ -21,16 +20,18 @@ export const authSlice = createSlice({
     onLogin: (state, action: PayloadAction<IUser>) => {
       state.status = 'authenticated'
       state.user = action.payload
+      state.errorMessage = undefined
     },
-    onLogout: (state) => {
+    onLogout: (state, action: PayloadAction<string | undefined>) => {
       state.status = 'not-authenticated'
-      state.user = {
-        name: '',
-        role: undefined 
-      }
+      state.user = undefined
+      state.errorMessage = action.payload
+    },
+    clearErrorMessage: (state) => {
+      state.errorMessage = undefined
     }
   }
 });
 
-export const {onLogin, onLogout} = authSlice.actions;
+export const {onLogin, onLogout, clearErrorMessage} = authSlice.actions;
 export default authSlice.reducer;

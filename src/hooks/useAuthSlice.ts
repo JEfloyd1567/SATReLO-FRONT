@@ -1,28 +1,36 @@
 import { useDispatch, useSelector } from "react-redux"
 import satreloLoginAPI from "../api/satreloLoginAPI";
-import { onLogin, onLogout } from "../store/auth/authSlice";
+import { clearErrorMessage, onLogin, onLogout } from "../store/auth/authSlice";
 import { RootState } from '../store/store';
 import { IUserLogin } from '../interfaces/users';
+import axios from "axios";
 
 export const useAuthStore = () => {
 
-  const {status, user} = useSelector((state: RootState) => state.auth);
+  const {status, user, errorMessage} = useSelector((state: RootState) => state.auth);
   const dispatch = useDispatch();  
 
   const startLogin = async({username, password}: IUserLogin) => {
-    console.log({username, password});
+
+    dispatch(clearErrorMessage());
 
     try {
       const {data} = await satreloLoginAPI.post('/login', {username, password})
-      console.log(data);
-    
-      // dispatch(onLogin({name: 'Therapist Name', role:'therapist'}))
-    } catch (error) {
-      console.log({error});
-    }
 
-    localStorage.setItem('user', username);
-    dispatch(onLogin({name: 'Therapist Name', role:'therapist'}))
+      localStorage.setItem('token', data.token);
+      dispatch(onLogin({name: 'Therapist Name', role:'therapist'}))
+    
+    } catch (error) {
+
+      if (axios.isAxiosError(error)) {
+        const {message} = error.response?.data
+
+        dispatch(onLogout(message));
+      } else {
+        console.log(error);
+        dispatch(onLogout());
+      }
+    }
   }
 
   const startLogout = () => {
@@ -30,10 +38,10 @@ export const useAuthStore = () => {
     dispatch(onLogout());
   }
 
-  const checkAuth = () => {
-    const user = localStorage.getItem('user');
+  const checkAuth = async() => {
+    const token = localStorage.getItem('token');
 
-    if (!user) return;
+    if (!token) return;
 
     dispatch(onLogin({name: 'Therapist Name', role:'therapist'}))
 
@@ -43,6 +51,7 @@ export const useAuthStore = () => {
     // *Props
     status,
     user,
+    errorMessage,
 
     // *Methods
     startLogin,

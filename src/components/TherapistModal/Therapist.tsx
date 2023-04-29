@@ -3,7 +3,7 @@ import Modal from 'react-bootstrap/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons/faChevronLeft';
 import { ErrorToast } from '../Toasts/ErrorToast';
-import { ChangeEvent, FC, useState } from 'react';
+import { ChangeEvent, FC, useEffect, useState } from 'react';
 import { useAuthStore } from '../../hooks/useAuthSlice';
 import { IUserLogin } from '../../interfaces/users';
 
@@ -15,15 +15,21 @@ interface Props {
 
 const Therapist: FC<Props> = ({ show, handleClose, identification }) => {
     const [showErrorToast, setShowErrorToast] = useState(false);
-    const [inputPassword, setInputPassword] = useState('');
+    const [inputPassword,  setInputPassword] = useState('');
+    const [toastErrorMessage, setToastErrorMessage] = useState('')
 
-    const {startLogin} = useAuthStore();
+    const {startLogin, errorMessage} = useAuthStore();
 
     function handleReset() {
-        throw new Error('Function not implemented.');
+        setShowErrorToast(false);
+        setToastErrorMessage('');
+        setInputPassword('');
     }
 
-    const handleCloseToast = () => setShowErrorToast(false);
+    const handleCloseToast = () => {
+        setShowErrorToast(false);
+        setToastErrorMessage('');
+    }
 
     const handleInputPasswordChange = (event: ChangeEvent<HTMLInputElement>) => {
         const value = event.target.value;
@@ -33,12 +39,22 @@ const Therapist: FC<Props> = ({ show, handleClose, identification }) => {
 
     const handleLoginBtnClick = () => {
         if (inputPassword === '') {
+            setToastErrorMessage('Debe ingresar su contraseña');
             setShowErrorToast(true);
             return;
         }
 
         startLogin({username: identification,password: inputPassword});
     }
+
+    useEffect(() => {
+        if (errorMessage !== undefined) {
+            setShowErrorToast(true);
+            setToastErrorMessage(errorMessage);
+        }
+      
+    }, [errorMessage])
+    
 
     return (
         <Modal show={show} onHide={handleClose} className="new-modalT align-items-center justify-content-center" backdrop="static" keyboard={false} centered >
@@ -67,7 +83,7 @@ const Therapist: FC<Props> = ({ show, handleClose, identification }) => {
                         <div className='d-flex flex-column justify-content-center w-75 mx-auto' style={{minHeight: "64px"}}>
                             {
                                 showErrorToast && 
-                                <ErrorToast msg='Contrasena invalida' handleCloseBtnClick={handleCloseToast} />
+                                <ErrorToast msg={toastErrorMessage} handleCloseBtnClick={handleCloseToast} />
                             }
                         </div>
 

@@ -46,7 +46,7 @@ export const Navbar: FC<Props> = ({currentPage = ''}) => {
 
                   
                   <li className="nav-item">
-                    <a href='#' className={`nav-link text-primary fw-bold active`}>{user.name}</a>
+                    <a href='#' className={`nav-link text-primary fw-bold active`}>{user?.name}</a>
                   </li>
 
                   <UserAvatar />

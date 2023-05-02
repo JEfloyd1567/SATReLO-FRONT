@@ -18,7 +18,7 @@ const Therapist: FC<Props> = ({ show, handleClose, identification }) => {
     const [inputPassword,  setInputPassword] = useState('');
     const [toastErrorMessage, setToastErrorMessage] = useState('')
 
-    const {startLogin, errorMessage} = useAuthStore();
+    const {startLogin, errorMessage, status} = useAuthStore();
 
     function handleReset() {
         setShowErrorToast(false);
@@ -89,7 +89,20 @@ const Therapist: FC<Props> = ({ show, handleClose, identification }) => {
 
                         <div className='align-self-baseline'>
                             <input className='rounded-pill inputClickedTera mb-3' type="password" value={inputPassword} onChange={handleInputPasswordChange} name="password" placeholder="CONTRASEÑA" maxLength={10}/>
-                            <Button variant="primary" onClick={handleLoginBtnClick} className="custom-btnT">INICIAR SESIÓN</Button>
+                            <Button variant="primary" onClick={handleLoginBtnClick} className={`custom-btnT ${(status==='checking')?'disabled':''}`} >
+                                {/* INICIAR SESIÓN */}
+                                {
+                                    (status === 'checking') 
+                                    ? (
+                                        <div className="spinner-border text-light" role="status">
+                                            <span className="visually-hidden">Loading...</span>
+                                        </div>
+                                    )
+                                    : (
+                                        'INICIAR SESIÓN'
+                                    )
+                                }
+                            </Button>
                         </div>
                 </Modal.Body>
 

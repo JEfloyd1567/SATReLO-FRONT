@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import satreloLoginAPI from "../api/satreloLoginAPI";
-import { clearErrorMessage, onLogin, onLogout } from "../store/auth/authSlice";
+import { clearErrorMessage, onChecking, onLogin, onLogout } from "../store/auth/authSlice";
 import { RootState } from '../store/store';
 import { IUserLogin } from '../interfaces/users';
 import axios from "axios";
@@ -13,25 +13,29 @@ export const useAuthStore = () => {
   const startLogin = async({username, password}: IUserLogin) => {
 
     dispatch(clearErrorMessage());
-
+    dispatch(onChecking());
 
     try {
-      const {data} = await satreloLoginAPI.post('/login', {username, password})
+      const {data} = await satreloLoginAPI.post('/login', {personalId: username, password})
 
       localStorage.setItem('token', data.token);
+
       dispatch(onLogin({name: 'Therapist Name', role:'therapist'}))
-    
     } catch (error) {
 
       if (axios.isAxiosError(error)) {
         const {message} = error.response?.data
 
+        console.log(message);
+        
         dispatch(onLogout(message));
       } else {
         console.log(error);
         dispatch(onLogout());
       }
     }
+
+
   }
 
   const startLogout = () => {

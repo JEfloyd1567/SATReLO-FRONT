@@ -49,36 +49,35 @@ export const HomeLoginButton =()=>{
 
     return(
         <>
-        <div className="position-absolute bottom-0 start-50 homeLoginButton translate-middle-x">
+        <div className="d-flex h-100 align-items-end pb-5">
         {
             (!clicked)?
             <button className="btn rounded-pill botonNoClicked " onClick={handleButtonClick}>INICIAR SESIÓN</button>
             :
 
-            <div className="container" style={{maxWidth: '460px'}}>
-                
-                <div className="row d-inline-flex justify-content-center">
-                    {
-                        showErrorToast &&
-                        <ErrorToast msg="Debe ingresar una identificacion valida" handleCloseBtnClick={handleCloseErrorToast} />
-                    }
-                    <div className="col d-flex">
-                        <input className="rounded-pill inputClicked" type="text" value={inputValue} onChange={handleInputChange} placeholder="IDENTIFICACIÓN" maxLength={10} ></input>
-                        <div className="d-inline-flex">
-                            <div className="clickedBackgroundIcon rounded-circle d-inline-flex justify-content-center align-items-center h-auto" onClick={handleShow}>
-                                <FontAwesomeIcon  icon={faArrowRight} style={{color: "white", width: "30px", height: "30px"}} />
-                            </div>
-                            <Therapist show={show} handleClose={handleClose} identification={inputValue} />
-
-                            <div className="clickedBackgroundIcon rounded-circle d-inline-flex justify-content-center align-items-center" onClick={handleShowPatients}>
-                                <FontAwesomeIcon  icon={faArrowRight} style={{color: "white", width: "30px", height: "30px"}} />
-                            </div>
-
-                            <Patients show={showPatients} handleClose={handleClosePatients}/>
-                        </div>
-                    </div>
-                    
+            <div className="d-flex flex-column justify-content-start ">
+                <div className="d-flex">
+                {
+                    showErrorToast &&
+                    <ErrorToast msg="Debe ingresar una identificacion valida" handleCloseBtnClick={handleCloseErrorToast} />
+                }
                 </div>
+                <div className="d-flex ">
+                    <input className="rounded-pill inputClicked " type="text" value={inputValue} onChange={handleInputChange} placeholder="IDENTIFICACIÓN" maxLength={10} ></input>
+                    <div className="d-inline-flex">
+                        <div className="clickedBackgroundIcon rounded-circle d-inline-flex justify-content-center align-items-center h-auto" onClick={handleShow}>
+                            <FontAwesomeIcon  icon={faArrowRight} style={{color: "white", width: "30px", height: "30px"}} />
+                        </div>
+                        <Therapist show={show} handleClose={handleClose} identification={inputValue} />
+
+                        {/* <div className="clickedBackgroundIcon rounded-circle d-inline-flex justify-content-center align-items-center" onClick={handleShowPatients}>
+                            <FontAwesomeIcon  icon={faArrowRight} style={{color: "white", width: "30px", height: "30px"}} />
+                        </div> 
+
+                        <Patients show={showPatients} handleClose={handleClosePatients}/> */}
+                    </div>
+                </div>
+                
             </div>
         }
         </div>

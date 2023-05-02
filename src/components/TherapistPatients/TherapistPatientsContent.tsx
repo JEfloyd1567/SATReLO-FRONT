@@ -3,10 +3,11 @@ import { FC, useState } from "react";
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { PaginationControl } from "react-bootstrap-pagination-control";
-import { Patient } from "../../interfaces";
+import { IPatient } from '../../interfaces/patients';
+
 
 interface Props {
-  patients: Patient[];
+  patients: IPatient[];
 }
 
 export const TherapistPatientsContent: FC<Props> = ({patients}) => {
@@ -20,13 +21,13 @@ export const TherapistPatientsContent: FC<Props> = ({patients}) => {
       
   return (
     <>
-      <div className="row row-cols-3 gy-4 d-flex align-items-center h-auto">
+      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 gy-4 d-flex align-items-center h-auto">
         { 
           currentPatients.map( ({name, fromDate, profileUrl}, index) => (
-          <div className="col d-flex justify-content-center" key={index}>
-            <div className="border shadow rounded-3 px-5 py-3 d-inline-flex flex-column align-items-center" >
+          <div className="col d-flex justify-content-center" key={index} >
+            <div className="border shadow rounded-3 px-2 py-3 d-inline-flex flex-column align-items-center "  style={{width: '260px'}}>
               <FontAwesomeIcon icon={faCircleUser} className='text-primary mb-3' size="7x" />
-              <p className="fw-bold align-bottom">{name}</p>
+              <p className="fw-bold align-bottom text-center">{name}</p>
               <p>{fromDate}</p>
               <a href={`${profileUrl}`} >Ver Perfil</a>
             </div>

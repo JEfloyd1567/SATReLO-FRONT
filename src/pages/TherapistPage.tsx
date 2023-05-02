@@ -1,19 +1,19 @@
 import { FC } from "react";
-import { TherapistLayout, TherapistPatientsContent, TherapistPatientsHeader} from "../components";
-import { Patient } from "../interfaces";
+import {  BoxContentLayout, TherapistPatientsContent, TherapistPatientsHeader} from "../components";
+import { IPatient } from '../interfaces/patients';
 
-const patientsData: Patient[] = Array();
+const patientsData: IPatient[] = Array();
 
 /***  ONLY FOR TEST PURPOSE ***/
-const numDataTest = 1;
+const numDataTest = 7;
 
 /***  ONLY FOR TEST PURPOSE ***/
 for (let i = 0; i < numDataTest; i++) {
-  const obj: Patient = {
+  const obj: IPatient = {
     picture: '',
-    name: `Paciente ${i+1}`,
+    name: `Nombre del paciente ${i+1}`,
     fromDate: 'DD/MM/YYYY',
-    profileUrl: '#'
+    profileUrl: '/PatientProfile'
   };
   patientsData.push(obj);
 }
@@ -24,12 +24,12 @@ interface Props {
 
 export const TherapistPage: FC<Props> = ({target = 'all'}) => {
   return(
-    <TherapistLayout
+    <BoxContentLayout
       header={<TherapistPatientsHeader target={target} />}
     >
     
     <TherapistPatientsContent patients={patientsData} />
 
-  </TherapistLayout>
+  </BoxContentLayout>
   );
 };

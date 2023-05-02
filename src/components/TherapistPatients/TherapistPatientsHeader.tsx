@@ -10,7 +10,7 @@ export const TherapistPatientsHeader: FC<Props> = ({target}) => {
   return (
     <>
       <div className="d-flex flex-column w-100">
-        <div className="d-flex justify-content-between align-items-center">
+        <div className="d-flex flex-column justify-content-start align-items-start align-items-sm-center flex-sm-row justify-content-sm-between">
           <h2 className="fw-bold">{(target === 'all')?'Todos los pacientes':'Mis pacientes'}</h2>
           <a href={`/${(target === 'all')?'MisPacientes':'TodosLosPacientes'}`}>{(target === 'all')?'Ver mis pacientes':'Todos los pacientes'}</a>
         </div>

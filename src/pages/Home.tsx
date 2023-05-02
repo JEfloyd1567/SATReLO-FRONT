@@ -3,7 +3,7 @@ import { HomeLoginButton } from "../components/HomeLoginButton/HomeLoginButton";
 export const Home = () => {
     return(
         <>
-        <div className="position-relative banner-background">
+        <div className="d-flex banner-background justify-content-center align-items-baseline">
             <HomeLoginButton/>
         </div>
         <div className="mx-auto w-50">

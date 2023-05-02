@@ -7,7 +7,6 @@ interface Props {
 
 export const BoxContentLayout: FC<Props> = ({children, header}) => {
   return (
-    // <div className="h-100 bg-white w-50 w-sm-50 rounded-3 shadow my-5 mx-auto px-4 pt-4 pb-3 " style={{minHeight: '512px'}}>
      <div className="h-100 bg-white col-12 col-md-12 col-lg-10 col-xxl-7 rounded-3 shadow my-5 mx-auto px-4 pt-4 pb-3 " style={{minHeight: '512px'}}>
 
       {/* Box Header */}

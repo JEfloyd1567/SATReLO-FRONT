@@ -9,8 +9,8 @@ export const Home = () => {
         <div className="mx-auto w-50">
 
             <div className='Bienvenido-container fw-bold my-3' id = 'bienvenido'>
-                Bienvenidos a la aplicacion de apoyo a la 
-                rehabilitacion del lenguaje oral
+                Bienvenidos a la aplicación de apoyo a la 
+                rehabilitación del lenguaje oral
             </div>
             <div className='texto-container' id = 'texto'>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. 

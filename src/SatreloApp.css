@@ -372,3 +372,156 @@ a:hover {
 a:active {
     text-decoration: none;
 }
+
+.createActivitiesBG{
+    position: absolute;
+    width: 1336px;
+    height: 1650px;
+    left: 0px;
+    top: 122px;
+
+    background: #F1EEEE;
+}
+
+.createActivities{
+    position: absolute;
+    width: 920px;
+    height: 1580px;
+    left: 208px;
+    top: 144px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivityPatient{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 80px;
+    left: 253px;
+    top: 218px;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity1{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 205px;
+    left: 253px;
+    top: 316px;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity2{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 205px;
+    left: 253px;
+    top: 539px;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity3{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 140px;
+    left: 253px;
+    top: 762px;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity4{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 363px;
+    left: 253px;
+    top: 920px;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity5{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 140px;
+    left: 253px;
+    top: 1301px;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity6{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 140px;
+    left: 253px;
+    top: 1301px;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity7{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 140px;
+    left: 253px;
+    top: 1459px;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+.createActivityButton{
+    position: absolute;
+    width: 196px;
+    height: 41.68px;
+    left: 570px;
+    top: 1628px;
+
+    background: #FF673B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}

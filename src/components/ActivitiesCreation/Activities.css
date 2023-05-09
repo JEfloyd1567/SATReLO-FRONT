@@ -1,0 +1,650 @@
+.createActivitiesBG{
+    position: absolute;
+    width: 1336px;
+    height: 1650px;
+    left: 0px;
+    top: 122px;
+
+    background: #F1EEEE;
+}
+
+.createActivities{
+    position: absolute;
+    width: 920px;
+    height: 1580px;
+    left: 208px;
+    top: 144px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.createActivitiesTitle{
+    position: absolute;
+    width: 607px;
+    height: 100px;
+    left: 26px;
+    top: 183px;
+    
+    font-family: 'Actor';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    
+    color: #000000;
+}
+
+.boxActivityPatient{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 80px;
+    left: 253px;
+    top: 218px;
+    
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivityPatientTitle{
+    position: absolute;
+    width: 124px;
+    height: 20.67px;
+    left: 288px;
+    top: 248px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+}
+
+.boxActivityPatientName{
+    position: absolute;
+    width: 242px;
+    height: 21px;
+    left: 485px;
+    top: 248px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+}
+
+/* Activity 1*/
+
+.boxActivity1{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 205px;
+    left: 253px;
+    top: 316px;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity1Title{
+    position: absolute;
+    width: 230px;
+    height: 19px;
+    left: 288px;
+    top: 339px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+}
+
+.boxActivity1Btn1{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 288px;
+    top: 376px;
+
+    /*background: url();*/
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+}
+
+.boxActivity1Btn2{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 485px;
+    top: 376px;
+
+    /*background: url();*/
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+}
+
+.boxActivity1Btn3{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 689px;
+    top: 377px;
+
+    /*background: url();*/
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+}
+
+.boxActivity1Btn4{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 892px;
+    top: 377px;
+
+    /*background: url();*/
+    border: 3px solid #1C7FD9;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+}
+
+/* Activity 2*/
+
+.boxActivity2{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 205px;
+    left: 253px;
+    top: 539px;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity2Title{
+    position: absolute;
+    width: 230px;
+    height: 19px;
+    left: 288px;
+    top: 562px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+}
+
+.boxActivity2Btn1{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 288px;
+    top: 599px;
+
+    /*background: url();*/
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+}
+
+.boxActivity2Btn2{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 485px;
+    top: 599px;
+
+    /*background: url();*/
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+}
+
+.boxActivity2Btn3{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 689px;
+    top: 600px;
+
+    /*background: url();*/
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+}
+
+.boxActivity2Btn4{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 892px;
+    top: 600px;
+
+    /*background: url();*/
+    border: 3px solid #1C7FD9;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+}
+
+/* Activity 3*/
+
+.boxActivity3{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 140px;
+    left: 253px;
+    top: 762px;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity3Title{
+    position: absolute;
+    width: 230px;
+    height: 19px;
+    left: 288px;
+    top: 784px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+}
+
+.boxActivity3Btn1{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 197px;
+    height: 44px;
+    left: 288px;
+    top: 821px;
+
+    background: #E2FCFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+}
+
+.boxActivity3Btn2{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 197px;
+    height: 44px;
+    left: 562px;
+    top: 821px;
+
+    background: #E2FCFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+}
+
+.boxActivity3Btn3{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 197px;
+    height: 44px;
+    left: 837px;
+    top: 821px;
+
+    background: #E2FCFF;
+    border: 3px solid #1C7FD9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+/* Activity 4*/
+
+.boxActivity4{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 363px;
+    left: 253px;
+    top: 920px;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity4Title{
+    position: absolute;
+    width: 230px;
+    height: 19px;
+    left: 288px;
+    top: 943px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+}
+
+.boxActivity4Btn1{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 288px;
+    top: 980px;
+
+    /*background: url();*/
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+}
+
+.boxActivity4Btn2{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 485px;
+    top: 980px;
+
+    /*background: url();*/
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+}
+
+.boxActivity4Btn3{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 689px;
+    top: 981px;
+
+    /*background: url();*/
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+}
+
+.boxActivity4Btn4{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 892px;
+    top: 981px;
+
+    /*background: url();*/
+    border: 3px solid #1C7FD9;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+}
+
+.boxActivity4Btn5{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 292px;
+    top: 1119px;
+
+    /*background: url();*/
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+}
+
+.boxActivity4Btn6{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 489px;
+    top: 1119px;
+
+    /*background: url();*/
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+}
+
+.boxActivity4Btn7{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 693px;
+    top: 1120px;
+
+    /*background: url();*/
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+}
+
+.boxActivity4Btn8{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 896px;
+    top: 1120px;
+
+    /*background: url();*/
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+}
+
+/* Activity 5*/
+
+.boxActivity5{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 140px;
+    left: 253px;
+    top: 1301px;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity5Title{
+    position: absolute;
+    width: 230px;
+    height: 19px;
+    left: 288px;
+    top: 1323px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+}
+
+.boxActivity5Btn1{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 197px;
+    height: 44px;
+    left: 288px;
+    top: 1360px;
+    
+    background: #EBE2FF;
+    border: 3px solid #1C7FD9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity5Btn2{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 197px;
+    height: 44px;
+    left: 562px;
+    top: 1360px;
+    
+    background: #EBE2FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity5Btn3{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 197px;
+    height: 44px;
+    left: 837px;
+    top: 1360px;
+    
+    background: #EBE2FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+/* Activity 6*/
+
+.boxActivity6{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 140px;
+    left: 253px;
+    top: 1301px;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity6Title{
+    position: absolute;
+    width: 230px;
+    height: 19px;
+    left: 288px;
+    top: 1481px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+}
+
+.boxActivity6Btn1{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 197px;
+    height: 44px;
+    left: 453px;
+    top: 1518px;
+    
+    background: #FFE2E2;
+    border: 3px solid #1C7FD9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity6Btn2{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 197px;
+    height: 44px;
+    left: 727px;
+    top: 1518px;
+    
+    background: #FFE2E2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+/* Activity Button*/
+
+.createActivityButton{
+    position: absolute;
+    width: 196px;
+    height: 41.68px;
+    left: 570px;
+    top: 1628px;
+
+    background: #FF673B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.createActivityButtonTitle{   
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    
+    color: #FFFFFF;
+}

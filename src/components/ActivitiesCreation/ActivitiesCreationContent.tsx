@@ -31,15 +31,15 @@ export const ActivitiesCreationContent = () => {
     return(
         <>
             <div className="createActivities justify-content-center">
-                <h6 className='createActivitiesTitle'>Asignar Actividad</h6>
-                <div className='boxActivityPatient'>
+                <h6 className='createActivitiesTitle justify-content-center'>Asignar Actividad</h6>
+                <div className='boxActivityPatient justify-content-center'>
                     <h6 className='boxActivityPatientTitle'>Paciente</h6>
                     <h6 className='boxActivityPatientName'>ID 234 - Juan Pepito Pérez</h6>
                 </div>
-                <div className='boxActivity1'>
+                <div className='boxActivity1 justify-content-center'>
                     <h6 className='boxActivity1Title'>1. Categoría Semántica</h6>
                     <ButtonGroup>
-                        <button className='boxActivity1Btn1'></button>
+                        <button type="button" className='boxActivity1Btn1'></button>
                         <button className='boxActivity1Btn2'></button>
                         <button className='boxActivity1Btn3'></button>
                         <button className='boxActivity1Btn4'></button>

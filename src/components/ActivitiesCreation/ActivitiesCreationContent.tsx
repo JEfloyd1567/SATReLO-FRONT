@@ -6,7 +6,7 @@ import { useState } from 'react';
 import './Activities.css';
 
 export const ActivitiesCreationContent = () => {
-    const [objButtons, setObjButtons] = useState([
+    const [act1BTN, setact1BTN] = useState([
         { className: "lunita", cssC: "css-lunita", image: "", identifier: '1', value: 0 },
         { className: "arbolito", cssC: "css-arbolito", image: "", identifier: '2', value: 0 },
         { className: "solicito", cssC: "css-solicito", image: "", identifier: '3', value: 0 },
@@ -14,7 +14,7 @@ export const ActivitiesCreationContent = () => {
         { className: "perrito", cssC: "css-perrito", image: "", identifier: '5', value: 0 },
     ]);
 
-    const handleReset = () => {
+    /*const handleReset = () => {
         setObjButtons([
             { className: "lunita", cssC: "css-lunita", image: "", identifier: '1', value: 0 },
             { className: "arbolito", cssC: "css-arbolito", image: "", identifier: '2', value: 0 },
@@ -24,7 +24,7 @@ export const ActivitiesCreationContent = () => {
         ]);
         setPressedButtons("");
         setIconPress(1);
-      };
+    };*/
 
     const [pressedButtons, setPressedButtons] = useState(""); //combinación botones
     let [iconCount, setIconPress] = useState(1); //combinación botones

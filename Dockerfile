@@ -1,21 +1,17 @@
-FROM node:lts AS base-frontend
-
-RUN mkdir -p /home/app
-
-WORKDIR /home/app
-
-COPY package.json /home/app/package.json
-COPY package-lock.json /home/app/package-lock.json
-
+# stage1 - build react app first 
+FROM node:18-alpine3.16 as build
+WORKDIR /app
+ENV PATH /app/node_modules/.bin:$PATH
+COPY ./package.json /app/
+COPY ./package-lock.json /app/
 RUN npm ci
-COPY . /home/app
-
-FROM base-frontend AS build
-
+COPY . /app
 RUN ["npm", "run", "build"]
 
-FROM nginx:1.23-alpine
-
+# stage 2 - build the final image and copy the react build files
+FROM nginx:1.17.8-alpine
+COPY --from=build /app/build /usr/share/nginx/html
+RUN rm /etc/nginx/conf.d/default.conf
+COPY nginx/nginx.conf /etc/nginx/conf.d
 EXPOSE 80
-
-COPY --from=build /home/app/build /usr/share/nginx/html
+CMD ["nginx", "-g", "daemon off;"]

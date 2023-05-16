@@ -6,25 +6,94 @@ import { useState } from 'react';
 import './Activities.css';
 
 export const ActivitiesCreationContent = () => {
-    const [act1BTN, setact1BTN] = useState([
-        { className: "lunita", cssC: "css-lunita", image: "", identifier: '1', value: 0 },
-        { className: "arbolito", cssC: "css-arbolito", image: "", identifier: '2', value: 0 },
-        { className: "solicito", cssC: "css-solicito", image: "", identifier: '3', value: 0 },
-        { className: "gatito", cssC: "css-gatito", image: "", identifier: '4', value: 0 },
-        { className: "perrito", cssC: "css-perrito", image: "", identifier: '5', value: 0 },
+    const [activity1BTN, setActivity1BTN] = useState([
+        { className: "boxActivity1Btn1", image: "", identifier: '1', value: false },
+        { className: "boxActivity1Btn2", image: "", identifier: '2', value: false },
+        { className: "boxActivity1Btn3", image: "", identifier: '3', value: false },
+        { className: "boxActivity1Btn4", image: "", identifier: '4', value: false },
+    ]);
+    
+    const [activity2BTN, setActivity2BTN] = useState([
+        { className: "boxActivity2Btn1", image: "", identifier: '1', value: false },
+        { className: "boxActivity2Btn2", image: "", identifier: '2', value: false },
+        { className: "boxActivity2Btn3", image: "", identifier: '3', value: false },
+        { className: "boxActivity2Btn4", image: "", identifier: '4', value: false },
     ]);
 
-    /*const handleReset = () => {
-        setObjButtons([
-            { className: "lunita", cssC: "css-lunita", image: "", identifier: '1', value: 0 },
-            { className: "arbolito", cssC: "css-arbolito", image: "", identifier: '2', value: 0 },
-            { className: "solicito", cssC: "css-solicito", image: "", identifier: '3', value: 0 },
-            { className: "gatito", cssC: "css-gatito", image: "", identifier: '4', value: 0 },
-            { className: "perrito", cssC: "css-perrito", image: "", identifier: '5', value: 0 },
+    const [activity3BTN, setActivity3BTN] = useState([
+        { className: "boxActivity3Btn1", image: "", identifier: '1', value: false },
+        { className: "boxActivity3Btn2", image: "", identifier: '2', value: false },
+        { className: "boxActivity3Btn3", image: "", identifier: '3', value: false },
+    ]);
+
+    const [activity4BTN, setActivity4BTN] = useState([
+        { className: "boxActivity4Btn1", image: "", identifier: '1', value: false },
+        { className: "boxActivity4Btn2", image: "", identifier: '2', value: false },
+        { className: "boxActivity4Btn3", image: "", identifier: '3', value: false },
+        { className: "boxActivity4Btn4", image: "", identifier: '4', value: false },
+        { className: "boxActivity4Btn5", image: "", identifier: '5', value: false },
+        { className: "boxActivity4Btn6", image: "", identifier: '6', value: false },
+        { className: "boxActivity4Btn7", image: "", identifier: '7', value: false },
+        { className: "boxActivity4Btn8", image: "", identifier: '8', value: false },
+    ]);
+
+    const [activity5BTN, setActivity5BTN] = useState([
+        { className: "boxActivity5Btn1", image: "", identifier: '1', value: false },
+        { className: "boxActivity5Btn2", image: "", identifier: '2', value: false },
+        { className: "boxActivity5Btn3", image: "", identifier: '3', value: false },
+    ]);
+
+    const [activity6BTN, setActivity6BTN] = useState([
+        { className: "boxActivity6Btn1", image: "", identifier: '1', value: false },
+        { className: "boxActivity6Btn2", image: "", identifier: '2', value: false },
+    ]);
+
+    const handleReset = () => {
+        setActivity1BTN([
+            { className: "boxActivity1Btn1", image: "", identifier: '1', value: false },
+            { className: "boxActivity1Btn2", image: "", identifier: '2', value: false },
+            { className: "boxActivity1Btn3", image: "", identifier: '3', value: false },
+            { className: "boxActivity1Btn4", image: "", identifier: '4', value: false },
         ]);
+
+        setActivity2BTN([
+            { className: "boxActivity2Btn1", image: "", identifier: '1', value: false },
+            { className: "boxActivity2Btn2", image: "", identifier: '2', value: false },
+            { className: "boxActivity2Btn3", image: "", identifier: '3', value: false },
+            { className: "boxActivity2Btn4", image: "", identifier: '4', value: false },
+        ]);
+
+        setActivity3BTN([
+            { className: "boxActivity3Btn1", image: "", identifier: '1', value: false },
+            { className: "boxActivity3Btn2", image: "", identifier: '2', value: false },
+            { className: "boxActivity3Btn3", image: "", identifier: '3', value: false },
+        ]);
+
+        setActivity4BTN([
+            { className: "boxActivity4Btn1", image: "", identifier: '1', value: false },
+            { className: "boxActivity4Btn2", image: "", identifier: '2', value: false },
+            { className: "boxActivity4Btn3", image: "", identifier: '3', value: false },
+            { className: "boxActivity4Btn4", image: "", identifier: '4', value: false },
+            { className: "boxActivity4Btn5", image: "", identifier: '5', value: false },
+            { className: "boxActivity4Btn6", image: "", identifier: '6', value: false },
+            { className: "boxActivity4Btn7", image: "", identifier: '7', value: false },
+            { className: "boxActivity4Btn8", image: "", identifier: '8', value: false },
+        ]);
+
+        setActivity5BTN([
+            { className: "boxActivity5Btn1", image: "", identifier: '1', value: false },
+            { className: "boxActivity5Btn2", image: "", identifier: '2', value: false },
+            { className: "boxActivity5Btn3", image: "", identifier: '3', value: false },
+        ]);
+
+        setActivity6BTN([
+            { className: "boxActivity6Btn1", image: "", identifier: '1', value: false },
+            { className: "boxActivity6Btn2", image: "", identifier: '2', value: false },
+        ]);
+
         setPressedButtons("");
         setIconPress(1);
-    };*/
+    };
 
     const [pressedButtons, setPressedButtons] = useState(""); //combinación botones
     let [iconCount, setIconPress] = useState(1); //combinación botones

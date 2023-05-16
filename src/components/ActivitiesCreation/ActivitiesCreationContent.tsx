@@ -38,14 +38,14 @@ export const ActivitiesCreationContent = () => {
     ]);
 
     const [activity5BTN, setActivity5BTN] = useState([
-        { className: "boxActivity5Btn1", image: "", identifier: '1', value: false },
-        { className: "boxActivity5Btn2", image: "", identifier: '2', value: false },
-        { className: "boxActivity5Btn3", image: "", identifier: '3', value: false },
+        { className: "boxActivity5Btn1", image: "", identifier: 'Pasado', value: false },
+        { className: "boxActivity5Btn2", image: "", identifier: 'Presente', value: false },
+        { className: "boxActivity5Btn3", image: "", identifier: 'Futuro', value: false },
     ]);
 
     const [activity6BTN, setActivity6BTN] = useState([
-        { className: "boxActivity6Btn1", image: "", identifier: '1', value: false },
-        { className: "boxActivity6Btn2", image: "", identifier: '2', value: false },
+        { className: "boxActivity6Btn1", image: "", identifier: 'Si', value: false },
+        { className: "boxActivity6Btn2", image: "", identifier: 'No', value: false },
     ]);
 
     const handleReset = () => {
@@ -81,14 +81,14 @@ export const ActivitiesCreationContent = () => {
         ]);
 
         setActivity5BTN([
-            { className: "boxActivity5Btn1", image: "", identifier: '1', value: false },
-            { className: "boxActivity5Btn2", image: "", identifier: '2', value: false },
-            { className: "boxActivity5Btn3", image: "", identifier: '3', value: false },
+            { className: "boxActivity5Btn1", image: "", identifier: 'Pasado', value: false },
+            { className: "boxActivity5Btn2", image: "", identifier: 'Presente', value: false },
+            { className: "boxActivity5Btn3", image: "", identifier: 'Futuro', value: false },
         ]);
 
         setActivity6BTN([
-            { className: "boxActivity6Btn1", image: "", identifier: '1', value: false },
-            { className: "boxActivity6Btn2", image: "", identifier: '2', value: false },
+            { className: "boxActivity6Btn1", image: "", identifier: 'True', value: false },
+            { className: "boxActivity6Btn2", image: "", identifier: 'False', value: false },
         ]);
 
         setPressedButtons("");

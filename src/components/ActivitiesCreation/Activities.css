@@ -85,6 +85,21 @@
     color: #000000;
 }
 
+.checkmarkSelected{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 42px !important;
+    border-radius: 50px;
+    height: 42px;
+    text-align: center !important;
+    border: 3px solid #FFFFFF;
+    background-color: #1C7FD9;;
+    font-size: 24px;
+    font-family: 'Inter' !important;
+    font-weight: 800px;
+    font-style: normal;
+}
+
 /* Activity 1*/
 
 .boxActivity1{

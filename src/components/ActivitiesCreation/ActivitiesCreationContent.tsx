@@ -1,4 +1,5 @@
-import { ButtonGroup, Image } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
+import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import { Row, Col } from "react-bootstrap";
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -90,13 +91,32 @@ export const ActivitiesCreationContent = () => {
             { className: "boxActivity6Btn1", image: "", identifier: 'True', value: false },
             { className: "boxActivity6Btn2", image: "", identifier: 'False', value: false },
         ]);
-
-        setPressedButtons("");
-        setIconPress(1);
     };
 
-    const [pressedButtons, setPressedButtons] = useState(""); //combinación botones
-    let [iconCount, setIconPress] = useState(1); //combinación botones
+    const handleClickA1 = (value:boolean) => {
+
+    };
+
+    const handleClickA2 = (value:boolean) => {
+
+    };
+
+    const handleClickA3 = (value:boolean) => {
+
+    };
+
+    const handleClickA4 = (value:boolean) => {
+
+    };
+
+    const handleClickA5 = (value:boolean) => {
+
+    };
+
+    const handleClickA6 = (value:boolean) => {
+
+    };
+
     return(
         <>
             <div className="createActivities justify-content-center">
@@ -107,34 +127,34 @@ export const ActivitiesCreationContent = () => {
                 </div>
                 <div className='boxActivity1 justify-content-center'>
                     <h6 className='boxActivity1Title'>1. Categoría Semántica</h6>
-                    <ButtonGroup>
-                        <button type="button" className='boxActivity1Btn1'></button>
+                    <div className="btn-group">
+                        <button className='boxActivity1Btn1'></button>
                         <button className='boxActivity1Btn2'></button>
                         <button className='boxActivity1Btn3'></button>
                         <button className='boxActivity1Btn4'></button>
-                    </ButtonGroup>
+                    </div>
                 </div>
                 <div className='boxActivity2 justify-content-center'>
                     <h6 className='boxActivity2Title'>2. Subcategoría Semántica</h6>
-                    <ButtonGroup>
+                    <div className="btn-group">
                         <button className='boxActivity2Btn1'></button>
                         <button className='boxActivity2Btn2'></button>
                         <button className='boxActivity2Btn3'></button>
                         <button className='boxActivity2Btn4'></button>
-                    </ButtonGroup>
+                    </div>
                 </div>
                 <div className='boxActivity3 justify-content-center'>
                     <h6 className='boxActivity3Title'>3. Mecánica</h6>
-                    <ButtonGroup>
+                    <div className="btn-group">
                         <button className='boxActivity3Btn1'>Secuencia</button>
                         <button className='boxActivity3Btn2'>Memoria</button>
                         <button className='boxActivity3Btn3'>Organizar</button>
-                    </ButtonGroup>
+                    </div>
                 </div>
                 <div className='boxActivity4 justify-content-center'>
                     <h6 className='boxActivity4Title'>4. Situación</h6>
-                    <ButtonGroup>
-                        <button className='boxActivity4Btn1'></button>
+                    <div className="btn-group">
+                        <button type='button' className='boxActivity4Btn1'></button>
                         <button className='boxActivity4Btn2'></button>
                         <button className='boxActivity4Btn3'></button>
                         <button className='boxActivity4Btn4'></button>
@@ -142,22 +162,22 @@ export const ActivitiesCreationContent = () => {
                         <button className='boxActivity4Btn6'></button>
                         <button className='boxActivity4Btn7'></button>
                         <button className='boxActivity4Btn8'></button>
-                    </ButtonGroup>
+                    </div>
                 </div>
                 <div className='boxActivity5 justify-content-center'>
                     <h6 className='boxActivity5Title'>5. Tiempos Verbales</h6>
-                    <ButtonGroup>
+                    <div className="btn-group">
                         <button className='boxActivity5Btn1'>Pasado</button>
                         <button className='boxActivity5Btn2'>Presente</button>
                         <button className='boxActivity5Btn3'>Futuro</button>
-                    </ButtonGroup>
+                    </div>
                 </div>
                 <div className='boxActivity6 justify-content-center'>
                     <h6 className='boxActivity6Title'>6. Proceso Lector</h6>
-                    <ButtonGroup>
+                    <div className="btn-group">
                         <button className='boxActivity6Btn1'>Si</button>
                         <button className='boxActivity6Btn2'>No</button>
-                    </ButtonGroup>
+                    </div>
                 </div>
                 <button className='createActivityButton'>
                     <h6 className='createActivityButtonTitle'>Asignar actividad</h6>

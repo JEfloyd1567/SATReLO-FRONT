@@ -1,11 +1,34 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { SearchBox } from "../SearchBox/SearchBox"
+import axios from "axios";
 
 interface Props {
   target: 'all' | 'own';
 }
 
 export const TherapistPatientsHeader: FC<Props> = ({target}) => {
+  
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState<any[]>([]); 
+
+  useEffect(() => {
+    const fetchSearchResults = async () => {
+      try {
+        const response = await axios.get(`/search?term=${searchTerm}`); 
+        const results = response.data.results; 
+        setSearchResults(results);
+      } catch (error) {
+        console.log("Error fetching search results:", error);
+      }
+    };
+    if (searchTerm !== "") {
+      fetchSearchResults();
+    }
+  }, [searchTerm]);
+
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
+  };
 
   return (
     <>

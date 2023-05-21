@@ -1,16 +1,14 @@
-import { FC, useState } from "react";
-
+import { FC, useEffect, useState } from "react";
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { PaginationControl } from "react-bootstrap-pagination-control";
 import { IPatient } from '../../interfaces/patients';
 
-
 interface Props {
   patients: IPatient[];
 }
 
-export const TherapistPatientsContent: FC<Props> = ({patients}) => {
+export const TherapistPatientsContent: FC<Props> = ({ patients}) => {
 
   const patientsPerPage = 6;
   const [activePage, setActivePage] = useState(1);

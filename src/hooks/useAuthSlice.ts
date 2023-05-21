@@ -4,6 +4,7 @@ import { clearErrorMessage, onChecking, onLogin, onLogout } from "../store/auth/
 import { RootState } from '../store/store';
 import { IUserLogin } from '../interfaces/users';
 import axios from "axios";
+import { setAuthToken } from "../store/auth/setAuthToken";
 
 export const useAuthStore = () => {
 
@@ -34,8 +35,6 @@ export const useAuthStore = () => {
         dispatch(onLogout());
       }
     }
-
-
   }
 
   const startLogout = () => {
@@ -47,6 +46,8 @@ export const useAuthStore = () => {
     const token = localStorage.getItem('token');
 
     if (!token) return;
+
+    setAuthToken(token);
 
     dispatch(onLogin({name: 'Therapist Name', role:'therapist'}))
 

@@ -139,8 +139,16 @@ export const ActivitiesCreationContent = () => {
                         <button className='boxActivity2Btn2' onClick={() => handleClickA2(false, "2")}></button>
                         <button className='boxActivity2Btn3' onClick={() => handleClickA2(false, "3")}></button>
                         <button className='boxActivity2Btn4' onClick={() => handleClickA2(false, "4")}></button>
-                        {btn2        ? <FontAwesomeIcon className="checkmarkSelected" icon={faCheck} size="2xs" style={{color: "#ffffff",}} />
-                        : ""     }
+                        {btn2 == false ? ""
+                            : <>
+                                {btn2R == "1" ? <div className=' boxActivity2Btn1 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                : <>{btn2R == "2" ? <div className='boxActivity2Btn2 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                    : <>{btn2R == "3" ? <div className='boxActivity2Btn3 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                        : <div className='boxActivity2Btn4 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>}
+                                        </>}
+                                    </>
+                                }
+                            </>}
                     </div>
                 </div>
                 <div className='boxActivity3 justify-content-center'>

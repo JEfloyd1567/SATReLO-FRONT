@@ -117,9 +117,13 @@ export const ActivitiesCreationContent = () => {
                     <h6 className='boxActivity1Title'>1. Categoría Semántica</h6>
                     <div className="btn-group" >
                         <button className='boxActivity1Btn1' onClick={() => handleClickA1(false, "1")}></button>
+                        <h6 className='boxActivity1Btn1Text'>Animales</h6>
                         <button className='boxActivity1Btn2' onClick={() => handleClickA1(false, "2")}></button>
+                        <h6 className='boxActivity1Btn2Text'>Prendas de vestir</h6>
                         <button className='boxActivity1Btn3' onClick={() => handleClickA1(false, "3")}></button>
+                        <h6 className='boxActivity1Btn3Text'>Comida</h6>
                         <button className='boxActivity1Btn4' onClick={() => handleClickA1(false,"4")}></button>
+                        <h6 className='boxActivity1Btn4Text'>Casa</h6>
                         {btn1 == false ? ""
                             : <>
                                 {btn1R == "1" ? <div className=' boxActivity1Btn1 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
@@ -136,9 +140,13 @@ export const ActivitiesCreationContent = () => {
                     <h6 className='boxActivity2Title'>2. Subcategoría Semántica</h6>
                     <div className="btn-group">
                         <button className='boxActivity2Btn1' onClick={() => handleClickA2(false, "1")}></button>
+                        <h6 className='boxActivity2Btn1Text'>Cuartos</h6>
                         <button className='boxActivity2Btn2' onClick={() => handleClickA2(false, "2")}></button>
+                        <h6 className='boxActivity2Btn2Text'>Objetos</h6>
                         <button className='boxActivity2Btn3' onClick={() => handleClickA2(false, "3")}></button>
+                        <h6 className='boxActivity2Btn3Text'>Preposiciones</h6>
                         <button className='boxActivity2Btn4' onClick={() => handleClickA2(false, "4")}></button>
+                        <h6 className='boxActivity2Btn4Text'>Tipos de casas</h6>
                         {btn2 == false ? ""
                             : <>
                                 {btn2R == "1" ? <div className=' boxActivity2Btn1 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
@@ -171,15 +179,39 @@ export const ActivitiesCreationContent = () => {
                     <h6 className='boxActivity4Title'>4. Situación</h6>
                     <div className="btn-group">
                         <button className='boxActivity4Btn1' onClick={() => handleClickA4(false, "1")}></button>
+                        <h6 className='boxActivity4Btn1Text'>Camino al colegio</h6>
                         <button className='boxActivity4Btn2' onClick={() => handleClickA4(false, "2")}></button>
+                        <h6 className='boxActivity4Btn2Text'>Cumpleaños</h6>
                         <button className='boxActivity4Btn3' onClick={() => handleClickA4(false, "3")}></button>
+                        <h6 className='boxActivity4Btn3Text'>Caperucita roja</h6>
                         <button className='boxActivity4Btn4' onClick={() => handleClickA4(false, "4")}></button>
+                        <h6 className='boxActivity4Btn4Text'>El ratón Perez</h6>
                         <button className='boxActivity4Btn5' onClick={() => handleClickA4(false, "5")}></button>
+                        <h6 className='boxActivity4Btn5Text'>Paseando al perro</h6>
                         <button className='boxActivity4Btn6' onClick={() => handleClickA4(false, "6")}></button>
+                        <h6 className='boxActivity4Btn6Text'>Un día en la playa</h6>
                         <button className='boxActivity4Btn7' onClick={() => handleClickA4(false, "7")}></button>
+                        <h6 className='boxActivity4Btn7Text'>Bañando al bebé</h6>
                         <button className='boxActivity4Btn8' onClick={() => handleClickA4(false, "8")}></button>
-                        {btn4        ? <FontAwesomeIcon className="checkmarkSelected" icon={faCheck} size="2xs" style={{color: "#ffffff",}} />
-                        : ""     }
+                        <h6 className='boxActivity4Btn8Text'>Un día de natación</h6>
+                        {btn4 == false ? ""
+                            : <>
+                                {btn4R == "1" ? <div className=' boxActivity2Btn1 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                : <>{btn4R == "2" ? <div className='boxActivity4Btn2 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                    : <>{btn4R == "3" ? <div className='boxActivity4Btn3 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                        : <>{btn4R == "4" ? <div className='boxActivity4Btn4 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                            : <>{btn4R == "5" ? <div className='boxActivity4Btn5 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                                : <>{btn4R == "6" ? <div className='boxActivity4Btn6 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                                    : <>{btn4R == "7" ? <div className='boxActivity4Btn7 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                                        : <div className='boxActivity4Btn8 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>}
+                                                        </>}
+                                                    </>}
+                                                </>}
+                                            </>}
+                                        </>}
+                                    </>
+                                }
+                            </>}
                     </div>
                 </div>
                 <div className='boxActivity5 justify-content-center'>

@@ -102,6 +102,9 @@
     font-family: 'Inter' !important;
     font-weight: 800px;
     font-style: normal;
+    position: absolute;     
+    bottom: 0;     
+    right: 0;
 }
 
 /* Activity 1*/
@@ -146,10 +149,29 @@
     left: 35px;
     top: 60px;
 
-    /*background: url();*/
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/category/animales.jpg);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
+}
+
+.boxActivity1Btn1Text{
+    position: absolute;
+    width: 60px;
+    height: 17px;
+    left: 79px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
 }
 
 .boxActivity1Btn2{
@@ -161,10 +183,29 @@
     left: 232px;
     top: 60px;
 
-    /*background: url();*/
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/category/prendas.jpg);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
+}
+
+.boxActivity1Btn2Text{
+    position: absolute;
+    width: 116px;
+    height: 17px;
+    left: 248px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
 }
 
 .boxActivity1Btn3{
@@ -176,10 +217,29 @@
     left: 436px;
     top: 60px;
 
-    /*background: url();*/
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/category/comida.avif);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
+}
+
+.boxActivity1Btn3Text{
+    position: absolute;
+    width: 60px;
+    height: 17px;
+    left: 485px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
 }
 
 .boxActivity1Btn4{
@@ -191,10 +251,29 @@
     left: 639px;
     top: 60px;
 
-    /*background: url();*/
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/category/casa.jpg);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
+}
+
+.boxActivity1Btn4Text{
+    position: absolute;
+    width: 34px;
+    height: 17px;
+    left: 696px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
 }
 
 .boxActivity1Btn1:target,
@@ -329,6 +408,82 @@
 .boxActivity2Btn4:target,
 .boxActivity2Btn4:focus{
     border: 3px solid #1C7FD9;
+}
+
+.boxActivity2Btn1Text{
+    position: absolute;
+    width: 60px;
+    height: 17px;
+    left: 83px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity2Btn2Text{
+    position: absolute;
+    width: 60px;
+    height: 17px;
+    left: 280px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity2Btn3Text{
+    position: absolute;
+    width: 93px;
+    height: 17px;
+    left: 464px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity2Btn4Text{
+    position: absolute;
+    width: 100px;
+    height: 17px;
+    left: 663px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
 }
 
 /* Activity 3*/
@@ -466,7 +621,7 @@
     left: 35px;
     top: 60px;
 
-    /*background: url();*/
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/caminoalcolegio.jpg);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -481,7 +636,7 @@
     left: 232px;
     top: 60px;
 
-    /*background: url();*/
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/cumpleanos.webp);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -496,7 +651,7 @@
     left: 436px;
     top: 60px;
 
-    /*background: url();*/
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/caperucitaroja.png);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -511,7 +666,7 @@
     left: 639px;
     top: 60px;
 
-    /*background: url();*/
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/ratonperez.png);
     border: none;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
@@ -526,7 +681,7 @@
     left: 35px;
     top: 200px;
 
-    /*background: url();*/
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/paseoperro.png);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -541,7 +696,7 @@
     left: 232px;
     top: 200px;
 
-    /*background: url();*/
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/diaplaya.png);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -556,7 +711,7 @@
     left: 436px;
     top: 200px;
 
-    /*background: url();*/
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/banobebe.png);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -571,10 +726,162 @@
     left: 639px;
     top: 200px;
 
-    /*background: url();*/
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/dianatacion.png);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
+}
+
+.boxActivity4Btn1Text{
+    position: absolute;
+    width: 118px;
+    height: 17px;
+    left: 50px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity4Btn2Text{
+    position: absolute;
+    width: 83px;
+    height: 17px;
+    left: 265px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity4Btn3Text{
+    position: absolute;
+    width: 101px;
+    height: 17px;
+    left: 460px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity4Btn4Text{
+    position: absolute;
+    width: 92px;
+    height: 17px;
+    left: 667px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity4Btn5Text{
+    position: absolute;
+    width: 120px;
+    height: 17px;
+    left: 53px;
+    top: 302px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity4Btn6Text{
+    position: absolute;
+    width: 117px;
+    height: 17px;
+    left: 252px;
+    top: 302px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity4Btn7Text{
+    position: absolute;
+    width: 112px;
+    height: 17px;
+    left: 458px;
+    top: 302px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity4Btn8Text{
+    position: absolute;
+    width: 124px;
+    height: 17px;
+    left: 655px;
+    top: 302px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
 }
 
 .boxActivity4Btn1:target,

@@ -17,9 +17,7 @@ export const TherapistProfile:  FC<Props> = ({ therapist }) => {
     const [email, setEmail] = useState(therapist.email);
     const [especialidad, setEspecialidad] = useState("Terapeuta");
     const [contacto, setContacto] = useState(therapist.phone);
-
-    console.log(name);
-
+    
     const handleEditClick = () => {
         setEditing(true);
     };
@@ -36,10 +34,6 @@ export const TherapistProfile:  FC<Props> = ({ therapist }) => {
                 email: email,
                 phone: contacto
           });
-          console.log(name);
-          console.log(email);
-          console.log(contacto);
-          console.log(response.data);
 
         } catch (error) {
           if (axios.isAxiosError(error)) {
@@ -75,7 +69,7 @@ export const TherapistProfile:  FC<Props> = ({ therapist }) => {
                     <div className="info-therapist-info">
                         <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
                         <input type="text" value={especialidad} readOnly />
-                        <input type="text" value={contacto} onChange={(e) => setContacto(e.target.value)} />
+                        <input type="text" value={contacto} onChange={(e) => setContacto(e.target.value)} maxLength={10}  />
                         <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
                     </div>
                     ) : (

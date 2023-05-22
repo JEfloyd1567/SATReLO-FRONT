@@ -26,7 +26,7 @@ export const TherapistPage: FC<Props> = ({ target = 'all' }) => {
       if (searchTerm) {
         endpoint += `/${searchTerm}`;
       }
-      console.log(endpoint);
+      
       const response = await satreloUsersAPI.get(endpoint);
       setPatientsData(response.data);
     } catch (error) {

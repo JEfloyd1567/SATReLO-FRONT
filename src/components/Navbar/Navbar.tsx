@@ -6,8 +6,8 @@ import './Navbar.css';
 import { useAuthStore } from '../../hooks/useAuthSlice';
 
 const Navigation = [ 
-  {name: 'Inicio', href: '/'},
-  {name: 'Contacto', href: '/'},
+  {name: 'Inicio', href: '/*'},
+  {name: 'Contacto', href: '/*'},
 ]
 
 interface Props {
@@ -43,8 +43,6 @@ export const Navbar: FC<Props> = ({currentPage = ''}) => {
               {
                 (status === 'authenticated') &&
                 <>
-
-                  
                   <li className="nav-item">
                     <a href='#' className={`nav-link text-primary fw-bold active`}>{user?.name}</a>
                   </li>

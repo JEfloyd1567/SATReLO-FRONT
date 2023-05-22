@@ -3,8 +3,10 @@ import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import { Row, Col } from "react-bootstrap";
 import { faCheck, faCircleUser } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { useState } from 'react';
+import { FC, useEffect, useState } from 'react';
+import axios from "axios";
 import './Activities.css';
+import activityAdd from '../../api/activityAdd';
 
 export const ActivitiesCreationContent = () => {
     const [pressedButtons, setPressedButtons] = useState<string[]>([]);
@@ -35,8 +37,6 @@ export const ActivitiesCreationContent = () => {
         }else{
             setBtn1R(valuePress);
         }
-        console.log(btn1R)
-        console.log(pressedButtons)
     };
 
     const handleClickA2 = (value:boolean, valuePress:string) => {
@@ -47,8 +47,6 @@ export const ActivitiesCreationContent = () => {
         }else{
             setBtn2R(valuePress);
         }
-        console.log(btn2R)
-        console.log(pressedButtons)
     };
 
     const handleClickA3 = (value:boolean, valuePress:string) => {
@@ -59,8 +57,6 @@ export const ActivitiesCreationContent = () => {
         }else{
             setBtn3R(valuePress);
         }
-        console.log(btn3R)
-        console.log(pressedButtons)
     };
 
     const handleClickA4 = (value:boolean, valuePress:string) => {
@@ -71,8 +67,6 @@ export const ActivitiesCreationContent = () => {
         }else{
             setBtn4R(valuePress);
         }
-        console.log(btn4R)
-        console.log(pressedButtons)
     };
 
     const handleClickA5 = (value:boolean, valuePress:string) => {
@@ -83,8 +77,6 @@ export const ActivitiesCreationContent = () => {
         }else{
             setBtn5R(valuePress);
         }
-        console.log(btn5R)
-        console.log(pressedButtons)
     };
 
     const handleClickA6 = (value:boolean, valuePress:string) => {
@@ -95,15 +87,34 @@ export const ActivitiesCreationContent = () => {
         }else{
             setBtn6R(valuePress);
         }
-        console.log(btn6R)
-        console.log(pressedButtons)
     };
 
     const handleClickAA = () => {
         setPressedButtons(pressedButtons.concat(btn1R, btn2R, btn3R, btn4R, btn5R, btn6R));
-        console.log(pressedButtons);
-        console.log(pressedButtons);
     };
+
+    useEffect(() => {
+        const fetchPatientsData = async () => {
+          try {
+            const token = localStorage.getItem('token');
+    
+            if (!token) {
+              return;
+            }
+    
+            /*activityAdd.defaults.headers.common["Authorization"] = Bearer ${token};*/
+    
+            const response = await activityAdd.post('/activity/add');
+    
+            /*setPatientsData(response.data);*/
+    
+          } catch (error) {
+            console.log(error);
+          }
+        };
+    
+        fetchPatientsData();
+      }, []);
 
     return(
         <>

@@ -24,12 +24,12 @@ export const TherapistPatientsContent: FC<Props> = ({patients}) => {
       <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 gy-4 d-flex align-items-center h-auto">
         { 
           currentPatients.map( ({name, fromDate, profileUrl}, index) => (
-          <div className="col d-flex justify-content-center" key={index} >
+          <div className="col d-flex justify-content-center" key={index} id="patient-card" >
             <div className="border shadow rounded-3 px-2 py-3 d-inline-flex flex-column align-items-center "  style={{width: '260px'}}>
               <FontAwesomeIcon icon={faCircleUser} className='text-primary mb-3' size="7x" />
               <p className="fw-bold align-bottom text-center">{name}</p>
               <p>{fromDate}</p>
-              <a href={`${profileUrl}`} >Ver Perfil</a>
+              <a href={`${profileUrl || '/PatientProfile'}`} id="patient-view-profile" >Ver Perfil</a>
             </div>
           </div>
           ))
@@ -46,7 +46,7 @@ export const TherapistPatientsContent: FC<Props> = ({patients}) => {
 
       {/* PAGINATION */}
       {(patients.length > 0) &&
-        <div className="d-flex justify-content-end mt-4 me-4">
+        <div className="d-flex justify-content-end mt-4 me-4" id="patients-pagination">
           <PaginationControl
             page={activePage}
             total={patients.length}

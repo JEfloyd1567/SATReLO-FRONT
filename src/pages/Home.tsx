@@ -8,11 +8,11 @@ export const Home = () => {
         </div>
         <div className="mx-auto w-50">
 
-            <div className='Bienvenido-container fw-bold my-3' id = 'bienvenido'>
+            <div className='Bienvenido-container fw-bold my-3' id = 'home-bienvenido'>
                 Bienvenidos a la aplicación de apoyo a la 
                 rehabilitación del lenguaje oral
             </div>
-            <div className='texto-container' id = 'texto'>
+            <div className='texto-container' id = 'home-texto'>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                 when an unknown printer took a galley of type and scrambled it to make a type specimen book. 

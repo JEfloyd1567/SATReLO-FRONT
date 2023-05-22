@@ -10,10 +10,10 @@ import { IUserLogin } from '../../interfaces/users';
 interface Props {
     show: boolean;
     handleClose: () => void;
-    identification: string;
+    personalId: string;
 }
 
-const Therapist: FC<Props> = ({ show, handleClose, identification }) => {
+const Therapist: FC<Props> = ({ show, handleClose, personalId }) => {
     const [showErrorToast, setShowErrorToast] = useState(false);
     const [inputPassword,  setInputPassword] = useState('');
     const [toastErrorMessage, setToastErrorMessage] = useState('')
@@ -44,20 +44,24 @@ const Therapist: FC<Props> = ({ show, handleClose, identification }) => {
             return;
         }
 
-        startLogin({username: identification,password: inputPassword});
+        startLogin({username: personalId, password: inputPassword});
     }
 
     useEffect(() => {
         if (errorMessage !== undefined) {
             setShowErrorToast(true);
             setToastErrorMessage(errorMessage);
-        }
+            return;
+        } 
+
+        setShowErrorToast(false);
+        setToastErrorMessage('');
       
     }, [errorMessage])
     
 
     return (
-        <Modal show={show} onHide={handleClose} className="new-modalT align-items-center justify-content-center" backdrop="static" keyboard={false} centered >
+        <Modal show={show} onHide={handleClose} className="new-modalT align-items-center justify-content-center" backdrop="static" keyboard={true} centered >
 
                 <Modal.Header
                         style={{
@@ -68,6 +72,8 @@ const Therapist: FC<Props> = ({ show, handleClose, identification }) => {
                         
                         
                         }}
+                        id="therapist-modal"
+                        className='mb-0'
                     >
                     <Modal.Title style={{ fontFamily: 'Abel', fontStyle: 'normal', fontWeight: 400, fontSize: '32px', 
                     lineHeight: '41px', textAlign: 'center', textTransform: 'uppercase'}}>
@@ -88,8 +94,8 @@ const Therapist: FC<Props> = ({ show, handleClose, identification }) => {
                         </div>
 
                         <div className='align-self-baseline'>
-                            <input className='rounded-pill inputClickedTera mb-3' type="password" value={inputPassword} onChange={handleInputPasswordChange} name="password" placeholder="CONTRASEÑA" maxLength={10}/>
-                            <Button variant="primary" onClick={handleLoginBtnClick} className={`custom-btnT ${(status==='checking')?'disabled':''}`} >
+                            <input className='rounded-pill inputClickedTera mb-3' type="password" value={inputPassword} onChange={handleInputPasswordChange} name="password" placeholder="CONTRASEÑA" maxLength={10} id="therapist-modal-password" />
+                            <Button variant="primary" onClick={handleLoginBtnClick} className={`custom-btnT ${(status==='checking')?'disabled':''}`} id="therapist-modal-login-btn" >
                                 {/* INICIAR SESIÓN */}
                                 {
                                     (status === 'checking') 
@@ -108,10 +114,10 @@ const Therapist: FC<Props> = ({ show, handleClose, identification }) => {
 
                 <Modal.Footer
                     style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        border: "none",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            border: "none",
                         }}>
 
                 {/* Cerrar*/}

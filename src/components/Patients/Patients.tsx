@@ -1,5 +1,5 @@
 import './Patients.css';
-import React, {useState, } from "react";
+import React, {FC, useEffect, useState, } from "react";
 import Button from 'react-bootstrap/Button';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
@@ -15,8 +15,16 @@ import arbol from '../../assets/images/arbol.png';
 import gato from '../../assets/images/gato.png';
 import perro from '../../assets/images/perro.png';
 import luna from '../../assets/images/luna.png';
+import { ErrorToast } from '../Toasts/ErrorToast';
+import { useAuthStore } from '../../hooks';
 
-const Patients = ({ show, handleClose }: {show:any; handleClose:any}) => {
+interface Props {
+    show: boolean;
+    handleClose: () => void;
+    personalId: string;
+}
+
+const Patients: FC<Props> = ({ show, handleClose, personalId }) => {
 
     const [objButtons, setObjButtons] = useState([
         { className: "lunita", cssC: "css-lunita", image: luna, identifier: '1', value: 0 },
@@ -27,7 +35,11 @@ const Patients = ({ show, handleClose }: {show:any; handleClose:any}) => {
     ]);
 
     const [pressedButtons, setPressedButtons] = useState(""); //combinación botones
-    let [iconCount, setIconPress] = useState(1); //combinación botones
+    const [iconCount, setIconPress] = useState(1); //combinación botones
+    const [showErrorMsgToast, setShowErrorMsgToast] = useState(false);
+    const [errorMsgToast, setErrorMsgToast] = useState('');
+
+    const {startLogin, errorMessage, status} = useAuthStore();
 
     const handleClick = (value:string) => {
         if( pressedButtons.length < 4 ){
@@ -75,10 +87,39 @@ const Patients = ({ show, handleClose }: {show:any; handleClose:any}) => {
         ]);
         setPressedButtons("");
         setIconPress(1);
-      };
+    };
+
+    const handleCloseErrorMsgToast = () => {
+        setShowErrorMsgToast(false);
+    }
+
+    const handleLoginBtnClick = () => {
+        // setShowErrorMsgToast(true)
+        if (pressedButtons === '') {
+            setErrorMsgToast('Debes ingresar tu secuencia de imagenes');
+            setShowErrorMsgToast(true)
+            return
+        }
+        
+
+        startLogin({username: personalId, password: pressedButtons});
+    }
+
+    useEffect(() => {
+        if (errorMessage !== undefined) {
+            setShowErrorMsgToast(true)
+            setErrorMsgToast(errorMessage);
+            return;
+        }
+
+        setShowErrorMsgToast(false)
+        setErrorMsgToast('');
+      
+    }, [errorMessage])
+    
     
     return(
-        <Modal show={show} onHide={handleClose} className="new-modal align-items-center justify-content-center" backdrop="static" keyboard={false} centered >
+        <Modal show={show} onHide={handleClose} className="new-modal align-items-center justify-content-center" backdrop="static" keyboard={true} centered >
 
             <Modal.Header
                     style={{
@@ -93,15 +134,18 @@ const Patients = ({ show, handleClose }: {show:any; handleClose:any}) => {
                 lineHeight: '41px', textAlign: 'center', textTransform: 'uppercase' }}>
                     HOLA, NOMBRE 
                 </Modal.Title>
-
-                
             </Modal.Header>
 
-            <Modal.Body>
+            <Modal.Body className='d-inline-flex flex-column justify-content-center'>
 
-                <h6 className="imagen-init"> Selecciona las 4 imagenes que se te asignaron. Recuerda que el orden es importante. </h6>
-
-                <br></br>
+                <h6 className="mb-3"> Selecciona las 4 imagenes que se te asignaron. Recuerda que el orden es importante. </h6>
+                
+                <div className='d-flex flex-column justify-content-center w-75 mx-auto' style={{height: "44px"}}>
+                    {
+                        showErrorMsgToast &&
+                        <ErrorToast msg={errorMsgToast} handleCloseBtnClick={handleCloseErrorMsgToast} />
+                    }
+                </div>
                 <form>
                     <Row gutter={2} className="justify-content-center">
                         <ToggleButtonGroup type="checkbox" defaultValue={[]} className="justify-content-center">
@@ -117,12 +161,21 @@ const Patients = ({ show, handleClose }: {show:any; handleClose:any}) => {
                             )}
                         </ToggleButtonGroup>
                     </Row>
-                <br></br>
                     {/* inicio de sesión */}
-                    <div className="init-Sesion">
+                    <div className="init-Sesion mt-2">
                         <div className="text-center">
-                            <Button variant="primary" className="custom-btn">
-                                INICIAR SESIÓN
+                            <Button variant="primary" className={`custom-btn ${(status==='checking')?'disabled':''}`} onClick={handleLoginBtnClick}>
+                                {
+                                    (status === 'checking') 
+                                    ? (
+                                        <div className="spinner-border text-light" role="status">
+                                            <span className="visually-hidden">Loading...</span>
+                                        </div>
+                                    )
+                                    : (
+                                        'INICIAR SESIÓN'
+                                    )
+                                }
                             </Button>
                         </div>
                     </div>
@@ -137,7 +190,9 @@ const Patients = ({ show, handleClose }: {show:any; handleClose:any}) => {
                     justifyContent: "center",
                     alignItems: "center",
                     border: "none",
-                    }}>
+                    }}
+            >
+
 
             {/* Cerrar*/}
             

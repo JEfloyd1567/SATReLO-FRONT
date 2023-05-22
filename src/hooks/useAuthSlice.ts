@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from "react-redux"
-import satreloLoginAPI from "../api/satreloLoginAPI";
-import { clearErrorMessage, onChecking, onLogin, onLogout } from "../store/auth/authSlice";
+import { clearErrorMessage, onChecking, onLogin, onLogout, onGettingUserRole } from "../store/auth/authSlice";
 import { RootState } from '../store/store';
-import { IUserLogin } from '../interfaces/users';
+import { IRole, IUserLogin } from '../interfaces/users';
 import axios from "axios";
+import satreloLoginAPI from "../api/satreloLoginAPI";
+import satreloUsersAPI from "../api/satreloUsersAPI";
 
 export const useAuthStore = () => {
 
@@ -19,36 +20,73 @@ export const useAuthStore = () => {
       const {data} = await satreloLoginAPI.post('/login', {personalId: username, password})
 
       localStorage.setItem('token', data.token);
+      const user_role: any = localStorage.getItem('user_role') ?? 'patient';
 
-      dispatch(onLogin({name: 'Therapist Name', role:'therapist'}))
+      dispatch(onLogin({name: `${user_role} user`, role: user_role}))
+
     } catch (error) {
 
       if (axios.isAxiosError(error)) {
         const {message} = error.response?.data
-
-        console.log(message);
         
         dispatch(onLogout(message));
       } else {
-        console.log(error);
         dispatch(onLogout());
       }
     }
-
-
   }
 
   const startLogout = () => {
     localStorage.clear();
-    dispatch(onLogout());
+    dispatch(onLogout(undefined));
   }
 
   const checkAuth = async() => {
     const token = localStorage.getItem('token');
+    const user_role: any = localStorage.getItem('user_role') ?? 'patient';
 
-    if (!token) return;
+    if (!token) {
+      localStorage.clear()
+      return dispatch(onLogout())
+    } 
 
-    dispatch(onLogin({name: 'Therapist Name', role:'therapist'}))
+    dispatch(onLogin({name: `${user_role} user`, role: user_role}))
+  }
+
+  const startCheckingRole = async(personalId: string) => {
+    dispatch(onChecking());
+
+    try {
+      const {data} = await satreloLoginAPI.get(`/role/${personalId}`)
+
+      localStorage.setItem('user_role', data.role);
+
+      dispatch(onGettingUserRole({role: data.role}))
+
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        const {message} = error.response?.data ?? {message: 'Error del servidor, vuelva a intentarlo mas tarde'}
+
+        dispatch(onLogout(message));
+      } else {
+        
+        dispatch(onLogout());
+      }     
+    }
+  }
+
+  const startGettingPatients = async() => {
+
+    dispatch(onChecking());
+
+    try {
+      const {data} = await satreloUsersAPI.get('/therapist/mypatients');
+
+      console.log(data);
+
+    } catch (error) {
+      
+    }
 
   }
 
@@ -61,6 +99,8 @@ export const useAuthStore = () => {
     // *Methods
     startLogin,
     startLogout,
-    checkAuth
+    checkAuth,
+    startCheckingRole,
+    startGettingPatients
   }
 }

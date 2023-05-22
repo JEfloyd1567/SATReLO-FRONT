@@ -18,10 +18,14 @@ export const useAuthStore = () => {
 
     try {
       const {data} = await satreloLoginAPI.post('/login', {personalId: username, password})
+      console.log(data.token)
 
       localStorage.setItem('token', data.token);
+      setAuthToken(data.token);
 
       dispatch(onLogin({name: 'Therapist Name', role:'therapist'}))
+      console.log(data.role)
+      
     } catch (error) {
 
       if (axios.isAxiosError(error)) {
@@ -39,6 +43,7 @@ export const useAuthStore = () => {
 
   const startLogout = () => {
     localStorage.clear();
+    setAuthToken(null)
     dispatch(onLogout());
   }
 
@@ -46,8 +51,6 @@ export const useAuthStore = () => {
     const token = localStorage.getItem('token');
 
     if (!token) return;
-
-    setAuthToken(token);
 
     dispatch(onLogin({name: 'Therapist Name', role:'therapist'}))
 

@@ -1,9 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import { BoxContentLayout, TherapistPatientsContent, TherapistPatientsHeader } from "../components";
 import { IPatient } from '../interfaces/patients';
-import { useAuthStore } from "../hooks/useAuthSlice";
-import { useSelector } from "react-redux";
-import { RootState } from '../store/store';
 import satreloUsersAPI from "../api/satreloUsersAPI";
 
 interface Props {
@@ -12,9 +9,29 @@ interface Props {
 
 export const TherapistPage: FC<Props> = ({ target = 'all' }) => {
   const [patientsData, setPatientsData] = useState<IPatient[]>([]);
-  const { checkAuth } = useAuthStore();
 
-  
+  useEffect(() => {
+    const fetchPatientsData = async () => {
+      try {
+        const token = localStorage.getItem('token');
+
+        if (!token) {
+          return;
+        }
+
+        satreloUsersAPI.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+
+        const response = await satreloUsersAPI.get('/therapist/patients');
+
+        setPatientsData(response.data);
+        
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchPatientsData();
+  }, []);
 
   return (
     <BoxContentLayout header={<TherapistPatientsHeader target={target} />}>

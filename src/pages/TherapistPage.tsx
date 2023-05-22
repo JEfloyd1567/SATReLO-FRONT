@@ -19,7 +19,7 @@ export const TherapistPage: FC<Props> = ({ target = 'all' }) => {
       if (!token) {
         return;
       }
-      //console.log(satreloUsersAPI.defaults.headers.common["Authorization"])
+      satreloUsersAPI.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
       let endpoint = '/therapist/patients';
 

@@ -4,7 +4,6 @@ import { clearErrorMessage, onChecking, onLogin, onLogout } from "../store/auth/
 import { RootState } from '../store/store';
 import { IUserLogin } from '../interfaces/users';
 import axios from "axios";
-import { setAuthToken } from "../store/auth/setAuthToken";
 
 export const useAuthStore = () => {
 
@@ -19,7 +18,6 @@ export const useAuthStore = () => {
     try {
       const {data} = await satreloLoginAPI.post('/login', {personalId: username, password})
       localStorage.setItem('token', data.token);
-      setAuthToken(data.token);
       localStorage.setItem('personalID', username);
 
       dispatch(onLogin({name: 'Therapist Name', role:'therapist'}))
@@ -41,7 +39,6 @@ export const useAuthStore = () => {
 
   const startLogout = () => {
     localStorage.clear();
-    setAuthToken(null)
     dispatch(onLogout());
   }
 

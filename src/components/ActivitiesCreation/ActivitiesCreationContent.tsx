@@ -27,92 +27,6 @@ export const ActivitiesCreationContent = () => {
     const [btn6, setBtn6] = useState(false);
     const [btn6R, setBtn6R] = useState("");
 
-    const [activity1BTN, setActivity1BTN] = useState([
-        { className: "boxActivity1Btn1", image: "", identifier: '1', value: false },
-        { className: "boxActivity1Btn2", image: "", identifier: '2', value: false },
-        { className: "boxActivity1Btn3", image: "", identifier: '3', value: false },
-        { className: "boxActivity1Btn4", image: "", identifier: '4', value: false },
-    ]);
-    
-    const [activity2BTN, setActivity2BTN] = useState([
-        { className: "boxActivity2Btn1", image: "", identifier: '1', value: false },
-        { className: "boxActivity2Btn2", image: "", identifier: '2', value: false },
-        { className: "boxActivity2Btn3", image: "", identifier: '3', value: false },
-        { className: "boxActivity2Btn4", image: "", identifier: '4', value: false },
-    ]);
-
-    const [activity3BTN, setActivity3BTN] = useState([
-        { className: "boxActivity3Btn1", image: "", identifier: '1', value: false },
-        { className: "boxActivity3Btn2", image: "", identifier: '2', value: false },
-        { className: "boxActivity3Btn3", image: "", identifier: '3', value: false },
-    ]);
-
-    const [activity4BTN, setActivity4BTN] = useState([
-        { className: "boxActivity4Btn1", image: "", identifier: '1', value: false },
-        { className: "boxActivity4Btn2", image: "", identifier: '2', value: false },
-        { className: "boxActivity4Btn3", image: "", identifier: '3', value: false },
-        { className: "boxActivity4Btn4", image: "", identifier: '4', value: false },
-        { className: "boxActivity4Btn5", image: "", identifier: '5', value: false },
-        { className: "boxActivity4Btn6", image: "", identifier: '6', value: false },
-        { className: "boxActivity4Btn7", image: "", identifier: '7', value: false },
-        { className: "boxActivity4Btn8", image: "", identifier: '8', value: false },
-    ]);
-
-    const [activity5BTN, setActivity5BTN] = useState([
-        { className: "boxActivity5Btn1", image: "", identifier: 'Pasado', value: false },
-        { className: "boxActivity5Btn2", image: "", identifier: 'Presente', value: false },
-        { className: "boxActivity5Btn3", image: "", identifier: 'Futuro', value: false },
-    ]);
-
-    const [activity6BTN, setActivity6BTN] = useState([
-        { className: "boxActivity6Btn1", image: "", identifier: 'Si', value: false },
-        { className: "boxActivity6Btn2", image: "", identifier: 'No', value: false },
-    ]);
-
-    const handleReset = () => {
-        setActivity1BTN([
-            { className: "boxActivity1Btn1", image: "", identifier: '1', value: false },
-            { className: "boxActivity1Btn2", image: "", identifier: '2', value: false },
-            { className: "boxActivity1Btn3", image: "", identifier: '3', value: false },
-            { className: "boxActivity1Btn4", image: "", identifier: '4', value: false },
-        ]);
-
-        setActivity2BTN([
-            { className: "boxActivity2Btn1", image: "", identifier: '1', value: false },
-            { className: "boxActivity2Btn2", image: "", identifier: '2', value: false },
-            { className: "boxActivity2Btn3", image: "", identifier: '3', value: false },
-            { className: "boxActivity2Btn4", image: "", identifier: '4', value: false },
-        ]);
-
-        setActivity3BTN([
-            { className: "boxActivity3Btn1", image: "", identifier: '1', value: false },
-            { className: "boxActivity3Btn2", image: "", identifier: '2', value: false },
-            { className: "boxActivity3Btn3", image: "", identifier: '3', value: false },
-        ]);
-
-        setActivity4BTN([
-            { className: "boxActivity4Btn1", image: "", identifier: '1', value: false },
-            { className: "boxActivity4Btn2", image: "", identifier: '2', value: false },
-            { className: "boxActivity4Btn3", image: "", identifier: '3', value: false },
-            { className: "boxActivity4Btn4", image: "", identifier: '4', value: false },
-            { className: "boxActivity4Btn5", image: "", identifier: '5', value: false },
-            { className: "boxActivity4Btn6", image: "", identifier: '6', value: false },
-            { className: "boxActivity4Btn7", image: "", identifier: '7', value: false },
-            { className: "boxActivity4Btn8", image: "", identifier: '8', value: false },
-        ]);
-
-        setActivity5BTN([
-            { className: "boxActivity5Btn1", image: "", identifier: 'Pasado', value: false },
-            { className: "boxActivity5Btn2", image: "", identifier: 'Presente', value: false },
-            { className: "boxActivity5Btn3", image: "", identifier: 'Futuro', value: false },
-        ]);
-
-        setActivity6BTN([
-            { className: "boxActivity6Btn1", image: "", identifier: 'True', value: false },
-            { className: "boxActivity6Btn2", image: "", identifier: 'False', value: false },
-        ]);
-    };
-
     const handleClickA1 = (value:boolean, valuePress:string) => {
         if (btn1 == false){
             setBtn1(true);
@@ -126,7 +40,7 @@ export const ActivitiesCreationContent = () => {
     };
 
     const handleClickA2 = (value:boolean, valuePress:string) => {
-        if (btn1 == false){
+        if (btn2 == false){
             setBtn2(true);
             setBtn2R(valuePress);
 
@@ -138,7 +52,7 @@ export const ActivitiesCreationContent = () => {
     };
 
     const handleClickA3 = (value:boolean, valuePress:string) => {
-        if (btn1 == false){
+        if (btn3 == false){
             setBtn3(true);
             setBtn3R(valuePress);
 
@@ -150,7 +64,7 @@ export const ActivitiesCreationContent = () => {
     };
 
     const handleClickA4 = (value:boolean, valuePress:string) => {
-        if (btn1 == false){
+        if (btn4 == false){
             setBtn4(true);
             setBtn4R(valuePress);
 
@@ -162,7 +76,7 @@ export const ActivitiesCreationContent = () => {
     };
 
     const handleClickA5 = (value:boolean, valuePress:string) => {
-        if (btn1 == false){
+        if (btn5 == false){
             setBtn5(true);
             setBtn5R(valuePress);
 
@@ -174,7 +88,7 @@ export const ActivitiesCreationContent = () => {
     };
 
     const handleClickA6 = (value:boolean, valuePress:string) => {
-        if (btn1 == false){
+        if (btn6 == false){
             setBtn6(true);
             setBtn6R(valuePress);
 
@@ -186,12 +100,7 @@ export const ActivitiesCreationContent = () => {
     };
 
     const handleClickAA = () => {
-        setPressedButtons([...pressedButtons, btn1R]);
-        setPressedButtons([...pressedButtons, btn2R]);
-        setPressedButtons([...pressedButtons, btn3R]);
-        setPressedButtons([...pressedButtons, btn4R]);
-        setPressedButtons([...pressedButtons, btn5R]);
-        setPressedButtons([...pressedButtons, btn6R]);
+        setPressedButtons(pressedButtons.concat(btn1R, btn2R, btn3R, btn4R, btn5R, btn6R));
         console.log(pressedButtons);
         console.log(pressedButtons);
     };
@@ -211,8 +120,16 @@ export const ActivitiesCreationContent = () => {
                         <button className='boxActivity1Btn2' onClick={() => handleClickA1(false, "2")}></button>
                         <button className='boxActivity1Btn3' onClick={() => handleClickA1(false, "3")}></button>
                         <button className='boxActivity1Btn4' onClick={() => handleClickA1(false,"4")}></button>
-                        {btn1        ? <FontAwesomeIcon icon={faCheck} />
-                        : ""     }
+                        {btn1 == false ? ""
+                            : <>
+                                {btn1R == "1" ? <div className=' boxActivity1Btn1 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                : <>{btn1R == "2" ? <div className='boxActivity1Btn2 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                    : <>{btn1R == "3" ? <div className='boxActivity1Btn3 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                        : <div className='boxActivity1Btn4 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>}
+                                        </>}
+                                    </>
+                                }
+                            </>}
                     </div>
                 </div>
                 <div className='boxActivity2 justify-content-center'>
@@ -222,6 +139,8 @@ export const ActivitiesCreationContent = () => {
                         <button className='boxActivity2Btn2' onClick={() => handleClickA2(false, "2")}></button>
                         <button className='boxActivity2Btn3' onClick={() => handleClickA2(false, "3")}></button>
                         <button className='boxActivity2Btn4' onClick={() => handleClickA2(false, "4")}></button>
+                        {btn2        ? <FontAwesomeIcon className="checkmarkSelected" icon={faCheck} size="2xs" style={{color: "#ffffff",}} />
+                        : ""     }
                     </div>
                 </div>
                 <div className='boxActivity3 justify-content-center'>
@@ -230,6 +149,14 @@ export const ActivitiesCreationContent = () => {
                         <button className='boxActivity3Btn1' onClick={() => handleClickA3(false, "1")}>Secuencia</button>
                         <button className='boxActivity3Btn2' onClick={() => handleClickA3(false, "2")}>Memoria</button>
                         <button className='boxActivity3Btn3' onClick={() => handleClickA3(false, "3")}>Organizar</button>
+                        {btn3 == false ? ""
+                            : <>
+                                {btn3R == "1" ? <div className=' boxActivity3Btn1 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                : <>{btn3R == "2" ? <div className='boxActivity3Btn2 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                    : <div className='boxActivity3Btn3 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>}
+                                    </>
+                                }
+                            </>     }
                     </div>
                 </div>
                 <div className='boxActivity4 justify-content-center'>
@@ -243,6 +170,8 @@ export const ActivitiesCreationContent = () => {
                         <button className='boxActivity4Btn6' onClick={() => handleClickA4(false, "6")}></button>
                         <button className='boxActivity4Btn7' onClick={() => handleClickA4(false, "7")}></button>
                         <button className='boxActivity4Btn8' onClick={() => handleClickA4(false, "8")}></button>
+                        {btn4        ? <FontAwesomeIcon className="checkmarkSelected" icon={faCheck} size="2xs" style={{color: "#ffffff",}} />
+                        : ""     }
                     </div>
                 </div>
                 <div className='boxActivity5 justify-content-center'>
@@ -251,6 +180,14 @@ export const ActivitiesCreationContent = () => {
                         <button className='boxActivity5Btn1' onClick={() => handleClickA5(false, "Pasado")}>Pasado</button>
                         <button className='boxActivity5Btn2' onClick={() => handleClickA5(false, "Presente")}>Presente</button>
                         <button className='boxActivity5Btn3' onClick={() => handleClickA5(false, "Futuro")}>Futuro</button>
+                        {btn5 == false ? ""
+                            : <>
+                                {btn5R == "Pasado" ? <div className=' boxActivity5Btn1 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                : <>{btn5R == "Presente" ? <div className='boxActivity5Btn2 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                    : <div className='boxActivity5Btn3 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>}
+                                    </>
+                                }
+                            </>     }
                     </div>
                 </div>
                 <div className='boxActivity6 justify-content-center'>
@@ -258,6 +195,12 @@ export const ActivitiesCreationContent = () => {
                     <div className="btn-group">
                         <button className='boxActivity6Btn1' onClick={() => handleClickA6(false, "True")}>Si</button>
                         <button className='boxActivity6Btn2' onClick={() => handleClickA6(false, "False")}>No</button>
+                            {btn6 == false ? ""
+                            : <>
+                                {btn6R == "True" ? <div className='boxActivity6Btn1 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                : <div className='boxActivity6Btn2 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                }
+                            </>     }
                     </div>
                 </div>
                 <button className='createActivityButton'>

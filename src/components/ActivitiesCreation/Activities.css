@@ -85,6 +85,10 @@
     color: #000000;
 }
 
+.checked{
+    text-align: end;
+  }
+
 .checkmarkSelected{
     display: inline-block;
     box-sizing: border-box;
@@ -188,9 +192,29 @@
     top: 60px;
 
     /*background: url();*/
-    border: 3px solid #1C7FD9;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
+    border: none;
+}
+
+.boxActivity1Btn1:target,
+.boxActivity1Btn1:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity1Btn2:target,
+.boxActivity1Btn2:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity1Btn3:target,
+.boxActivity1Btn3:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity1Btn4:target,
+.boxActivity1Btn4:focus{
+    border: 3px solid #1C7FD9;
 }
 
 /* Activity 2*/
@@ -287,6 +311,26 @@
     border: none;
 }
 
+.boxActivity2Btn1:target,
+.boxActivity2Btn1:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity2Btn2:target,
+.boxActivity2Btn2:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity2Btn3:target,
+.boxActivity2Btn3:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity2Btn4:target,
+.boxActivity2Btn4:focus{
+    border: 3px solid #1C7FD9;
+}
+
 /* Activity 3*/
 
 .boxActivity3{
@@ -360,9 +404,24 @@
     top: 49px;
 
     background: #E2FCFF;
-    border: 3px solid #1C7FD9;
+    border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
+}
+
+.boxActivity3Btn1:target,
+.boxActivity3Btn1:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity3Btn2:target,
+.boxActivity3Btn2:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity3Btn3:target,
+.boxActivity3Btn3:focus{
+    border: 3px solid #1C7FD9;
 }
 
 /* Activity 4*/
@@ -453,7 +512,7 @@
     top: 60px;
 
     /*background: url();*/
-    border: 3px solid #1C7FD9;
+    border: none;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
 }
@@ -518,6 +577,46 @@
     border: none;
 }
 
+.boxActivity4Btn1:target,
+.boxActivity4Btn1:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity4Btn2:target,
+.boxActivity4Btn2:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity4Btn3:target,
+.boxActivity4Btn3:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity4Btn4:target,
+.boxActivity4Btn4:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity4Btn5:target,
+.boxActivity4Btn5:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity4Btn6:target,
+.boxActivity4Btn6:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity4Btn7:target,
+.boxActivity4Btn7:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity4Btn8:target,
+.boxActivity4Btn8:focus{
+    border: 3px solid #1C7FD9;
+}
+
 /* Activity 5*/
 
 .boxActivity5{
@@ -561,7 +660,7 @@
     top: 49px;
     
     background: #EBE2FF;
-    border: 3px solid #1C7FD9;
+    border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
 }
@@ -594,6 +693,21 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
     border: none;
+}
+
+.boxActivity5Btn1:target,
+.boxActivity5Btn1:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity5Btn2:target,
+.boxActivity5Btn2:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity5Btn3:target,
+.boxActivity5Btn3:focus{
+    border: 3px solid #1C7FD9;
 }
 
 /* Activity 6*/
@@ -639,7 +753,7 @@
     top: 49px;
     
     background: #FFE2E2;
-    border: 3px solid #1C7FD9;
+    border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
 }
@@ -657,6 +771,16 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
     border: none;
+}
+
+.boxActivity6Btn1:target,
+.boxActivity6Btn1:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity6Btn2:target,
+.boxActivity6Btn2:focus{
+    border: 3px solid #1C7FD9;
 }
 
 /* Activity Button*/

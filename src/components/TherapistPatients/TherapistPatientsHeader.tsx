@@ -1,11 +1,19 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { SearchBox } from "../SearchBox/SearchBox"
+import axios from "axios";
 
 interface Props {
   target: 'all' | 'own';
+  handleSearch: (event: string | null) => void;
 }
 
-export const TherapistPatientsHeader: FC<Props> = ({target}) => {
+export const TherapistPatientsHeader: FC<Props> = ({ handleSearch, target }) => {
+  const [searchTerm, setSearchTerm] = useState<string | null>(null);
+
+  const handleSearchTerm = (searchTerm: string | null) => {
+    setSearchTerm(searchTerm);
+    handleSearch(searchTerm);
+  };
 
   return (
     <>
@@ -16,7 +24,7 @@ export const TherapistPatientsHeader: FC<Props> = ({target}) => {
         </div>
 
         <div className="d-flex flex-row justify-content-end align-items-center" style={{height: '80px'}}>
-          <SearchBox />
+          <SearchBox onSearch={handleSearchTerm} />
         </div>
       </div>
     </>

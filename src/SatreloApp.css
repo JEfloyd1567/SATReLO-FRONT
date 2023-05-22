@@ -341,7 +341,7 @@ html body {
 }
 
 .iconCamera{
-    display: flexs;
+    display: flex;
     box-sizing: border-box;
     position: absolute;
     width: 50px;
@@ -353,7 +353,6 @@ html body {
     background: #1C7FD9;
     border: 4px solid #FFFFFF;
     border-radius: 20px;
-    display: inline-block;
     align-items: center !important;
 }
 

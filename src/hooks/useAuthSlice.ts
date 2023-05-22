@@ -17,10 +17,11 @@ export const useAuthStore = () => {
 
     try {
       const {data} = await satreloLoginAPI.post('/login', {personalId: username, password})
-
       localStorage.setItem('token', data.token);
+      localStorage.setItem('personalID', username);
 
       dispatch(onLogin({name: 'Therapist Name', role:'therapist'}))
+      
     } catch (error) {
 
       if (axios.isAxiosError(error)) {
@@ -34,8 +35,6 @@ export const useAuthStore = () => {
         dispatch(onLogout());
       }
     }
-
-
   }
 
   const startLogout = () => {

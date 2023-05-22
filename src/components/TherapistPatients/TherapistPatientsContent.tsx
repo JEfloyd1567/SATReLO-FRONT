@@ -3,6 +3,7 @@ import { faCircleUser } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { PaginationControl } from "react-bootstrap-pagination-control";
 import { IPatient } from '../../interfaces/patients';
+import { Col, Row } from "react-bootstrap";
 
 interface Props {
   patients: IPatient[];
@@ -35,9 +36,11 @@ export const TherapistPatientsContent: FC<Props> = ({ patients}) => {
 
         {
           patients.length < 1 &&
-          <div className="col-12 h-auto my-auto align-items-center d-flex justify-content-center">
-            <h2 className="fw-lighter fst-italic">Aun no hay pacientes registrados</h2>
-          </div>
+          <Row className="align-items-center d-flex justify-content-center text-center">
+            <Col  className="fw-lighter fst-italic" style={{ whiteSpace: 'nowrap' }}>Aún no hay pacientes registrados
+            </Col>
+          </Row>
+          
         }
 
       </div>

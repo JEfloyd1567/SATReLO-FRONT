@@ -19,14 +19,14 @@ export const TherapistPage: FC<Props> = ({ target = 'all' }) => {
       if (!token) {
         return;
       }
-      satreloUsersAPI.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+      //console.log(satreloUsersAPI.defaults.headers.common["Authorization"])
 
       let endpoint = '/therapist/patients';
 
       if (searchTerm) {
         endpoint += `/${searchTerm}`;
       }
-
+      //console.log(endpoint);
       const response = await satreloUsersAPI.get(endpoint);
       setPatientsData(response.data);
     } catch (error) {

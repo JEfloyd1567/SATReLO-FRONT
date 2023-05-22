@@ -8,6 +8,8 @@ import { AxiosError, isAxiosError } from "axios";
 import './Activities.css';
 import activityAdd from '../../api/activityAdd';
 import satreloUsersAPI from "../../api/satreloLoginAPI";
+import { Link } from 'react-router-dom';
+import { format } from 'date-fns'
 
 export const ActivitiesCreationContent = () => {
     const [pressedButtons, setPressedButtons] = useState<string[]>([]);
@@ -28,7 +30,7 @@ export const ActivitiesCreationContent = () => {
     const [btn5R, setBtn5R] = useState("");
 
     const [btn6, setBtn6] = useState(false);
-    const [btn6R, setBtn6R] = useState("");
+    const [btn6R, setBtn6R] = useState(Boolean);
 
     const handleClickA1 = (value:boolean, valuePress:string) => {
         if (btn1 == false){
@@ -80,7 +82,7 @@ export const ActivitiesCreationContent = () => {
         }
     };
 
-    const handleClickA6 = (value:boolean, valuePress:string) => {
+    const handleClickA6 = (value:boolean, valuePress:boolean) => {
         if (btn6 == false){
             setBtn6(true);
             setBtn6R(valuePress);
@@ -88,10 +90,6 @@ export const ActivitiesCreationContent = () => {
         }else{
             setBtn6R(valuePress);
         }
-    };
-
-    const handleClickAA = () => {
-        setPressedButtons(pressedButtons.concat(btn1R, btn2R, btn3R, btn4R, btn5R, btn6R));
     };
 
     const postActivityCreation = async () => {
@@ -104,8 +102,8 @@ export const ActivitiesCreationContent = () => {
   
           satreloUsersAPI.defaults.headers.common["Authorization"] = 'Bearer ${token}';
   
-          const response = await activityAdd.post('/activity/add', {personalId:"446-03-4814", startDate:Date(), lastAccess:Date(), name:"Test Activity", progress:0, 
-                                                                   description:"some description", category:btn1R, subcategory:btn2R, mecanic:btn3R, 
+          const response = await activityAdd.post('/activity/add', {personalId:"446-03-4814", startDate:format(new Date(), 'YYYY-MM-DD'), lastAcess:format(new Date(), 'YYYY-MM-DD'), name:"Test Activity", progress:0, 
+                                                                   description:"some description", category:btn1R, subCategory:btn2R, mecanic:btn3R, 
                                                                    situation:btn4R, verbalTime:btn5R, readingProcess:btn6R});
   
         } catch (error) {
@@ -241,19 +239,21 @@ export const ActivitiesCreationContent = () => {
                 <div className='boxActivity6 justify-content-center'>
                     <h6 className='boxActivity6Title'>6. Proceso Lector</h6>
                     <div className="btn-group">
-                        <button className='boxActivity6Btn1' onClick={() => handleClickA6(false, "True")}>Si</button>
-                        <button className='boxActivity6Btn2' onClick={() => handleClickA6(false, "False")}>No</button>
+                        <button className='boxActivity6Btn1' onClick={() => handleClickA6(false, true)}>Si</button>
+                        <button className='boxActivity6Btn2' onClick={() => handleClickA6(false, false)}>No</button>
                             {btn6 == false ? ""
                             : <>
-                                {btn6R == "True" ? <div className='boxActivity6Btn1 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                {btn6R ? <div className='boxActivity6Btn1 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
                                 : <div className='boxActivity6Btn2 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
                                 }
                             </>     }
                     </div>
                 </div>
-                <button className='createActivityButton'>
-                    <h6 className='createActivityButtonTitle' onClick={() => {handleClickAA(); postActivityCreation()}}>Asignar actividad</h6>
-                </button>
+                <Link to="/">
+                    <button className='createActivityButton'>
+                        <h6 className='createActivityButtonTitle' onClick={() => postActivityCreation()}>Asignar actividad</h6>
+                    </button>
+                </Link>
             </div>
         </>
     )

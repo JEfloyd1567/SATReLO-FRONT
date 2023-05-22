@@ -4,36 +4,47 @@ import { useState } from "react";
 import "./SearchBox.css"
 
 interface Props {
-    onSearch: (searchTerm: string | null) => void;
+  onSearch: (searchTerm: string | null) => void;
 }
 
 export const SearchBox: React.FC<Props> = ({ onSearch }) => {
-    const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
-    const handleButtonClick = () => {
-        onSearch(searchTerm.trim() !== "" ? searchTerm : null);
-    };
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newSearchTerm = e.target.value;
+    setSearchTerm(newSearchTerm);
+    onSearch(newSearchTerm.trim() !== "" ? newSearchTerm : null);
+  };
 
-    const[clicked,setClicked] = useState(false)
-    const hanndleButtonClick =()=>{
-        setClicked(true)
+  const handleInputBlur = () => {
+    if (searchTerm.trim() === "") {
+      setSearchTerm("");
+      onSearch(null);
     }
-    const [show, setShow] = useState(false);
+  };
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
-    return(
-        <>
-        <div className="input-group col justify-content-end align-items-center">
-            <div className="me-3 d-none d-sm-flex">Buscar paciente:</div>
-            <input className="rounded-pill inputBusqueda" type="text" placeholder="Nombre paciente" maxLength={30} 
-                onChange={(e) => setSearchTerm(e.target.value)} />
-            <div className="SearchButton rounded-circle d-inline-flex justify-content-center align-items-center" onClick={handleShow}>
-                <FontAwesomeIcon icon={faMagnifyingGlass} style={{ color: "white", backgroundColor: "#FF673B" }} size={"lg"}/>
-                <span className="search-button-text">Buscar</span>
-            </div>
-        </div>   
+  return (
+    <>
+      <div className="input-group col justify-content-end align-items-center">
+        <div className="me-3 d-none d-sm-flex">Buscar paciente:</div>
+        <input
+          className="rounded-pill inputBusqueda"
+          type="text"
+          placeholder="Nombre paciente"
+          maxLength={30}
+          value={searchTerm}
+          onChange={handleInputChange}
+          onBlur={handleInputBlur}
+        />
+        <button className="SearchButton rounded-circle d-inline-flex justify-content-center align-items-center">
+          <FontAwesomeIcon
+            icon={faMagnifyingGlass}
+            style={{ color: "white", backgroundColor: "#FF673B" }}
+            size={"lg"}
+          />
+          <span className="search-button-text">Buscar</span>
+        </button>
+      </div>
     </>
-    );
-}
+  );
+};

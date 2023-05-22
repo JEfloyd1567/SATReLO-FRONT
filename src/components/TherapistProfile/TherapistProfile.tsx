@@ -3,25 +3,54 @@ import { faPen, faCamera, faFloppyDisk, faCircleUser } from '@fortawesome/free-s
 import { Container } from 'react-bootstrap';
 import { FC, useState } from 'react';
 import { ItherapistUser } from "../../interfaces";
+import satreloUsersAPI from "../../api/satreloUsersAPI";
+import axios from "axios";
 
 interface Props {
     therapist: ItherapistUser;
 }
 
 export const TherapistProfile:  FC<Props> = ({ therapist }) => {
+    const [error, setError] = useState("");
     const [editing, setEditing] = useState(false);
     const [name, setName] = useState(therapist.name);
     const [email, setEmail] = useState(therapist.email);
     const [especialidad, setEspecialidad] = useState("Terapeuta");
     const [contacto, setContacto] = useState(therapist.phone);
 
+    console.log(name);
+
     const handleEditClick = () => {
         setEditing(true);
     };
 
-    const handleSaveClick = () => {
+    const handlePutRequest = async () => {
+        try {
+            const token = localStorage.getItem('token');
+            if (!token) {
+                return;
+            }
+            satreloUsersAPI.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+            const response = await satreloUsersAPI.put("/therapist/profile", {
+                name: name,
+                email: email,
+                phone: contacto
+          });
+          console.log(name);
+          console.log(email);
+          console.log(contacto);
+          console.log(response.data);
+
+        } catch (error) {
+          if (axios.isAxiosError(error)) {
+            const { message } = error.response?.data;
+            console.log(message);
+          } else {
+            console.log(error);
+          }
+        }
         setEditing(false);
-    };
+      };
 
     return(
        
@@ -45,7 +74,7 @@ export const TherapistProfile:  FC<Props> = ({ therapist }) => {
                 {editing ? (
                     <div className="info-therapist-info">
                         <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-                        <input type="text" value={especialidad} onChange={(e) => setEspecialidad(e.target.value)} />
+                        <input type="text" value={especialidad} readOnly />
                         <input type="text" value={contacto} onChange={(e) => setContacto(e.target.value)} />
                         <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
                     </div>
@@ -60,7 +89,7 @@ export const TherapistProfile:  FC<Props> = ({ therapist }) => {
 
                 <div>
                     {editing ? (
-                        <button className="info-therapist-button" onClick={handleSaveClick}>
+                        <button className="info-therapist-button" onClick={handlePutRequest}>
                             <FontAwesomeIcon icon={faFloppyDisk} /> Guardar
                         </button>
                     ) : (

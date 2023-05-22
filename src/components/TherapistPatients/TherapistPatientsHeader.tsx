@@ -4,30 +4,15 @@ import axios from "axios";
 
 interface Props {
   target: 'all' | 'own';
+  handleSearch: (event: string | null) => void;
 }
 
-export const TherapistPatientsHeader: FC<Props> = ({target}) => {
-  
-  const [searchTerm, setSearchTerm] = useState("");
-  const [searchResults, setSearchResults] = useState<any[]>([]); 
+export const TherapistPatientsHeader: FC<Props> = ({ handleSearch, target }) => {
+  const [searchTerm, setSearchTerm] = useState<string | null>(null);
 
-  useEffect(() => {
-    const fetchSearchResults = async () => {
-      try {
-        const response = await axios.get(`/search?term=${searchTerm}`); 
-        const results = response.data.results; 
-        setSearchResults(results);
-      } catch (error) {
-        console.log("Error fetching search results:", error);
-      }
-    };
-    if (searchTerm !== "") {
-      fetchSearchResults();
-    }
-  }, [searchTerm]);
-
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(event.target.value);
+  const handleSearchTerm = (searchTerm: string | null) => {
+    setSearchTerm(searchTerm);
+    handleSearch(searchTerm);
   };
 
   return (
@@ -39,7 +24,7 @@ export const TherapistPatientsHeader: FC<Props> = ({target}) => {
         </div>
 
         <div className="d-flex flex-row justify-content-end align-items-center" style={{height: '80px'}}>
-          <SearchBox />
+          <SearchBox onSearch={handleSearchTerm} />
         </div>
       </div>
     </>

@@ -30,7 +30,7 @@ export const TherapistProfilePage = () => {
     }, [personalIdTherapist]);
   
     if (!therapistData) {
-        return <div>Loading...</div>; // or any other fallback UI
+        return <div>Loading...</div>; 
       }
 
     return (

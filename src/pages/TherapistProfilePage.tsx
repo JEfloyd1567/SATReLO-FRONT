@@ -7,7 +7,6 @@ import axios from "axios";
 export const TherapistProfilePage = () => {
     const [therapistData, setTherapistData] = useState<ItherapistUser | null>(null);
     const personalIdTherapist = localStorage.getItem('personalID');
-    console.log(personalIdTherapist);
   
     useEffect(() => {
       const fetchTherapistData = async () => {

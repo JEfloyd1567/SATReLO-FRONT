@@ -102,7 +102,7 @@ export const ActivitiesCreationContent = () => {
   
           satreloUsersAPI.defaults.headers.common["Authorization"] = 'Bearer ${token}';
   
-          const response = await activityAdd.post('/activity/add', {personalId:"446-03-4814", startDate:format(new Date(), 'YYYY-MM-DD'), lastAcess:format(new Date(), 'YYYY-MM-DD'), name:"Test Activity", progress:0, 
+          const response = await activityAdd.post('/activity/add', {patientId:"446-03-4814", startDate:format(new Date(), 'yyyy-MM-dd'), lastAccess:format(new Date(), 'yyyy-MM-dd'), name:"Test Activity", progress:0, 
                                                                    description:"some description", category:btn1R, subCategory:btn2R, mecanic:btn3R, 
                                                                    situation:btn4R, verbalTime:btn5R, readingProcess:btn6R});
   
@@ -168,13 +168,13 @@ export const ActivitiesCreationContent = () => {
                 <div className='boxActivity3 justify-content-center'>
                     <h6 className='boxActivity3Title'>3. Mecánica</h6>
                     <div className="btn-group">
-                        <button className='boxActivity3Btn1' onClick={() => handleClickA3(false, "1")}>Secuencia</button>
-                        <button className='boxActivity3Btn2' onClick={() => handleClickA3(false, "2")}>Memoria</button>
-                        <button className='boxActivity3Btn3' onClick={() => handleClickA3(false, "3")}>Organizar</button>
+                        <button className='boxActivity3Btn1' onClick={() => handleClickA3(false, "4")}>Secuencia</button>
+                        <button className='boxActivity3Btn2' onClick={() => handleClickA3(false, "5")}>Memoria</button>
+                        <button className='boxActivity3Btn3' onClick={() => handleClickA3(false, "6")}>Organizar</button>
                         {btn3 == false ? ""
                             : <>
-                                {btn3R == "1" ? <div className=' boxActivity3Btn1 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
-                                : <>{btn3R == "2" ? <div className='boxActivity3Btn2 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                {btn3R == "4" ? <div className=' boxActivity3Btn1 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                : <>{btn3R == "5" ? <div className='boxActivity3Btn2 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
                                     : <div className='boxActivity3Btn3 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>}
                                     </>
                                 }
@@ -184,21 +184,21 @@ export const ActivitiesCreationContent = () => {
                 <div className='boxActivity4 justify-content-center'>
                     <h6 className='boxActivity4Title'>4. Situación</h6>
                     <div className="btn-group">
-                        <button className='boxActivity4Btn1' onClick={() => handleClickA4(false, "1")}></button>
+                        <button className='boxActivity4Btn1' onClick={() => handleClickA4(false, "5")}></button>
                         <h6 className='boxActivity4Btn1Text'>Camino al colegio</h6>
-                        <button className='boxActivity4Btn2' onClick={() => handleClickA4(false, "2")}></button>
+                        <button className='boxActivity4Btn2' onClick={() => handleClickA4(false, "6")}></button>
                         <h6 className='boxActivity4Btn2Text'>Cumpleaños</h6>
-                        <button className='boxActivity4Btn3' onClick={() => handleClickA4(false, "3")}></button>
+                        <button className='boxActivity4Btn3' onClick={() => handleClickA4(false, "7")}></button>
                         <h6 className='boxActivity4Btn3Text'>Caperucita roja</h6>
-                        <button className='boxActivity4Btn4' onClick={() => handleClickA4(false, "4")}></button>
+                        <button className='boxActivity4Btn4' onClick={() => handleClickA4(false, "8")}></button>
                         <h6 className='boxActivity4Btn4Text'>El ratón Perez</h6>
-                        <button className='boxActivity4Btn5' onClick={() => handleClickA4(false, "5")}></button>
+                        <button className='boxActivity4Btn5' onClick={() => handleClickA4(false, "9")}></button>
                         <h6 className='boxActivity4Btn5Text'>Paseando al perro</h6>
-                        <button className='boxActivity4Btn6' onClick={() => handleClickA4(false, "6")}></button>
+                        <button className='boxActivity4Btn6' onClick={() => handleClickA4(false, "10")}></button>
                         <h6 className='boxActivity4Btn6Text'>Un día en la playa</h6>
-                        <button className='boxActivity4Btn7' onClick={() => handleClickA4(false, "7")}></button>
+                        <button className='boxActivity4Btn7' onClick={() => handleClickA4(false, "11")}></button>
                         <h6 className='boxActivity4Btn7Text'>Bañando al bebé</h6>
-                        <button className='boxActivity4Btn8' onClick={() => handleClickA4(false, "8")}></button>
+                        <button className='boxActivity4Btn8' onClick={() => handleClickA4(false, "12")}></button>
                         <h6 className='boxActivity4Btn8Text'>Un día de natación</h6>
                         {btn4 == false ? ""
                             : <>

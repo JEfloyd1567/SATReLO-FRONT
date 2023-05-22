@@ -1,0 +1,1134 @@
+.createActivitiesBG{
+    position: absolute;
+    width: 1336px;
+    height: 1650px;
+    left: 0px;
+    top: 122px;
+
+    background: #F1EEEE;
+}
+
+.createActivities{
+    position: absolute;
+    width: 920px;
+    height: 1580px;
+    left: 208px;
+    top: 144px;
+    bottom: 48px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.createActivitiesTitle{
+    position: absolute;
+    width: 607px;
+    height: 100px;
+    right: 495px;
+    top: 39px;
+    
+    font-family: 'Actor';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    
+    color: #000000;
+}
+
+.boxActivityPatient{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 80px;
+    left: 50px;
+    top: 74px;
+    
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivityPatientTitle{
+    position: absolute;
+    width: 124px;
+    height: 20.67px;
+    left: 35px;
+    top: 30px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+}
+
+.boxActivityPatientName{
+    position: absolute;
+    width: 242px;
+    height: 21px;
+    left: 232px;
+    top: 30px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+}
+
+.checked{
+    text-align: end;
+  }
+
+.checkmarkSelected{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 42px !important;
+    border-radius: 50px;
+    height: 42px;
+    text-align: center !important;
+    border: 3px solid #FFFFFF;
+    background-color: #1C7FD9;;
+    font-size: 24px;
+    font-family: 'Inter' !important;
+    font-weight: 800px;
+    font-style: normal;
+    position: absolute;     
+    bottom: 0;     
+    right: 0;
+}
+
+/* Activity 1*/
+
+.boxActivity1{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 205px;
+    left: 50px;
+    top: 172px;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity1Title{
+    position: absolute;
+    width: 230px;
+    height: 19px;
+    left: 35px;
+    top: 23px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+}
+
+.boxActivity1Btn1{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 35px;
+    top: 60px;
+
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/category/animales.jpg);
+    background-size: cover;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    border: none;
+}
+
+.boxActivity1Btn1Text{
+    position: absolute;
+    width: 60px;
+    height: 17px;
+    left: 79px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity1Btn2{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 232px;
+    top: 60px;
+
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/category/prendas.jpg);
+    background-size: cover;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    border: none;
+}
+
+.boxActivity1Btn2Text{
+    position: absolute;
+    width: 116px;
+    height: 17px;
+    left: 248px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity1Btn3{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 436px;
+    top: 60px;
+
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/category/comida.avif);
+    background-size: cover;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    border: none;
+}
+
+.boxActivity1Btn3Text{
+    position: absolute;
+    width: 60px;
+    height: 17px;
+    left: 485px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity1Btn4{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 639px;
+    top: 60px;
+
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/category/casa.jpg);
+    background-size: cover;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    border: none;
+}
+
+.boxActivity1Btn4Text{
+    position: absolute;
+    width: 34px;
+    height: 17px;
+    left: 696px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity1Btn1:target,
+.boxActivity1Btn1:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity1Btn2:target,
+.boxActivity1Btn2:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity1Btn3:target,
+.boxActivity1Btn3:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity1Btn4:target,
+.boxActivity1Btn4:focus{
+    border: 3px solid #1C7FD9;
+}
+
+/* Activity 2*/
+
+.boxActivity2{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 205px;
+    left: 50px;
+    top: 395px;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity2Title{
+    position: absolute;
+    width: 230px;
+    height: 19px;
+    left: 35px;
+    top: 23px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+}
+
+.boxActivity2Btn1{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 35px;
+    top: 60px;
+
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/subcategory/cuartos.webp);
+    background-size: cover;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    border: none;
+}
+
+.boxActivity2Btn2{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 232px;
+    top: 60px;
+
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/subcategory/objetos.webp);
+    background-size: cover;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    border: none;
+}
+
+.boxActivity2Btn3{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 436px;
+    top: 60px;
+
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/subcategory/accesorios.webp);
+    background-size: cover;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    border: none;
+}
+
+.boxActivity2Btn4{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 639px;
+    top: 60px;
+
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/subcategory/tiposcasas.jpg);
+    background-size: cover;
+    border: 3px solid #1C7FD9;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    border: none;
+}
+
+.boxActivity2Btn1:target,
+.boxActivity2Btn1:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity2Btn2:target,
+.boxActivity2Btn2:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity2Btn3:target,
+.boxActivity2Btn3:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity2Btn4:target,
+.boxActivity2Btn4:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity2Btn1Text{
+    position: absolute;
+    width: 60px;
+    height: 17px;
+    left: 83px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity2Btn2Text{
+    position: absolute;
+    width: 60px;
+    height: 17px;
+    left: 280px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity2Btn3Text{
+    position: absolute;
+    width: 93px;
+    height: 17px;
+    left: 464px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity2Btn4Text{
+    position: absolute;
+    width: 100px;
+    height: 17px;
+    left: 663px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+/* Activity 3*/
+
+.boxActivity3{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 140px;
+    left: 50px;
+    top: 618px;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity3Title{
+    position: absolute;
+    width: 230px;
+    height: 19px;
+    left: 35px;
+    top: 22px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+}
+
+.boxActivity3Btn1{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 197px;
+    height: 44px;
+    left: 35px;
+    top: 49px;
+
+    background: #E2FCFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    border: none;
+}
+
+.boxActivity3Btn2{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 197px;
+    height: 44px;
+    left: 309px;
+    top: 49px;
+
+    background: #E2FCFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    border: none;
+}
+
+.boxActivity3Btn3{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 197px;
+    height: 44px;
+    left: 584px;
+    top: 49px;
+
+    background: #E2FCFF;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity3Btn1:target,
+.boxActivity3Btn1:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity3Btn2:target,
+.boxActivity3Btn2:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity3Btn3:target,
+.boxActivity3Btn3:focus{
+    border: 3px solid #1C7FD9;
+}
+
+/* Activity 4*/
+
+.boxActivity4{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 363px;
+    left: 50px;
+    top: 776px;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity4Title{
+    position: absolute;
+    width: 230px;
+    height: 19px;
+    left: 35px;
+    top: 23px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+}
+
+.boxActivity4Btn1{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 35px;
+    top: 60px;
+
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/caminoalcolegio.jpg);
+    background-size: cover;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    border: none;
+}
+
+.boxActivity4Btn2{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 232px;
+    top: 60px;
+
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/cumpleanos.webp);
+    background-size: cover;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    border: none;
+}
+
+.boxActivity4Btn3{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 436px;
+    top: 60px;
+
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/caperucitaroja.png);
+    background-size: cover;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    border: none;
+}
+
+.boxActivity4Btn4{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 639px;
+    top: 60px;
+
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/ratonperez.png);
+    background-size: cover;
+    border: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+}
+
+.boxActivity4Btn5{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 35px;
+    top: 200px;
+
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/paseoperro.png);
+    background-size: cover;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    border: none;
+}
+
+.boxActivity4Btn6{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 232px;
+    top: 200px;
+
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/diaplaya.png);
+    background-size: cover;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    border: none;
+}
+
+.boxActivity4Btn7{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 436px;
+    top: 200px;
+
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/banobebe.png);
+    background-size: cover;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    border: none;
+}
+
+.boxActivity4Btn8{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 148px;
+    height: 96px;
+    left: 639px;
+    top: 200px;
+
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/dianatacion.png);
+    background-size: cover;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    border: none;
+}
+
+.boxActivity4Btn1Text{
+    position: absolute;
+    width: 118px;
+    height: 17px;
+    left: 50px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity4Btn2Text{
+    position: absolute;
+    width: 83px;
+    height: 17px;
+    left: 265px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity4Btn3Text{
+    position: absolute;
+    width: 101px;
+    height: 17px;
+    left: 460px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity4Btn4Text{
+    position: absolute;
+    width: 92px;
+    height: 17px;
+    left: 667px;
+    top: 163px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity4Btn5Text{
+    position: absolute;
+    width: 120px;
+    height: 17px;
+    left: 53px;
+    top: 302px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity4Btn6Text{
+    position: absolute;
+    width: 117px;
+    height: 17px;
+    left: 252px;
+    top: 302px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity4Btn7Text{
+    position: absolute;
+    width: 112px;
+    height: 17px;
+    left: 458px;
+    top: 302px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity4Btn8Text{
+    position: absolute;
+    width: 124px;
+    height: 17px;
+    left: 655px;
+    top: 302px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.boxActivity4Btn1:target,
+.boxActivity4Btn1:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity4Btn2:target,
+.boxActivity4Btn2:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity4Btn3:target,
+.boxActivity4Btn3:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity4Btn4:target,
+.boxActivity4Btn4:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity4Btn5:target,
+.boxActivity4Btn5:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity4Btn6:target,
+.boxActivity4Btn6:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity4Btn7:target,
+.boxActivity4Btn7:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity4Btn8:target,
+.boxActivity4Btn8:focus{
+    border: 3px solid #1C7FD9;
+}
+
+/* Activity 5*/
+
+.boxActivity5{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 140px;
+    left: 50px;
+    top: 1157px;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity5Title{
+    position: absolute;
+    width: 230px;
+    height: 19px;
+    left: 35px;
+    top: 22px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+}
+
+.boxActivity5Btn1{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 197px;
+    height: 44px;
+    left: 35px;
+    top: 49px;
+    
+    background: #EBE2FF;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity5Btn2{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 197px;
+    height: 44px;
+    left: 309px;
+    top: 49px;
+    
+    background: #EBE2FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    border: none;
+}
+
+.boxActivity5Btn3{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 197px;
+    height: 44px;
+    left: 584px;
+    top: 49px;
+    
+    background: #EBE2FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    border: none;
+}
+
+.boxActivity5Btn1:target,
+.boxActivity5Btn1:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity5Btn2:target,
+.boxActivity5Btn2:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity5Btn3:target,
+.boxActivity5Btn3:focus{
+    border: 3px solid #1C7FD9;
+}
+
+/* Activity 6*/
+
+.boxActivity6{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 829px;
+    height: 140px;
+    left: 50px;
+    top: 1315px;
+    
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity6Title{
+    position: absolute;
+    width: 230px;
+    height: 19px;
+    left: 35px;
+    top: 22px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+}
+
+.boxActivity6Btn1{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 197px;
+    height: 44px;
+    left: 200px;
+    top: 49px;
+    
+    background: #FFE2E2;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.boxActivity6Btn2{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 197px;
+    height: 44px;
+    left: 474px;
+    top: 49px;
+    
+    background: #FFE2E2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    border: none;
+}
+
+.boxActivity6Btn1:target,
+.boxActivity6Btn1:focus{
+    border: 3px solid #1C7FD9;
+}
+
+.boxActivity6Btn2:target,
+.boxActivity6Btn2:focus{
+    border: 3px solid #1C7FD9;
+}
+
+/* Activity Button*/
+
+.createActivityButton{
+    position: absolute;
+    width: 196px;
+    height: 41.68px;
+    left: 362px;
+    top: 1484px;
+
+    background: #FF673B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    border: none;
+}
+
+.createActivityButtonTitle{
+    height: 12px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    
+    color: #FFFFFF;
+}

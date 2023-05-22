@@ -94,30 +94,26 @@ export const ActivitiesCreationContent = () => {
         setPressedButtons(pressedButtons.concat(btn1R, btn2R, btn3R, btn4R, btn5R, btn6R));
     };
 
-    useEffect(() => {
-        const postActivityCreation = async () => {
-          try {
-            const token = localStorage.getItem('token');
-    
-            if (!token) {
-              return;
-            }
-    
-            /*satreloUsersAPI.defaults.headers.common["Authorization"] = Bearer ${token};*/
-    
-            const response = await activityAdd.post('/activity/add', {personalId:"446-03-4814", startDate:Date(), lastAccess:Date(), name:"Test Activity", progress:0, 
-                                                                     description:"some description", category:btn1R, subcategory:btn2R, mecanic:btn3R, 
-                                                                     situation:btn4R, verbalTime:btn5R, readingProcess:btn6R});
-    
-            /*setPatientsData(response.data);*/
-    
-          } catch (error) {
-            console.log(error);
+    const postActivityCreation = async () => {
+        try {
+          const token = localStorage.getItem('token');
+  
+          if (!token) {
+            return;
           }
-        };
-    
-        postActivityCreation();
-      }, [handleClickAA]);
+  
+          /*satreloUsersAPI.defaults.headers.common["Authorization"] = Bearer ${token};*/
+  
+          const response = await activityAdd.post('/activity/add', {personalId:"446-03-4814", startDate:Date(), lastAccess:Date(), name:"Test Activity", progress:0, 
+                                                                   description:"some description", category:btn1R, subcategory:btn2R, mecanic:btn3R, 
+                                                                   situation:btn4R, verbalTime:btn5R, readingProcess:btn6R});
+  
+          /*setPatientsData(response.data);*/
+  
+        } catch (error) {
+          console.log(error);
+        }
+    };
 
     return(
         <>
@@ -258,7 +254,7 @@ export const ActivitiesCreationContent = () => {
                     </div>
                 </div>
                 <button className='createActivityButton'>
-                    <h6 className='createActivityButtonTitle' onClick={() => handleClickAA()}>Asignar actividad</h6>
+                    <h6 className='createActivityButtonTitle' onClick={() => {handleClickAA(); postActivityCreation()}}>Asignar actividad</h6>
                 </button>
             </div>
         </>

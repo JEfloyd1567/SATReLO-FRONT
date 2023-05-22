@@ -150,6 +150,7 @@
     top: 60px;
 
     background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/category/animales.jpg);
+    background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -184,6 +185,7 @@
     top: 60px;
 
     background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/category/prendas.jpg);
+    background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -218,6 +220,7 @@
     top: 60px;
 
     background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/category/comida.avif);
+    background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -252,6 +255,7 @@
     top: 60px;
 
     background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/category/casa.jpg);
+    background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -339,6 +343,7 @@
     top: 60px;
 
     background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/subcategory/cuartos.webp);
+    background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -354,6 +359,7 @@
     top: 60px;
 
     background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/subcategory/objetos.webp);
+    background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -369,6 +375,7 @@
     top: 60px;
 
     background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/subcategory/accesorios.webp);
+    background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -384,6 +391,7 @@
     top: 60px;
 
     background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/subcategory/tiposcasas.jpg);
+    background-size: cover;
     border: 3px solid #1C7FD9;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
@@ -622,6 +630,7 @@
     top: 60px;
 
     background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/caminoalcolegio.jpg);
+    background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -637,6 +646,7 @@
     top: 60px;
 
     background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/cumpleanos.webp);
+    background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -652,6 +662,7 @@
     top: 60px;
 
     background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/caperucitaroja.png);
+    background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -667,6 +678,7 @@
     top: 60px;
 
     background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/ratonperez.png);
+    background-size: cover;
     border: none;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
@@ -682,6 +694,7 @@
     top: 200px;
 
     background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/paseoperro.png);
+    background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -697,6 +710,7 @@
     top: 200px;
 
     background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/diaplaya.png);
+    background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -712,6 +726,7 @@
     top: 200px;
 
     background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/banobebe.png);
+    background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -727,6 +742,7 @@
     top: 200px;
 
     background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/situation/dianatacion.png);
+    background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;

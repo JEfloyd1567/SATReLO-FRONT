@@ -18,13 +18,11 @@ export const useAuthStore = () => {
 
     try {
       const {data} = await satreloLoginAPI.post('/login', {personalId: username, password})
-      console.log(data.token)
-
       localStorage.setItem('token', data.token);
       setAuthToken(data.token);
+      localStorage.setItem('personalID', username);
 
       dispatch(onLogin({name: 'Therapist Name', role:'therapist'}))
-      console.log(data.role)
       
     } catch (error) {
 

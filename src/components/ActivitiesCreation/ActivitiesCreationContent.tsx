@@ -4,10 +4,10 @@ import { Row, Col } from "react-bootstrap";
 import { faCheck, faCircleUser } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { FC, useEffect, useState } from 'react';
-import axios from "axios";
+import { AxiosError, isAxiosError } from "axios";
 import './Activities.css';
 import activityAdd from '../../api/activityAdd';
-/*import satreloUsersAPI from "../../api/satreloUsersAPI";*/
+import satreloUsersAPI from "../../api/satreloLoginAPI";
 
 export const ActivitiesCreationContent = () => {
     const [pressedButtons, setPressedButtons] = useState<string[]>([]);
@@ -102,13 +102,11 @@ export const ActivitiesCreationContent = () => {
             return;
           }
   
-          /*satreloUsersAPI.defaults.headers.common["Authorization"] = Bearer ${token};*/
+          satreloUsersAPI.defaults.headers.common["Authorization"] = 'Bearer ${token}';
   
           const response = await activityAdd.post('/activity/add', {personalId:"446-03-4814", startDate:Date(), lastAccess:Date(), name:"Test Activity", progress:0, 
                                                                    description:"some description", category:btn1R, subcategory:btn2R, mecanic:btn3R, 
                                                                    situation:btn4R, verbalTime:btn5R, readingProcess:btn6R});
-  
-          /*setPatientsData(response.data);*/
   
         } catch (error) {
           console.log(error);
@@ -126,19 +124,19 @@ export const ActivitiesCreationContent = () => {
                 <div className='boxActivity1 justify-content-center'>
                     <h6 className='boxActivity1Title'>1. Categoría Semántica</h6>
                     <div className="btn-group" >
-                        <button className='boxActivity1Btn1' onClick={() => handleClickA1(false, "1")}></button>
+                        <button className='boxActivity1Btn1' onClick={() => handleClickA1(false, "2")}></button>
                         <h6 className='boxActivity1Btn1Text'>Animales</h6>
-                        <button className='boxActivity1Btn2' onClick={() => handleClickA1(false, "2")}></button>
+                        <button className='boxActivity1Btn2' onClick={() => handleClickA1(false, "3")}></button>
                         <h6 className='boxActivity1Btn2Text'>Prendas de vestir</h6>
-                        <button className='boxActivity1Btn3' onClick={() => handleClickA1(false, "3")}></button>
+                        <button className='boxActivity1Btn3' onClick={() => handleClickA1(false, "4")}></button>
                         <h6 className='boxActivity1Btn3Text'>Comida</h6>
-                        <button className='boxActivity1Btn4' onClick={() => handleClickA1(false,"4")}></button>
+                        <button className='boxActivity1Btn4' onClick={() => handleClickA1(false,"5")}></button>
                         <h6 className='boxActivity1Btn4Text'>Casa</h6>
                         {btn1 == false ? ""
                             : <>
-                                {btn1R == "1" ? <div className=' boxActivity1Btn1 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
-                                : <>{btn1R == "2" ? <div className='boxActivity1Btn2 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
-                                    : <>{btn1R == "3" ? <div className='boxActivity1Btn3 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                {btn1R == "2" ? <div className=' boxActivity1Btn1 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                : <>{btn1R == "3" ? <div className='boxActivity1Btn2 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                    : <>{btn1R == "4" ? <div className='boxActivity1Btn3 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
                                         : <div className='boxActivity1Btn4 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>}
                                         </>}
                                     </>
@@ -149,19 +147,19 @@ export const ActivitiesCreationContent = () => {
                 <div className='boxActivity2 justify-content-center'>
                     <h6 className='boxActivity2Title'>2. Subcategoría Semántica</h6>
                     <div className="btn-group">
-                        <button className='boxActivity2Btn1' onClick={() => handleClickA2(false, "1")}></button>
+                        <button className='boxActivity2Btn1' onClick={() => handleClickA2(false, "3")}></button>
                         <h6 className='boxActivity2Btn1Text'>Cuartos</h6>
-                        <button className='boxActivity2Btn2' onClick={() => handleClickA2(false, "2")}></button>
+                        <button className='boxActivity2Btn2' onClick={() => handleClickA2(false, "4")}></button>
                         <h6 className='boxActivity2Btn2Text'>Objetos</h6>
-                        <button className='boxActivity2Btn3' onClick={() => handleClickA2(false, "3")}></button>
+                        <button className='boxActivity2Btn3' onClick={() => handleClickA2(false, "7")}></button>
                         <h6 className='boxActivity2Btn3Text'>Preposiciones</h6>
-                        <button className='boxActivity2Btn4' onClick={() => handleClickA2(false, "4")}></button>
+                        <button className='boxActivity2Btn4' onClick={() => handleClickA2(false, "5")}></button>
                         <h6 className='boxActivity2Btn4Text'>Tipos de casas</h6>
                         {btn2 == false ? ""
                             : <>
-                                {btn2R == "1" ? <div className=' boxActivity2Btn1 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
-                                : <>{btn2R == "2" ? <div className='boxActivity2Btn2 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
-                                    : <>{btn2R == "3" ? <div className='boxActivity2Btn3 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                {btn2R == "3" ? <div className=' boxActivity2Btn1 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                : <>{btn2R == "4" ? <div className='boxActivity2Btn2 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
+                                    : <>{btn2R == "7" ? <div className='boxActivity2Btn3 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>
                                         : <div className='boxActivity2Btn4 checked'><span className="checkmarkSelected"><FontAwesomeIcon icon={faCheck} size="sm" style={{color: "#ffffff",}} /></span></div>}
                                         </>}
                                     </>

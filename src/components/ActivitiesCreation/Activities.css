@@ -338,7 +338,7 @@
     left: 35px;
     top: 60px;
 
-    /*background: url();*/
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/subcategory/cuartos.webp);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -353,7 +353,7 @@
     left: 232px;
     top: 60px;
 
-    /*background: url();*/
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/subcategory/objetos.webp);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -368,7 +368,7 @@
     left: 436px;
     top: 60px;
 
-    /*background: url();*/
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/subcategory/accesorios.webp);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     border: none;
@@ -383,7 +383,7 @@
     left: 639px;
     top: 60px;
 
-    /*background: url();*/
+    background: url(https://psi-website.s3.us-east-2.amazonaws.com/activities/subcategory/tiposcasas.jpg);
     border: 3px solid #1C7FD9;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;

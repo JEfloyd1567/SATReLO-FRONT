@@ -7,6 +7,7 @@ import { FC, useEffect, useState } from 'react';
 import axios from "axios";
 import './Activities.css';
 import activityAdd from '../../api/activityAdd';
+/*import satreloUsersAPI from "../../api/satreloUsersAPI";*/
 
 export const ActivitiesCreationContent = () => {
     const [pressedButtons, setPressedButtons] = useState<string[]>([]);
@@ -94,7 +95,7 @@ export const ActivitiesCreationContent = () => {
     };
 
     useEffect(() => {
-        const fetchPatientsData = async () => {
+        const postActivityCreation = async () => {
           try {
             const token = localStorage.getItem('token');
     
@@ -102,9 +103,11 @@ export const ActivitiesCreationContent = () => {
               return;
             }
     
-            /*activityAdd.defaults.headers.common["Authorization"] = Bearer ${token};*/
+            /*satreloUsersAPI.defaults.headers.common["Authorization"] = Bearer ${token};*/
     
-            const response = await activityAdd.post('/activity/add');
+            const response = await activityAdd.post('/activity/add', {personalId:"446-03-4814", startDate:Date(), lastAccess:Date(), name:"Test Activity", progress:0, 
+                                                                     description:"some description", category:btn1R, subcategory:btn2R, mecanic:btn3R, 
+                                                                     situation:btn4R, verbalTime:btn5R, readingProcess:btn6R});
     
             /*setPatientsData(response.data);*/
     
@@ -113,8 +116,8 @@ export const ActivitiesCreationContent = () => {
           }
         };
     
-        fetchPatientsData();
-      }, []);
+        postActivityCreation();
+      }, [handleClickAA]);
 
     return(
         <>

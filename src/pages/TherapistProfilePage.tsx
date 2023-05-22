@@ -12,6 +12,11 @@ export const TherapistProfilePage = () => {
     useEffect(() => {
       const fetchTherapistData = async () => {
         try {
+          const token = localStorage.getItem('token');
+          if (!token) {
+            return;
+          }
+          satreloUsersAPI.defaults.headers.common["Authorization"] = `Bearer ${token}`;
           const { data } = await satreloUsersAPI.get(`/therapist/personalid/${personalIdTherapist}`);
           setTherapistData(data);
         } catch (error) {

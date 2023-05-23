@@ -68,7 +68,7 @@ export const PatientProfileContent = () => {
                 {
                   (user?.role === 'therapist') && 
                   (
-                    <a href='/' className="" id="patient-asignar-actividad">Asignar actividad</a>
+                    <a href='/ActivityCreation' className="" id="patient-asignar-actividad">Asignar actividad</a>
                   )
                 }
               </div>

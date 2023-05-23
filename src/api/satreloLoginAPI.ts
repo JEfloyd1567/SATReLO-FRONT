@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const satreloLoginAPI = axios.create({
-  baseURL: 'http://18.188.39.32:8085',
+  baseURL: 'http://3.12.41.54:8085',
 });
 
 satreloLoginAPI.interceptors.request.use((request) => {

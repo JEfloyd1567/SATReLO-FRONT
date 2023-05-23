@@ -6,7 +6,8 @@ html body {
     background-image: url('./assets/images/banner.png');
     display: flex;
     height: 50vh;
-    background: "no-repeat";
+    background-repeat: no-repeat;
+    width: 100%;
 }
 .botonNoClicked{
     display: flex;
@@ -67,9 +68,9 @@ html body {
     padding: 0px;
 }
 
-.clickedBackgroundIcon:hover {
+/* .clickedBackgroundIcon:hover {
     cursor: pointer!important;
-}
+} */
 
 
 .texto-container{

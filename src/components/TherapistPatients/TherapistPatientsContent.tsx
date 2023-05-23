@@ -29,7 +29,7 @@ export const TherapistPatientsContent: FC<Props> = ({ patients}) => {
               <FontAwesomeIcon icon={faCircleUser} className='text-primary mb-3' size="7x" />
               <p className="fw-bold align-bottom text-center">{name}</p>
               <p>{createdDate}</p>
-              <a >Ver Perfil</a>
+              <a href={`/PatientProfile`} >Ver Perfil</a>
             </div>
           </div>
           ))

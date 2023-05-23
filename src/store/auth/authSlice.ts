@@ -34,9 +34,14 @@ export const authSlice = createSlice({
     },
     onChecking : (state) => {
       state.status = 'checking'
+    },
+    onGettingUserRole : (state, action: PayloadAction<IUser>) => {
+      state.status = 'not-authenticated'
+      state.user = action.payload
+      state.errorMessage = undefined
     }
   }
 });
 
-export const {onLogin, onLogout, clearErrorMessage, onChecking} = authSlice.actions;
+export const {onLogin, onLogout, clearErrorMessage, onChecking, onGettingUserRole} = authSlice.actions;
 export default authSlice.reducer;

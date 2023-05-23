@@ -13,22 +13,25 @@ export const PatientProfileContent = () => {
     <div className="row mb-4">
 
         {/* PATIENT PERSONAL INFO */}
-        <div className="col-12 col-md-7 col-xxl-7 pb-4 pb-md-0">
+        <div className="col-12 col-md-7 col-xxl-7 pb-4 pb-md-0" id="patient-personal-info">
           <div className="border shadow-sm rounded-3 px-4 py-4" >
             <div className="row mb-1">
               <h5>Información personal</h5>
             </div>
             <div className="row">
               <div className="col-12 col-lg-4 d-flex justify-content-center mb-2 mb-sm-0">
-                <FontAwesomeIcon icon={faCircleUser} className='text-primary' size="9x" />
+                {/* <FontAwesomeIcon icon={faCircleUser} className='text-primary' size="9x" /> */}
+                <div className="col-12 pb-sm-0">
+                  <img src="https://psi-website.s3.us-east-2.amazonaws.com/pfp/mypfp7.jpg" className='w-100 rounded' style={{height: '150px',objectFit: 'cover'}}/>
+                </div>
               </div>
               <div className="col">
-                <p className="m-0">Nombre: Nombre paciente</p>
-                <p className="m-0">Edad: 7 años</p>
-                <p className="m-0">Fecha de nacimiento: DD/MM/YYYY</p>
-                <p className="m-0">Guardian: Nombre del guardian</p>
-                <p className="m-0">Numero de contacto: 3001231122</p>
-                <p className="m-0">Email: paciente@mail.com</p>
+                <p className="m-0">Nombre: Belvia</p>
+                <p className="m-0">Edad: 13 años</p>
+                <p className="m-0">Fecha de nacimiento: 01/01/2010</p>
+                <p className="m-0">Guardian: Jhon Doe</p>
+                <p className="m-0">Numero de contacto: 190-358-7623</p>
+                <p className="m-0">Email: bhardikerk@dion.ne.jp</p>
               </div>
             </div>
           </div>
@@ -36,22 +39,19 @@ export const PatientProfileContent = () => {
         {/* PATIENT PERSONAL INFO */}
 
         {/* PATIENT HISTORY */}
-        <div className="col-12 col-md-5 col-xxl-5">
+        <div className="col-12 col-md-5 col-xxl-5" id="patient-history">
           <div className="border shadow-sm rounded-3 px-4 pt-3 pb-2 h-100" >
             <div className="row mb-1">
               <h5>Historia</h5>
             </div>
             <div className="row overflow-auto">
-              <p className="m-0">Paciente desde: DD/MM/YYYY</p>
+              <p className="m-0">Paciente desde: 25/04/2023</p>
               <p className="m-0">Estado: Activo</p>
               <p className="m-0">Terapeutas:</p>
-              <div className="d-flex flex-column overflow-auto " style={{maxHeight: '96px'}}>
-                <p className="m-0 text-nowrap">Nombre Terapeuta {`(Fecha inicio - actualidad)`}</p>
-                <p className="m-0 text-nowrap">Nombre Terapeuta {`(Fecha inicio - actualidad)`}</p>
-                <p className="m-0 text-nowrap">Nombre Terapeuta {`(Fecha inicio - actualidad)`}</p>
-                <p className="m-0 text-nowrap">Nombre Terapeuta {`(Fecha inicio - actualidad)`}</p>
-                <p className="m-0 text-nowrap">Nombre Terapeuta {`(Fecha inicio - actualidad)`}</p>
-                <p className="m-0 text-nowrap">Nombre Terapeuta {`(Fecha inicio - actualidad)`}</p>
+              <div className="d-flex flex-column overflow-auto ps-5" style={{maxHeight: '96px'}}>
+                <p className="m-0 text-nowrap">Paul</p>
+                <p className="m-0 text-nowrap">German Caycedo Mutis</p>
+                <p className="m-0 text-nowrap">Jeremias Villalobos</p>
               </div>
             </div>
           </div>
@@ -68,7 +68,7 @@ export const PatientProfileContent = () => {
                 {
                   (user?.role === 'therapist') && 
                   (
-                    <a href='/' className="">Asignar actividad</a>
+                    <a href='/' className="" id="patient-asignar-actividad">Asignar actividad</a>
                   )
                 }
               </div>

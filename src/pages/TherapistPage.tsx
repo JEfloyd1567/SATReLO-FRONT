@@ -3,6 +3,7 @@ import { BoxContentLayout, TherapistPatientsContent, TherapistPatientsHeader } f
 import { IPatient } from '../interfaces/patients';
 import satreloUsersAPI from "../api/satreloUsersAPI";
 import { AxiosError, isAxiosError } from "axios";
+import { useAuthStore } from "../hooks";
 
 interface Props {
   target?: 'all' | 'own';
@@ -11,6 +12,8 @@ interface Props {
 export const TherapistPage: FC<Props> = ({ target = 'all' }) => {
   const [patientsData, setPatientsData] = useState<IPatient[]>([]);
   const [searchTerm, setSearchTerm] = useState<string | null>(null);
+
+  const role = localStorage.getItem('user_role');
 
   const fetchPatientsData = async (searchTerm: string | null) => {
     try {
@@ -51,8 +54,14 @@ export const TherapistPage: FC<Props> = ({ target = 'all' }) => {
   }, [searchTerm]);
 
   return (
-    <BoxContentLayout header={<TherapistPatientsHeader  handleSearch={fetchPatientsData}  target={target} />}>
-      <TherapistPatientsContent patients={patientsData}/>
-    </BoxContentLayout>
+    <>
+    {
+      role === 'therapist' && (
+        <BoxContentLayout header={<TherapistPatientsHeader  handleSearch={fetchPatientsData}  target={target} />}>
+          <TherapistPatientsContent patients={patientsData}/>
+        </BoxContentLayout>
+      )
+    }
+    </>
   );
 };

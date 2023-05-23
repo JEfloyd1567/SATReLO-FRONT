@@ -1,11 +1,13 @@
 export interface IUser {
-  name: string;
-  role: IRole;
+  name?: string;
+  personalId?: string;
+  role: IRole
 }
 
 export interface IUserLogin {
   username: string;
   password: string;
+  role?: IRole;
 }
 
 export interface ItherapistUser{

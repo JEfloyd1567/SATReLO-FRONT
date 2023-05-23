@@ -47,7 +47,7 @@ export const TherapistPatientsContent: FC<Props> = ({patients}) => {
 
       {/* PAGINATION */}
       {(patients.length > 0) &&
-        <div className="d-flex justify-content-end mt-4 me-4" id="patients-pagination">
+        <div className="d-flex justify-content-end mt-4 me-4">
           <PaginationControl
             page={activePage}
             total={patients.length}

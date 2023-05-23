@@ -25,6 +25,7 @@ export const TherapistPatientsContent: FC<Props> = ({ patients}) => {
           currentPatients.map( ({name, createdDate, avatarUrl}, index) => (
           <div className="col d-flex justify-content-center" key={index} >
             <div className="border shadow rounded-3 px-2 py-3 d-inline-flex flex-column align-items-center "  style={{width: '260px'}}>
+              {/*<img src={avatarUrl} alt="Avatar" className="text-primary mb-3" style={{ fontSize: '7x' }} />*/}
               <FontAwesomeIcon icon={faCircleUser} className='text-primary mb-3' size="7x" />
               <p className="fw-bold align-bottom text-center">{name}</p>
               <p>{createdDate}</p>

@@ -9,7 +9,7 @@ interface Props {
   patients: IPatient[];
 }
 
-export const TherapistPatientsContent: FC<Props> = ({patients}) => {
+export const TherapistPatientsContent: FC<Props> = ({ patients}) => {
 
   const patientsPerPage = 6;
   const [activePage, setActivePage] = useState(1);

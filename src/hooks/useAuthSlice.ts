@@ -18,8 +18,8 @@ export const useAuthStore = () => {
 
     try {
       const {data} = await satreloLoginAPI.post('/login', {personalId: username, password})
-
       localStorage.setItem('token', data.token);
+      localStorage.setItem('personalID', data.token);
       const user_role: any = localStorage.getItem('user_role') ?? 'patient';
 
       dispatch(onLogin({name: `${user_role} user`, role: user_role}))

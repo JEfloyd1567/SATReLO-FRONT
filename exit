@@ -1,0 +1,261 @@
+[1mdiff --cc src/api/satreloUsersAPI.ts[m
+[1mindex 54b65cd,fc672e9..0000000[m
+[1m--- a/src/api/satreloUsersAPI.ts[m
+[1m+++ b/src/api/satreloUsersAPI.ts[m
+[36m@@@ -4,9 -4,4 +4,12 @@@[m [mconst satreloUsersAPI = axios.create([m
+    baseURL: 'http://18.188.39.32:8086',[m
+  });[m
+  [m
+[32m++<<<<<<< HEAD[m
+[32m +satreloUsersAPI.interceptors.request.use((request) => {[m
+[32m +    request.headers.set('Authorization', `Bearer ${localStorage.getItem('token')}`)[m
+[32m +  return request;[m
+[32m +})[m
+[32m +[m
+[32m++=======[m
+[32m++>>>>>>> develop[m
+  export default satreloUsersAPI;[m
+[1mdiff --cc src/components/TherapistPatients/TherapistPatientsContent.tsx[m
+[1mindex 25652f6,86c309c..0000000[m
+[1m--- a/src/components/TherapistPatients/TherapistPatientsContent.tsx[m
+[1m+++ b/src/components/TherapistPatients/TherapistPatientsContent.tsx[m
+[36m@@@ -23,13 -22,13 +22,23 @@@[m [mexport const TherapistPatientsContent: [m
+      <>[m
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 gy-4 d-flex align-items-center h-auto">[m
+          { [m
+[32m++<<<<<<< HEAD[m
+[32m +          currentPatients.map( ({name, fromDate, profileUrl}, index) => ([m
+[32m +          <div className="col d-flex justify-content-center" key={index} id="patient-card" >[m
+[32m +            <div className="border shadow rounded-3 px-2 py-3 d-inline-flex flex-column align-items-center "  style={{width: '260px'}}>[m
+[32m +              <FontAwesomeIcon icon={faCircleUser} className='text-primary mb-3' size="7x" />[m
+[32m +              <p className="fw-bold align-bottom text-center">{name}</p>[m
+[32m +              <p>{fromDate}</p>[m
+[32m +              <a href={`${profileUrl || '/PatientProfile'}`} id="patient-view-profile" >Ver Perfil</a>[m
+[32m++=======[m
+[32m+           currentPatients.map( ({name, createdDate, avatarUrl}, index) => ([m
+[32m+           <div className="col d-flex justify-content-center" key={index} >[m
+[32m+             <div className="border shadow rounded-3 px-2 py-3 d-inline-flex flex-column align-items-center "  style={{width: '260px'}}>[m
+[32m+               <FontAwesomeIcon icon={faCircleUser} className='text-primary mb-3' size="7x" />[m
+[32m+               <p className="fw-bold align-bottom text-center">{name}</p>[m
+[32m+               <p>{createdDate}</p>[m
+[32m+               <a href={`${avatarUrl}`} >Ver Perfil</a>[m
+[32m++>>>>>>> develop[m
+              </div>[m
+            </div>[m
+            ))[m
+[1mdiff --cc src/components/TherapistPatients/TherapistPatientsHeader.tsx[m
+[1mindex 2717392,ee7984b..0000000[m
+[1m--- a/src/components/TherapistPatients/TherapistPatientsHeader.tsx[m
+[1m+++ b/src/components/TherapistPatients/TherapistPatientsHeader.tsx[m
+[36m@@@ -12,11 -20,11 +20,16 @@@[m [mexport const TherapistPatientsHeader: F[m
+        <div className="d-flex flex-column w-100">[m
+          <div className="d-flex flex-column justify-content-start align-items-start align-items-sm-center flex-sm-row justify-content-sm-between">[m
+            <h2 className="fw-bold">{(target === 'all')?'Todos los pacientes':'Mis pacientes'}</h2>[m
+[31m -          <a href={`/${(target === 'all')?'MisPacientes':'TodosLosPacientes'}`}>{(target === 'all')?'Ver mis pacientes':'Todos los pacientes'}</a>[m
+[32m +          <a href={`/${(target === 'all')?'MisPacientes':'TodosLosPacientes'}`} id="patients-header-link">{(target === 'all')?'Ver mis pacientes':'Todos los pacientes'}</a>[m
+          </div>[m
+  [m
+[32m++<<<<<<< HEAD[m
+[32m +        <div className="d-flex flex-row justify-content-end align-items-center" style={{height: '80px'}} id="patients-searchbox">[m
+[32m +          <SearchBox />[m
+[32m++=======[m
+[32m+         <div className="d-flex flex-row justify-content-end align-items-center" style={{height: '80px'}}>[m
+[32m+           <SearchBox onSearch={handleSearchTerm} />[m
+[32m++>>>>>>> develop[m
+          </div>[m
+        </div>[m
+      </>[m
+[1mdiff --cc src/hooks/useAuthSlice.ts[m
+[1mindex 444a04c,6b3705c..0000000[m
+[1m--- a/src/hooks/useAuthSlice.ts[m
+[1m+++ b/src/hooks/useAuthSlice.ts[m
+[36m@@@ -18,12 -17,11 +18,18 @@@[m [mexport const useAuthStore = () => [m
+  [m
+      try {[m
+        const {data} = await satreloLoginAPI.post('/login', {personalId: username, password})[m
+[31m- [m
+        localStorage.setItem('token', data.token);[m
+[32m++<<<<<<< HEAD[m
+[32m +      const user_role: any = localStorage.getItem('user_role') ?? 'patient';[m
+[32m +[m
+[32m +      dispatch(onLogin({name: `${user_role} user`, role: user_role}))[m
+[32m +[m
+[32m++=======[m
+[32m+       localStorage.setItem('personalID', username);[m
+[32m+ [m
+[32m+       dispatch(onLogin({name: 'Therapist Name', role:'therapist'}))[m
+[32m+       [m
+[32m++>>>>>>> develop[m
+      } catch (error) {[m
+  [m
+        if (axios.isAxiosError(error)) {[m
+[1mdiff --cc src/interfaces/patients.ts[m
+[1mindex f596baa,a488537..0000000[m
+[1m--- a/src/interfaces/patients.ts[m
+[1m+++ b/src/interfaces/patients.ts[m
+[36m@@@ -1,7 -1,6 +1,11 @@@[m
+  export interface IPatient {[m
+[31m-   picture: string;[m
+    name: string;[m
+[32m++<<<<<<< HEAD[m
+[32m +  fromDate: string;[m
+[32m +  profileUrl?: string;[m
+[32m++=======[m
+[32m+   createdDate?: string;[m
+[32m+   avatarUrl: string;[m
+[32m++>>>>>>> develop[m
+  }[m
+  [m
+[1mdiff --cc src/interfaces/users.ts[m
+[1mindex 50c9569,7861413..0000000[m
+[1m--- a/src/interfaces/users.ts[m
+[1m+++ b/src/interfaces/users.ts[m
+[36m@@@ -7,7 -6,15 +7,20 @@@[m [mexport interface IUser [m
+  export interface IUserLogin {[m
+    username: string;[m
+    password: string;[m
+[32m +  role?: IRole;[m
+  }[m
+  [m
+[31m- export type IRole = 'therapist' | 'patient' | 'admin'  | undefined;[m
+[32m++<<<<<<< HEAD[m
+[32m++export type IRole = 'therapist' | 'patient' | 'admin'  | undefined;[m
+[32m++=======[m
+[32m+ export interface ItherapistUser{[m
+[32m+   username: string;[m
+[32m+   name: string;[m
+[32m+   personalId: string;[m
+[32m+   phone: string;[m
+[32m+   email: string;[m
+[32m+   avatarUrl: string;[m
+[32m+ }[m
+[32m+ [m
+[31m -export type IRole = 'therapist' | 'patient' | undefined;[m
+[32m++export type IRole = 'therapist' | 'patient' | undefined;[m
+[32m++>>>>>>> develop[m
+[1mdiff --cc src/pages/TherapistPage.tsx[m
+[1mindex 23f61fd,deb659a..0000000[m
+[1m--- a/src/pages/TherapistPage.tsx[m
+[1m+++ b/src/pages/TherapistPage.tsx[m
+[36m@@@ -1,63 -1,58 +1,120 @@@[m
+[32m++<<<<<<< HEAD[m
+[32m +import { FC, useEffect } from "react";[m
+[32m +import {  BoxContentLayout, TherapistPatientsContent, TherapistPatientsHeader} from "../components";[m
+[32m +import { IPatient } from '../interfaces/patients';[m
+[32m +import { useAuthStore, useSatreloStore } from "../hooks";[m
+[32m +[m
+[32m +const patientsData: IPatient[] = Array();[m
+[32m +[m
+[32m +/***  ONLY FOR TEST PURPOSE ***/[m
+[32m +const numDataTest = 7;[m
+[32m +[m
+[32m +/***  ONLY FOR TEST PURPOSE ***/[m
+[32m +for (let i = 0; i < numDataTest; i++) {[m
+[32m +  const obj: IPatient = {[m
+[32m +    picture: '',[m
+[32m +    name: `Nombre del paciente ${i+1}`,[m
+[32m +    fromDate: 'DD/MM/YYYY',[m
+[32m +    profileUrl: '/PatientProfile'[m
+[32m +  };[m
+[32m +  patientsData.push(obj);[m
+[32m +}[m
+[32m++=======[m
+[32m+ import { FC, useEffect, useState } from "react";[m
+[32m+ import { BoxContentLayout, TherapistPatientsContent, TherapistPatientsHeader } from "../components";[m
+[32m+ import { IPatient } from '../interfaces/patients';[m
+[32m+ import satreloUsersAPI from "../api/satreloUsersAPI";[m
+[32m+ import { AxiosError, isAxiosError } from "axios";[m
+[32m++>>>>>>> develop[m
+  [m
+  interface Props {[m
+    target?: 'all' | 'own';[m
+  }[m
+  [m
+[32m++<<<<<<< HEAD[m
+[32m +export const TherapistPage: FC<Props> = ({target = 'all'}) => {[m
+[32m +[m
+[32m +  const role = localStorage.getItem('user_role');[m
+[32m +[m
+[32m +  const {isLoadingPatients, patients, myPatients, startLoadingPatients, startLoadingMyPatients} = useSatreloStore()[m
+[32m +[m
+[32m +  useEffect(() => {[m
+[32m +    role === 'therapist' && startLoadingPatients();[m
+[32m +    if (role === 'therapist') {[m
+[32m +      (target === 'all')?[m
+[32m +        startLoadingPatients()[m
+[32m +      :[m
+[32m +        startLoadingMyPatients()[m
+[32m +    }[m
+[32m +  }, [])[m
+[32m +[m
+[32m +  return([m
+[32m +    <>{[m
+[32m +      role === 'therapist' &&[m
+[32m +        <BoxContentLayout[m
+[32m +          header={<TherapistPatientsHeader target={target} />}[m
+[32m +        >[m
+[32m +          {[m
+[32m +            (isLoadingPatients)?[m
+[32m +              <div className="d-flex col-12 justify-content-center">[m
+[32m +                <div className="spinner-border text-primary" role="status">[m
+[32m +                    <span className="visually-hidden">Loading...</span>[m
+[32m +                </div>[m
+[32m +              </div>[m
+[32m +            :([m
+[32m +              <TherapistPatientsContent patients={(target === 'all')? patients : myPatients} />[m
+[32m +            )[m
+[32m +          }[m
+[32m +        </BoxContentLayout>[m
+[32m +    }[m
+[32m +    </>[m
+[32m++=======[m
+[32m+ export const TherapistPage: FC<Props> = ({ target = 'all' }) => {[m
+[32m+   const [patientsData, setPatientsData] = useState<IPatient[]>([]);[m
+[32m+   const [searchTerm, setSearchTerm] = useState<string | null>(null);[m
+[32m+ [m
+[32m+   const fetchPatientsData = async (searchTerm: string | null) => {[m
+[32m+     try {[m
+[32m+       const token = localStorage.getItem('token');[m
+[32m+       const idThera = localStorage.getItem('personalID');[m
+[32m+       if (!token) {[m
+[32m+         return;[m
+[32m+       }[m
+[32m+       satreloUsersAPI.defaults.headers.common["Authorization"] = `Bearer ${token}`;[m
+[32m+ [m
+[32m+       let endpoint = '/therapist/patients';[m
+[32m+ [m
+[32m+       if (searchTerm) {[m
+[32m+         endpoint += `/${searchTerm}`;[m
+[32m+       }[m
+[32m+       //console.log(endpoint);[m
+[32m+       const response = await satreloUsersAPI.get(endpoint);[m
+[32m+       setPatientsData(response.data);[m
+[32m+     } catch (error) {[m
+[32m+       if (isAxiosError(error)) {[m
+[32m+         const axiosError = error as AxiosError;[m
+[32m+ [m
+[32m+         if (axiosError.response) {[m
+[32m+           console.log('Response status:', axiosError.response.status);[m
+[32m+           console.log('Response headers:', axiosError.response.headers);[m
+[32m+           console.log('Response data:', axiosError.response.data);[m
+[32m+         } else {[m
+[32m+           console.log('Error message:', axiosError.message);[m
+[32m+         }[m
+[32m+       } else {[m
+[32m+         console.log('Error message:', (error as Error).message);[m
+[32m+       }[m
+[32m+     }[m
+[32m+   };[m
+[32m+ [m
+[32m+   useEffect(() => {[m
+[32m+     fetchPatientsData(searchTerm);[m
+[32m+   }, [searchTerm]);[m
+[32m+ [m
+[32m+   return ([m
+[32m+     <BoxContentLayout header={<TherapistPatientsHeader  handleSearch={fetchPatientsData}  target={target} />}>[m
+[32m+       <TherapistPatientsContent patients={patientsData}/>[m
+[32m+     </BoxContentLayout>[m
+[32m++>>>>>>> develop[m
+    );[m
+[31m- };[m
+[32m+ };[m

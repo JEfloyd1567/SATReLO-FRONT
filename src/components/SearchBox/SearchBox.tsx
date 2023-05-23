@@ -3,7 +3,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import "./SearchBox.css"
 
-export const SearchBox =()=>{
+interface Props {
+    onSearch: (searchTerm: string | null) => void;
+}
+
+export const SearchBox: React.FC<Props> = ({ onSearch }) => {
+    const [searchTerm, setSearchTerm] = useState("");
+
+    const handleButtonClick = () => {
+        onSearch(searchTerm.trim() !== "" ? searchTerm : null);
+    };
+
     const[clicked,setClicked] = useState(false)
     const hanndleButtonClick =()=>{
         setClicked(true)
@@ -17,7 +27,8 @@ export const SearchBox =()=>{
         <>
         <div className="input-group col justify-content-end align-items-center">
             <div className="me-3 d-none d-sm-flex">Buscar paciente:</div>
-            <input className="rounded-pill inputBusqueda" type="text" placeholder="Nombre paciente" maxLength={30} />
+            <input className="rounded-pill inputBusqueda" type="text" placeholder="Nombre paciente" maxLength={30} 
+                onChange={(e) => setSearchTerm(e.target.value)} />
             <div className="SearchButton rounded-circle d-inline-flex justify-content-center align-items-center" onClick={handleShow}>
                 <FontAwesomeIcon icon={faMagnifyingGlass} style={{ color: "white", backgroundColor: "#FF673B" }} size={"lg"}/>
                 <span className="search-button-text">Buscar</span>

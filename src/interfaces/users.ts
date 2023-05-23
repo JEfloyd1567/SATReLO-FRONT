@@ -10,4 +10,13 @@ export interface IUserLogin {
   role?: IRole;
 }
 
-export type IRole = 'therapist' | 'patient' | 'admin'  | undefined;
+export interface ItherapistUser{
+  username: string;
+  name: string;
+  personalId: string;
+  phone: string;
+  email: string;
+  avatarUrl: string;
+}
+
+export type IRole = 'therapist' | 'patient' | undefined;

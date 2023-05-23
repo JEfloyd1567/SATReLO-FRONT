@@ -1,15 +1,19 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen, faCamera, faFloppyDisk, faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import { Container } from 'react-bootstrap';
-import { useState } from 'react';
+import { FC, useState } from 'react';
+import { ItherapistUser } from "../../interfaces";
 
+interface Props {
+    therapist: ItherapistUser;
+}
 
-export const TherapistProfile = () => {
+export const TherapistProfile:  FC<Props> = ({ therapist }) => {
     const [editing, setEditing] = useState(false);
-    const [name, setName] = useState("Nombres Apellidos");
-    const [email, setEmail] = useState("email@loquesea.com");
-    const [especialidad, setEspecialidad] = useState("terapeuta");
-    const [contacto, setContacto] = useState("XXXXXXXXX");
+    const [name, setName] = useState(therapist.name);
+    const [email, setEmail] = useState(therapist.email);
+    const [especialidad, setEspecialidad] = useState("Terapeuta");
+    const [contacto, setContacto] = useState(therapist.phone);
 
     const handleEditClick = () => {
         setEditing(true);
@@ -33,8 +37,8 @@ export const TherapistProfile = () => {
 
                 <div className="info-therapist-avatar"> 
                     <FontAwesomeIcon icon={faCircleUser} className="text-primary" size='10x' /> 
-                    <div className="iconCamera">
-                    <FontAwesomeIcon icon={faCamera} style={{fontSize: "24px"}}/>
+                    <div className="iconCamera" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        <FontAwesomeIcon icon={faCamera} style={{ fontSize: '24px' }} />
                     </div>
                 </div>
 

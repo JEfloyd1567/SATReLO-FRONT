@@ -1,8 +1,9 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes  } from "react-router-dom"
 import { MyAvatarTherapist } from "../pages/MyAvararTherapist"
 import { TherapistPage } from "../pages/TherapistPage"
 import { TherapistProfilePage } from "../pages/TherapistProfilePage"
 import { PatientProfilePage } from '../pages/PatientProfilePage';
+import { ActivitiesCreationPage } from "../pages/ActivitiesCreationPage";
 
 export const AppRouter = () => {
   return (
@@ -12,6 +13,7 @@ export const AppRouter = () => {
       <Route path='/Avatar' element={<MyAvatarTherapist/>}/>
       <Route path='/MiPerfil' element={<TherapistProfilePage/>}></Route>
       <Route path='/PatientProfile' element={<PatientProfilePage />}></Route>
+      <Route path='/ActivityCreation' element={<ActivitiesCreationPage />}></Route>
       <Route path='/*' element={<TherapistPage />} />
     </Routes>
   )
